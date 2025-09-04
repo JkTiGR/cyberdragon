@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asian Dragon Self‑Service Kiosk</title>
+  <!-- TailwindCSS via CDN for rapid styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* glassmorphism helper class */
+    .glass {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    }
+    /* hide default number input arrows */
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900 min-h-screen text-white font-sans">
+  <div class="container mx-auto py-8 px-4">
+    <!-- Header -->
+    <header class="glass p-6 text-center">
+      <h1 class="text-4xl font-bold tracking-wide">CYBER🐉DRAGON</h1>
+    </header>
+    <!-- Language selection -->
+    <section class="mt-6 flex flex-wrap justify-center gap-2" id="language-buttons"></section>
+    <!-- Phone entry section (hidden until a language is chosen) -->
+    <section id="phone-section" class="mt-6 hidden">
+      <div class="glass p-6 rounded-2xl max-w-md mx-auto">
+        <label id="phone-label" class="block text-sm mb-2"></label>
+        <input type="tel" id="phone-input" class="w-full p-2 rounded-lg bg-gray-700 mb-4" />
+        <button id="phone-next-btn" class="w-full py-2 rounded-xl bg-indigo-500 hover:bg-indigo-600 transition"></button>
+      </div>
+    </section>
+    <!-- Service selection section (hidden until phone is entered) -->
+    <section id="service-section" class="mt-6 hidden">
+      <div class="glass p-6 rounded-2xl max-w-md mx-auto text-center">
+        <h2 id="service-prompt" class="text-xl font-semibold mb-4"></h2>
+        <div class="grid grid-cols-2 gap-4">
+          <button class="service-btn px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 transition" data-type="dineIn"></button>
+          <button class="service-btn px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 transition" data-type="takeaway"></button>
+          <button class="service-btn px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 transition" data-type="delivery"></button>
+          <button class="service-btn px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 transition" data-type="reserve"></button>
+        </div>
+      </div>
+    </section>
+    <!-- Booking section for table reservation (hidden until reserve selected) -->
+    <section id="booking-section" class="mt-6 hidden">
+      <div class="glass p-6 rounded-2xl max-w-md mx-auto">
+        <h2 id="booking-prompt" class="text-xl font-semibold mb-4"></h2>
+
+        <label id="date-label" class="block text-sm mb-1"></label>
+        <input type="date" id="booking-date" class="w-full p-2 rounded-lg bg-gray-700 mb-3" />
+
+        <label id="time-label" class="block text-sm mb-1"></label>
+        <input type="time" id="booking-time" class="w-full p-2 rounded-lg bg-gray-700 mb-3" />
+
+        <label id="people-label" class="block text-sm mb-1"></label>
+        <input type="number" id="booking-people" min="1" max="20" value="2"
+              class="w-full p-2 rounded-lg bg-gray-700 mb-4" />
+
+        <div class="flex gap-3">
+          <button id="booking-back-btn"
+                  class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 shadow-md">
+            ← Назад
+          </button>
+
+          <button id="booking-confirm-btn"
+                  class="flex-1 py-2 rounded-xl bg-green-500 hover:bg-green-600 transition"></button>
+        </div>
+      </div>
+    </section>
+    <!-- Menu section containing categories and items (hidden until a service is chosen) -->
+    <section id="menu-section" class="hidden">
+      <!-- Category grid -->
+      <section class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6" id="categories"></section>
+      <!-- Items list -->
+      <section class="mt-6" id="items"></section>
+    </section>
+  </div>
+  <!-- Cart floating panel -->
+  <div id="cart-panel" class="glass fixed bottom-4 right-4 w-72 p-4 hidden flex flex-col max-h-[70vh] overflow-y-auto">
+    <h2 id="cart-title" class="text-xl font-semibold mb-2"></h2>
+    <ul id="cart-items" class="space-y-2 flex-1 overflow-y-auto"></ul>
+    <div class="border-t border-gray-500 my-2"></div>
+    <div class="flex justify-between mb-2">
+      <span id="cart-total-label" class="font-medium"></span>
+      <span id="cart-total" class="font-semibold"></span>
+    </div>
+    <!-- Order type and phone input -->
+    <div id="order-options" class="space-y-2 mb-2"></div>
+    <!-- Checkout button -->
+    <button id="checkout-btn" class="mt-2 w-full py-2 rounded-xl bg-green-500 hover:bg-green-600 transition disabled:opacity-50" disabled></button>
+  </div>
+  <script src="menu.js"></script>
+  <script>
+    // Supported languages
+    const languages = ["vn", "ru", "ua", "en", "pl", "de", "zh"];
+    // Translations for UI labels
+    const uiText = {
+      cartTitle: { en: "Cart", vn: "Giỏ hàng", ru: "Корзина", ua: "Кошик", pl: "Koszyk", de: "Warenkorb", zh: "购物车" },
+      confirmOrder: { en: "Confirm Order", vn: "Xác nhận đặt hàng", ru: "Подтвердить заказ", ua: "Підтвердити замовлення", pl: "Potwierdź zamówienie", de: "Bestellung bestätigen", zh: "确认订单" },
+      total: { en: "Total", vn: "Tổng cộng", ru: "Итого", ua: "Всього", pl: "Łącznie", de: "Gesamt", zh: "总计" },
+      emptyCart: { en: "Your cart is empty", vn: "Giỏ hàng trống", ru: "Корзина пуста", ua: "Кошик порожній", pl: "Koszyk jest pusty", de: "Der Warenkorb ist leer", zh: "购物车为空" },
+      add: { en: "Add", vn: "Thêm", ru: "Добавить", ua: "Додати", pl: "Dodaj", de: "Hinzufügen", zh: "添加" },
+      remove: { en: "Remove", vn: "Xóa", ru: "Удалить", ua: "Видалити", pl: "Usuń", de: "Entfernen", zh: "删除" },
+      dineIn: { en: "Dine in", vn: "Ăn tại chỗ", ru: "На месте", ua: "На місці", pl: "Na miejscu", de: "Vor Ort", zh: "堂食" },
+      takeaway: { en: "Take away", vn: "Mang đi", ru: "На вынос", ua: "Навинос", pl: "Na wynos", de: "Zum Mitnehmen", zh: "外带" },
+      delivery: { en: "Delivery", vn: "Giao hàng", ru: "Доставка", ua: "Доставка", pl: "Dostawa", de: "Lieferung", zh: "送货" },
+      reserve: { en: "Reserve table", vn: "Đặt bàn", ru: "Забронировать стол", ua: "Забронювати стіл", pl: "Rezerwacja stolika", de: "Tisch reservieren", zh: "预订桌位" },
+      orderSuccess: { en: "Order placed! Your order code is ", vn: "Đã đặt hàng! Mã đơn hàng của bạn là ", ru: "Заказ отправлен! Ваш код заказа ", ua: "Замовлення надіслано! Ваш код замовлення ", pl: "Zamówienie złożone! Twój kod zamówienia to ", de: "Bestellung abgeschickt! Ihre Bestellnummer ist ", zh: "订单已提交！您的订单代码是 " },
+      reservationSuccess: { en: "Reservation sent! Your code is ", vn: "Đã đặt bàn! Mã đặt của bạn là ", ru: "Бронь отправлена! Ваш код брони ", ua: "Броню надіслано! Ваш код ", pl: "Rezerwacja wysłana! Twój kod to ", de: "Reservierung gesendet! Ihr Code ist ", zh: "预订已发送！您的预订代码是 " },
+      phonePrompt: { en: "Enter phone number", vn: "Nhập số điện thoại", ru: "Введите номер телефона", ua: "Введіть номер телефону", pl: "Wprowadź numer telefonu", de: "Telefonnummer eingeben", zh: "输入电话号码" },
+      next: { en: "Next", vn: "Tiếp theo", ru: "Далее", ua: "Далі", pl: "Dalej", de: "Weiter", zh: "下一步" },
+      servicePrompt: { en: "Choose service type", vn: "Chọn loại dịch vụ", ru: "Выберите тип услуги", ua: "Виберіть тип послуги", pl: "Wybierz rodzaj usługi", de: "Wählen Sie die Serviceart", zh: "选择服务类型" },
+      date: { en: "Date", vn: "Ngày", ru: "Дата", ua: "Дата", pl: "Data", de: "Datum", zh: "日期" },
+      time: { en: "Time", vn: "Giờ", ru: "Время", ua: "Час", pl: "Czas", de: "Uhrzeit", zh: "时间" },
+      people: { en: "People", vn: "Số người", ru: "Количество человек", ua: "Кількість осіб", pl: "Liczba osób", de: "Anzahl Personen", zh: "人数" },
+      reserveConfirm: { en: "Reserve", vn: "Đặt", ru: "Забронировать", ua: "Забронювати", pl: "Zarezerwuj", de: "Reservieren", zh: "预订" },
+      enterAddress: { en: "Enter address", vn: "Nhập địa chỉ", ru: "Введите адрес", ua: "Введіть адресу", pl: "Wpisz adres", de: "Adresse eingeben", zh: "输入地址" },
+      back: { en: "Back", vn: "Quay lại", ru: "Назад", ua: "Назад", pl: "Wstecz", de: "Zurück", zh: "返回" }
+    };
+    // Category name translations
+    const categoryNames = {
+      "VORSPEISEN": { en: "Appetizers", vn: "Khai vị", ru: "Закуски", ua: "Закуски", pl: "Przystawki", de: "Vorspeisen", zh: "前菜" },
+      "HAUPTSPEISEN": { en: "Main Courses", vn: "Món chính", ru: "Основные блюда", ua: "Основні страви", pl: "Dania główne", de: "Hauptspeisen", zh: "主菜" },
+      "SUSHI": { en: "Sushi", vn: "Sushi", ru: "Суши", ua: "Суші", pl: "Sushi", de: "Sushi", zh: "寿司" },
+      "NACHSPEISEN": { en: "Desserts", vn: "Tráng miệng", ru: "Десерты", ua: "Десерти", pl: "Desery", de: "Nachspeisen", zh: "甜点" },
+      "BEILAGEN": { en: "Side Dishes", vn: "Món phụ", ru: "Гарниры", ua: "Гарніри", pl: "Dodatki", de: "Beilagen", zh: "配菜" },
+      "GETRÄNKE": { en: "Drinks", vn: "Đồ uống", ru: "Напитки", ua: "Напої", pl: "Napoje", de: "Getränke", zh: "饮料" }
+    };
+    // Telegram configuration – replace with your own values from betta.py if needed
+    const TELEGRAM_TOKEN = "8156242601:AAF_1v_fHSpegsgivFzMjhv6PBkfEUQO9z8";
+    const TELEGRAM_CHAT_ID = "-1002283682762";
+    // State
+    let currentLang = 'en';
+    let currentCategory = null;
+    const cart = [];
+    let userPhone = '';
+    let serviceType = '';
+    // DOM references
+    const langButtonsContainer = document.getElementById('language-buttons');
+    const categoriesContainer = document.getElementById('categories');
+    const itemsContainer = document.getElementById('items');
+    const cartPanel = document.getElementById('cart-panel');
+    const cartTitleEl = document.getElementById('cart-title');
+    const cartItemsEl = document.getElementById('cart-items');
+    const cartTotalEl = document.getElementById('cart-total');
+    const cartTotalLabelEl = document.getElementById('cart-total-label');
+    const checkoutBtn = document.getElementById('checkout-btn');
+    // Additional DOM references
+    const phoneSection = document.getElementById('phone-section');
+    const phoneLabelEl = document.getElementById('phone-label');
+    const phoneInputEl = document.getElementById('phone-input');
+    const phoneNextBtn = document.getElementById('phone-next-btn');
+    const serviceSection = document.getElementById('service-section');
+    const servicePromptEl = document.getElementById('service-prompt');
+    const menuSection = document.getElementById('menu-section');
+    const bookingSection = document.getElementById('booking-section');
+    const bookingPromptEl = document.getElementById('booking-prompt');
+    const dateLabelEl = document.getElementById('date-label');
+    const timeLabelEl = document.getElementById('time-label');
+    const peopleLabelEl = document.getElementById('people-label');
+    const bookingDateEl = document.getElementById('booking-date');
+    const bookingTimeEl = document.getElementById('booking-time');
+    const bookingPeopleEl = document.getElementById('booking-people');
+    const bookingConfirmBtn = document.getElementById('booking-confirm-btn');
+    // Initialize UI flows
+    function updateUIText() {
+      // update phone prompt and button
+      phoneLabelEl.textContent = uiText.phonePrompt[currentLang];
+      phoneInputEl.placeholder = uiText.phonePrompt[currentLang];
+      phoneNextBtn.textContent = uiText.next[currentLang];
+      // update service prompt and buttons
+      servicePromptEl.textContent = uiText.servicePrompt[currentLang];
+      const serviceBtns = document.querySelectorAll('.service-btn');
+      serviceBtns.forEach(btn => {
+        const type = btn.getAttribute('data-type');
+        btn.textContent = uiText[type][currentLang];
+      });
+      // update booking texts
+      bookingPromptEl.textContent = uiText.reserve[currentLang];
+      dateLabelEl.textContent = uiText.date[currentLang];
+      timeLabelEl.textContent = uiText.time[currentLang];
+      peopleLabelEl.textContent = uiText.people[currentLang];
+      bookingConfirmBtn.textContent = uiText.reserveConfirm[currentLang];
+      // update cart UI labels
+      cartTitleEl.textContent = uiText.cartTitle[currentLang];
+      cartTotalLabelEl.textContent = uiText.total[currentLang] + ':';
+      checkoutBtn.textContent = uiText.confirmOrder[currentLang];
+    }
+    // show/hide helpers
+    function showSection(section) {
+      section.classList.remove('hidden');
+    }
+    function hideSection(section) {
+      section.classList.add('hidden');
+    }
+    // Render language buttons
+    function renderLanguageButtons() {
+      langButtonsContainer.innerHTML = '';
+      languages.forEach(lang => {
+        const btn = document.createElement('button');
+        btn.className = `px-4 py-2 rounded-xl border border-white/30 bg-white/10 hover:bg-white/20 transition ${currentLang === lang ? 'ring-2 ring-indigo-400' : ''}`;
+        btn.textContent = lang.toUpperCase();
+        btn.onclick = () => {
+          currentLang = lang;
+          updateUIText();
+          renderLanguageButtons();
+          // Show phone section after selecting language and hide other steps
+          showSection(phoneSection);
+          hideSection(serviceSection);
+          hideSection(menuSection);
+          hideSection(bookingSection);
+          // update menu texts if already open
+          if (!menuSection.classList.contains('hidden')) {
+            renderCategories();
+            if (currentCategory) showItems(currentCategory);
+          }
+          updateCart();
+        };
+        langButtonsContainer.appendChild(btn);
+      });
+    }
+    // Render categories grid
+    function renderCategories() {
+      currentCategory = null;
+      itemsContainer.innerHTML = '';
+      categoriesContainer.innerHTML = '';
+      Object.keys(menuData).forEach(catKey => {
+        const card = document.createElement('div');
+        card.className = 'glass p-6 rounded-2xl cursor-pointer hover:scale-105 transition transform';
+        const title = document.createElement('h3');
+        title.className = 'text-xl font-semibold text-center';
+        title.textContent = (categoryNames[catKey] && categoryNames[catKey][currentLang]) || catKey;
+        card.appendChild(title);
+        card.onclick = () => {
+          showItems(catKey);
+        };
+        categoriesContainer.appendChild(card);
+      });
+    }
+    // Show items of selected category
+    function showItems(catKey) {
+      currentCategory = catKey;
+      categoriesContainer.innerHTML = '';
+      itemsContainer.innerHTML = '';
+      // Back button
+      const backBtn = document.createElement('button');
+      backBtn.className = 'glass px-4 py-2 rounded-xl mb-4';
+      backBtn.textContent = uiText.back[currentLang];
+      backBtn.onclick = () => {
+        renderCategories();
+      };
+      itemsContainer.appendChild(backBtn);
+      // Category header
+      const header = document.createElement('h2');
+      header.className = 'text-2xl font-bold mb-4';
+      header.textContent = (categoryNames[catKey] && categoryNames[catKey][currentLang]) || catKey;
+      itemsContainer.appendChild(header);
+      const list = document.createElement('div');
+      list.className = 'grid grid-cols-1 sm:grid-cols-2 gap-4';
+      (menuData[catKey] || []).forEach(item => {
+        const itemCard = document.createElement('div');
+        itemCard.className = 'glass p-4 rounded-2xl flex flex-col justify-between';
+        const nameEl = document.createElement('h3');
+        nameEl.className = 'text-lg font-medium mb-2';
+        nameEl.textContent = (item.translations[currentLang] || item.translations['en'] || item.key);
+        const priceEl = document.createElement('p');
+        priceEl.className = 'text-sm mb-4 text-gray-300';
+        priceEl.textContent = item.price.toFixed(2) + ' €';
+        const addBtn = document.createElement('button');
+        addBtn.className = 'mt-auto w-full py-2 rounded-xl bg-indigo-500 hover:bg-indigo-600 transition';
+        addBtn.textContent = uiText.add[currentLang];
+        addBtn.onclick = () => {
+          addToCart(item);
+        };
+        itemCard.appendChild(nameEl);
+        itemCard.appendChild(priceEl);
+        itemCard.appendChild(addBtn);
+        list.appendChild(itemCard);
+      });
+      itemsContainer.appendChild(list);
+    }
+    // Add item to cart
+    function addToCart(item) {
+      const existing = cart.find(ci => ci.key === item.key);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ key: item.key, price: item.price, translations: item.translations, qty: 1 });
+      }
+      updateCart();
+    }
+    // Remove item from cart
+    function removeFromCart(key) {
+      const idx = cart.findIndex(ci => ci.key === key);
+      if (idx > -1) {
+        cart.splice(idx, 1);
+        updateCart();
+      }
+    }
+    // Update cart display
+    function updateCart() {
+      // update labels
+      cartTitleEl.textContent = uiText.cartTitle[currentLang];
+      cartTotalLabelEl.textContent = uiText.total[currentLang] + ':';
+      checkoutBtn.textContent = uiText.confirmOrder[currentLang];
+      cartItemsEl.innerHTML = '';
+      if (cart.length === 0) {
+        cartItemsEl.innerHTML = `<li class="text-sm text-gray-400">${uiText.emptyCart[currentLang]}</li>`;
+        cartPanel.classList.remove('flex');
+        cartPanel.classList.add('hidden');
+        checkoutBtn.disabled = true;
+        return;
+      }
+      cartPanel.classList.remove('hidden');
+      cartPanel.classList.add('flex');
+      let total = 0;
+      cart.forEach(ci => {
+        const li = document.createElement('li');
+        li.className = 'flex justify-between items-center';
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'text-sm';
+        nameSpan.textContent = (ci.translations[currentLang] || ci.translations['en'] || ci.key) + ` x${ci.qty}`;
+        const removeBtn = document.createElement('button');
+        removeBtn.className = 'text-red-300 hover:text-red-500 text-sm';
+        removeBtn.textContent = uiText.remove[currentLang];
+        removeBtn.onclick = () => removeFromCart(ci.key);
+        li.appendChild(nameSpan);
+        li.appendChild(removeBtn);
+        cartItemsEl.appendChild(li);
+        total += ci.price * ci.qty;
+      });
+      cartTotalEl.textContent = total.toFixed(2) + ' €';
+      checkoutBtn.disabled = false;
+      // adjust order options: if delivery, we need address input in cart panel
+      // clear previous additional inputs
+      const existingAddr = document.getElementById('delivery-address');
+      if (existingAddr) existingAddr.parentElement.removeChild(existingAddr);
+      if (serviceType === 'delivery') {
+        const addrInput = document.createElement('input');
+        addrInput.type = 'text';
+        addrInput.id = 'delivery-address';
+        addrInput.placeholder = uiText.enterAddress[currentLang];
+        addrInput.className = 'w-full mt-2 p-2 rounded-lg bg-gray-700';
+        cartPanel.insertBefore(addrInput, checkoutBtn);
+      }
+      checkoutBtn.onclick = async () => {
+        // build order message
+        const now = new Date();
+        const code = 'A' + now.getTime().toString().slice(-5);
+        let orderLines = cart.map(ci => `${ci.translations['en']} x${ci.qty} (${(ci.price * ci.qty).toFixed(2)}€)`).join('\n');
+        let message = `Order code: ${code}\nType: ${uiText[serviceType][currentLang]}\nPhone: ${userPhone || 'n/a'}\n`;
+        if (serviceType === 'delivery') {
+          const addr = document.getElementById('delivery-address').value.trim();
+          message += `Address: ${addr || 'n/a'}\n`;
+        }
+        message += `${orderLines}\nTotal: ${total.toFixed(2)}€`;
+        try {
+          await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&text=` + encodeURIComponent(message));
+        } catch (e) {
+          console.error(e);
+        }
+        alert(uiText.orderSuccess[currentLang] + code);
+        cart.length = 0;
+        updateCart();
+        // After order, reset to service selection or languages
+        showSection(serviceSection);
+        hideSection(menuSection);
+        hideSection(bookingSection);
+      };
+    }
+    // Phone section logic
+    phoneNextBtn.onclick = () => {
+      const val = phoneInputEl.value.trim();
+      if (!val) return;
+      userPhone = val;
+      hideSection(phoneSection);
+      showSection(serviceSection);
+    };
+    // Service selection logic
+    serviceSection.addEventListener('click', (e) => {
+      if (e.target && e.target.classList.contains('service-btn')) {
+        const type = e.target.getAttribute('data-type');
+        serviceType = type;
+        if (type === 'reserve') {
+          hideSection(serviceSection);
+          showSection(bookingSection);
+        } else {
+          hideSection(serviceSection);
+          showSection(menuSection);
+          renderCategories();
+        }
+      }
+    });
+    // Booking section logic
+    bookingConfirmBtn.onclick = async () => {
+      // gather booking details
+      const date = bookingDateEl.value;
+      const time = bookingTimeEl.value;
+      const people = bookingPeopleEl.value;
+      if (!date || !time || !people) return;
+      const now = new Date();
+      const code = 'R' + now.getTime().toString().slice(-5);
+      const message = `Reservation code: ${code}\nType: ${uiText.reserve[currentLang]}\nPhone: ${userPhone}\nDate: ${date}\nTime: ${time}\nPeople: ${people}`;
+      try {
+        await fetch(`https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&text=` + encodeURIComponent(message));
+      } catch (e) {
+        console.error(e);
+      }
+      alert(uiText.reservationSuccess[currentLang] + code);
+      // reset to service selection
+      hideSection(bookingSection);
+      showSection(serviceSection);
+    };
+    // Initialize
+    function initializeApp() {
+      updateUIText();
+      renderLanguageButtons();
+      hideSection(phoneSection);
+      hideSection(serviceSection);
+      hideSection(menuSection);
+      hideSection(bookingSection);
+      // Start at language selection only
+    }
+    initializeApp();
+  </script>
+</body>
+</html>

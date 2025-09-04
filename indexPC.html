@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0f1a" />
+  <title>CYBER DRAGON — Mobile</title>
+  <style>
+    :root{
+      --bg:#0b0f1a; --glass:rgba(12,16,28,.55); --glass-strong:rgba(20,28,46,.72);
+      --line:rgba(255,255,255,.12); --text:#eaf6ff; --muted:#9fb3c8;
+      --brandA:#4fd3ff; --brandB:#8f00ff; --ok:#4ade80; --warn:#f59e0b; --danger:#ef4444;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    html{ -webkit-text-size-adjust:100% }
+    body{
+      margin:0;color:var(--text);
+      background:
+        radial-gradient(1200px 1200px at 15% -10%, #183055 0%, transparent 60%),
+        radial-gradient(1200px 1200px at 85% 110%, #2a1250 0%, transparent 55%),
+        var(--bg);
+      font:16px/1.48 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .app{
+      max-width:430px;margin:0 auto;
+      padding: calc(14px + env(safe-area-inset-top)) calc(14px + env(safe-area-inset-right))
+               calc(28px + env(safe-area-inset-bottom)) calc(14px + env(safe-area-inset-left));
+      min-height:100dvh; overscroll-behavior-y: contain;
+    }
+
+    /* Header */
+    .header{position:sticky; top:0; z-index:30; margin:-6px -4px 8px}
+    .bar{
+      display:flex;align-items:center;gap:10px;padding:8px;
+      backdrop-filter:saturate(140%) blur(12px);
+      background:linear-gradient(to bottom, rgba(10,15,26,.75), rgba(10,15,26,.35));
+      border-bottom:1px solid var(--line); border-radius:16px;
+    }
+    .brand{margin:0;font-size:1.06rem;letter-spacing:.35px;text-shadow:0 1px 6px #0009;display:flex;align-items:center;gap:6px}
+    .brand .mark{height:18px;width:auto;vertical-align:middle;filter:drop-shadow(0 0 6px #00eaff66)}
+
+    .lang{margin-left:auto;display:flex;align-items:center;gap:6px}
+    .lang select{
+      appearance:none;border-radius:10px;padding:10px 28px 10px 12px;
+      color:var(--text);background:var(--glass-strong);border:1px solid var(--line);outline:none;
+      min-height:44px;
+    }
+
+    .burger{
+      width:44px;height:44px;border-radius:12px;border:1px solid var(--line);
+      background:var(--glass-strong);color:#fff;display:grid;place-items:center;cursor:pointer;
+      touch-action: manipulation;
+    }
+    .burger:active{transform:scale(.98)}
+    .nav-pop{
+      position:absolute;right:14px;top:64px;background:rgba(10,14,24,.94);backdrop-filter:blur(14px) saturate(140%);
+      border:1px solid var(--line);border-radius:14px;padding:8px;display:none;min-width:220px;z-index:40
+    }
+    .nav-pop.open{display:block}
+    .nav-pop a,.nav-pop .lang-inline{
+      display:flex;align-items:center;gap:10px;padding:12px;border-radius:10px;color:#fff;text-decoration:none;min-height:44px
+    }
+    .nav-pop a:hover,.nav-pop .lang-inline:hover{background:var(--glass)}
+    .nav-pop hr{border:0;height:1px;background:var(--line);margin:6px 0}
+    .nav-pop .lang-inline select{flex:1;background:var(--glass-strong);border:1px solid var(--line);color:#fff;border-radius:10px;padding:8px 10px;min-height:44px}
+
+    /* Category pills */
+    .h-scroll{display:flex;gap:8px;overflow:auto;scroll-snap-type:x proximity;padding:6px 0}
+    .pill{
+      scroll-snap-align:start;white-space:nowrap;padding:10px 14px;border-radius:999px;border:1px solid var(--line);
+      background:var(--glass);backdrop-filter:blur(8px);color:#fff;cursor:pointer;min-height:44px
+    }
+    .pill:active{transform:scale(.98)}
+    .pill.active{background:linear-gradient(90deg,var(--brandA),var(--brandB));color:#001027;border:none;font-weight:700}
+
+    /* Items with thumbnails */
+    .list{display:grid;gap:10px;margin-top:8px}
+    .item{
+      display:grid;grid-template-columns:96px 1fr auto;align-items:center;gap:10px;padding:12px;border-radius:16px;background:var(--glass);
+      border:1px solid var(--line);backdrop-filter:blur(10px);position:relative;content-visibility:auto;contain-intrinsic-size:120px
+    }
+    .thumb{width:96px;height:72px;border-radius:12px;overflow:hidden;position:relative;background:linear-gradient(135deg,#3a517f,#7a45cc)}
+    .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+    .thumb.noimg{background:linear-gradient(135deg,#334b7a,#6842a6)}
+    .name-row{display:flex;align-items:center;gap:8px}
+    .name{font-weight:700;margin:0}
+    .desc{margin:.25rem 0 0;color:var(--muted);font-size:.95rem}
+    .info{
+      margin-left:auto;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);
+      background:var(--glass-strong);color:#fff;cursor:pointer;display:grid;place-items:center;font-weight:800;touch-action:manipulation
+    }
+    .price{font-weight:800;font-size:1.02rem}
+    .add{
+      border:none;border-radius:999px;padding:10px 14px;background:linear-gradient(90deg,var(--brandA),var(--brandB));
+      color:#001027;font-weight:800;cursor:pointer;min-height:44px;touch-action:manipulation
+    }
+    .qty{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:6px 8px}
+    .qty button{
+      width:36px;height:36px;border:none;border-radius:10px;background:var(--glass-strong);color:#fff;cursor:pointer;touch-action:manipulation
+    }
+
+    /* Expanded info */
+    .more{display:none;grid-column:1/-1;margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:#cfe7ff}
+    .item.expanded .more{display:block}
+
+    /* FAB cart */
+    .fab{position:sticky;bottom:calc(14px + env(safe-area-inset-bottom));display:flex;justify-content:center;margin-top:14px;z-index:35}
+    .cart-fab{
+      display:inline-flex;align-items:center;gap:10px;border:none;border-radius:999px;padding:12px 18px;cursor:pointer;color:#001027;
+      background:linear-gradient(90deg,var(--brandA),var(--brandB));font-weight:800;box-shadow:0 18px 28px #001a2f66;min-height:48px;touch-action:manipulation
+    }
+
+    /* Overlay + bottom sheet */
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:.2s opacity;z-index:40}
+    .overlay.show{opacity:1;pointer-events:auto}
+
+    .sheet{
+      position:fixed; left:0; right:0; bottom:0;
+      width:100%; max-width:430px; margin:0 auto;
+      background:rgba(10,14,24,.96);backdrop-filter:blur(16px) saturate(140%);
+      border-top-left-radius:18px;border-top-right-radius:18px;border:1px solid var(--line);
+      padding:14px; padding-bottom:calc(14px + env(safe-area-inset-bottom));
+      transition:.25s transform; transform:translateY(100%);
+      z-index:41; max-height:85dvh; overflow:auto; overscroll-behavior:contain;
+    }
+    .sheet.open{ transform:translateY(0) }
+    .sheet h3{margin:0 0 8px}
+
+    .cart-lines{display:grid;gap:10px;max-height:38dvh;overflow:auto;padding-right:4px}
+    .line{display:grid;grid-template-columns:1fr auto;align-items:center;gap:10px;padding:8px;border-radius:12px;border:1px dashed var(--line)}
+    .section{margin-top:10px}
+    .group{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{padding:10px 14px;border-radius:999px;background:var(--glass);border:1px solid var(--line);cursor:pointer;min-height:44px}
+    .chip.active{background:linear-gradient(90deg,var(--brandA),var(--brandB));color:#001027;border:none;font-weight:800}
+    .field{display:grid;gap:6px;margin-top:8px}
+    .field input,.field textarea,.field select{
+      border-radius:10px;padding:12px;background:var(--glass-strong);color:#fff;border:1px solid var(--line);outline:none;font-size:1rem;min-height:44px
+    }
+    .field textarea{min-height:72px;resize:vertical}
+    .checkout{display:grid;gap:8px;margin-top:10px}
+    .btn{border:none;border-radius:14px;padding:12px 14px;font-weight:800;cursor:pointer;min-height:48px;touch-action:manipulation}
+    .btn.primary{background:linear-gradient(90deg,var(--brandA),var(--brandB));color:#001027}
+    .btn.ghost{background:transparent;border:1px dashed var(--line);color:#fff}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="bar">
+        <h1 class="brand">
+          CYBER <img class="mark" src="logo.png" alt="Logo"> DRAGON
+        </h1>
+
+        <div class="lang" title="Language">
+          <select id="langSel" aria-label="Language">
+            <option value="ru">RU</option><option value="en">EN</option>
+            <option value="ua">UA</option><option value="vn">VN</option>
+            <option value="pl">PL</option><option value="de">DE</option>
+            <option value="zh">ZH</option>
+          </select>
+        </div>
+
+        <button class="burger" id="burger" aria-haspopup="true" aria-expanded="false" aria-controls="navPop">☰</button>
+        <nav class="nav-pop" id="navPop" role="menu" aria-label="Main menu">
+          <a href="#" id="navHome" role="menuitem">🏠 HOME</a>
+          <a href="#" id="navMenu" role="menuitem">🍜 MENU</a>
+          <a href="#" id="navKaraoke" role="menuitem">🎤 KARAOKE</a>
+          <a href="#" id="navContact" role="menuitem">📞 KONTAKT</a>
+          <hr>
+          <div class="lang-inline" role="none">
+            🌐 <select id="langSelMenu" aria-label="Language (menu)">
+              <option value="ru">RU</option><option value="en">EN</option>
+              <option value="ua">UA</option><option value="vn">VN</option>
+              <option value="pl">PL</option><option value="de">DE</option>
+              <option value="zh">ZH</option>
+            </select>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Categories -->
+    <div class="h-scroll" id="catPills" aria-label="Categories"></div>
+
+    <!-- Items -->
+    <div class="list" id="list"></div>
+
+    <!-- FAB -->
+    <div class="fab">
+      <button class="cart-fab" id="cartFab" aria-haspopup="dialog">🛒 <span id="fabText">0 шт. • 0.00 €</span></button>
+    </div>
+  </div>
+
+  <!-- Sheet -->
+  <div class="overlay" id="overlay"></div>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <h3 id="sheetTitle"></h3>
+    <div class="cart-lines" id="cartLines"></div>
+
+    <!-- Order type -->
+    <div class="section">
+      <div class="muted" id="orderTypeTitle" style="margin-bottom:6px">Тип заказа</div>
+      <div class="group" id="orderType">
+        <button class="chip active" data-ot="on_site" id="otOnSite">На месте</button>
+        <button class="chip" data-ot="takeaway" id="otTakeaway">На вынос</button>
+        <button class="chip" data-ot="delivery" id="otDelivery">Доставка</button>
+      </div>
+
+      <div class="field" id="tableField" style="display:grid">
+        <label for="tableNo" id="tableLbl">Стол <span class="muted">(обязательно)</span></label>
+        <input id="tableNo" type="number" min="1" inputmode="numeric" placeholder="Например, 5">
+      </div>
+
+      <div class="field" id="takeawayField" style="display:none">
+        <label for="pickupIn" id="pickupLbl">Через сколько забрать (мин) <span class="muted">(обязательно)</span></label>
+        <input id="pickupIn" type="number" min="5" step="5" placeholder="15">
+      </div>
+
+      <div class="field" id="addrField" style="display:none">
+        <label for="address" id="addrLbl">Адрес доставки <span class="muted">(обязательно)</span></label>
+        <textarea id="address" placeholder="Город, улица, дом, подъезд..."></textarea>
+      </div>
+
+      <div class="field" id="phoneField">
+        <label for="phone" id="phoneLbl">Телефон <span class="muted" id="phoneHint">(необязательно)</span></label>
+        <input id="phone" type="tel" placeholder="+48 600 000 000">
+      </div>
+    </div>
+
+    <div class="checkout">
+      <div class="muted" id="cartMeta">Итого: 0.00 €</div>
+      <button class="btn primary" id="checkoutBtn">Оформить</button>
+      <button class="btn ghost" id="clearBtn">Очистить корзину</button>
+    </div>
+  </div>
+
+  <!-- Data -->
+  <script src="menu.js"></script>
+  <script>
+  // ---------- SETTINGS ----------
+  let LANG='ru'; document.documentElement.lang=LANG;
+  const CURRENCY='€';
+  const USE_IMAGES=true;               // ← вернули изображения
+  const IMG_DIR='images/'; const IMG_EXTS=['webp','jpg','jpeg','png'];
+
+  // ---------- I18N ----------
+  const I18N={ /* … тот же объект из прошлой версии (RU/EN/UA/VN/PL/DE/ZH) … */ };
+  I18N.ru={navHome:'Главная',navMenu:'Меню',navKaraoke:'Караоке',navContact:'Контакты',
+    sheetTitle:'Ваш заказ',orderTypeTitle:'Тип заказа',otOnSite:'На месте',otTakeaway:'На вынос',otDelivery:'Доставка',
+    tableLbl:'Стол',pickupLbl:'Через сколько забрать (мин)',addrLbl:'Адрес доставки',
+    phoneLbl:'Телефон',phoneOptional:'(необязательно)',phoneRequired:'(обязательно)',
+    total:'Итого',checkout:'Оформить',clear:'Очистить корзину',cartEmpty:'Корзина пуста.',
+    add:'Добавить',itemsShort:'шт.',alertTable:'Укажите номер стола.',alertPickup:'Укажите через сколько минут забрать.',
+    alertPhone:'Укажите телефон.',alertAddr:'Укажите адрес доставки.',orderAccepted:'Заказ принят ✔',typeLabel:'Тип',
+    comp:'Состав',allergens:'Аллергены',spicy:'Острота',kcal:'Калорийность',portion:'Порция'};
+  I18N.en={navHome:'Home',navMenu:'Menu',navKaraoke:'Karaoke',navContact:'Contact',
+    sheetTitle:'Your order',orderTypeTitle:'Order type',otOnSite:'Dine-in',otTakeaway:'Takeaway',otDelivery:'Delivery',
+    tableLbl:'Table',pickupLbl:'Pickup in (min)',addrLbl:'Delivery address',phoneLbl:'Phone',phoneOptional:'(optional)',phoneRequired:'(required)',
+    total:'Total',checkout:'Checkout',clear:'Clear cart',cartEmpty:'Cart is empty.',add:'Add',itemsShort:'pcs',
+    alertTable:'Please enter table number.',alertPickup:'Please enter pickup minutes.',alertPhone:'Please enter phone.',alertAddr:'Please enter delivery address.',
+    orderAccepted:'Order accepted ✔',typeLabel:'Type',comp:'Ingredients',allergens:'Allergens',spicy:'Spice',kcal:'Calories',portion:'Portion'};
+  I18N.ua={navHome:'Головна',navMenu:'Меню',navKaraoke:'Караоке',navContact:'Контакти',
+    sheetTitle:'Ваше замовлення',orderTypeTitle:'Тип замовлення',otOnSite:'На місці',otTakeaway:'З собою',otDelivery:'Доставка',
+    tableLbl:'Стіл',pickupLbl:'Через скільки забрати (хв)',addrLbl:'Адреса доставки',phoneLbl:'Телефон',
+    phoneOptional:'(необов’язково)',phoneRequired:'(обов’язково)',total:'Разом',checkout:'Оформити',clear:'Очистити кошик',
+    cartEmpty:'Кошик порожній.',add:'Додати',itemsShort:'шт.',alertTable:'Вкажіть номер столу.',alertPickup:'Вкажіть через скільки хвилин забрати.',
+    alertPhone:'Вкажіть телефон.',alertAddr:'Вкажіть адресу доставки.',orderAccepted:'Замовлення прийнято ✔',typeLabel:'Тип',
+    comp:'Склад',allergens:'Алергени',spicy:'Гострота',kcal:'Калорійність',portion:'Порція'};
+  I18N.vn={navHome:'Trang chủ',navMenu:'Thực đơn',navKaraoke:'Karaoke',navContact:'Liên hệ',
+    sheetTitle:'Đơn hàng của bạn',orderTypeTitle:'Hình thức',otOnSite:'Dùng tại chỗ',otTakeaway:'Mang đi',otDelivery:'Giao hàng',
+    tableLbl:'Bàn',pickupLbl:'Lấy sau (phút)',addrLbl:'Địa chỉ giao',phoneLbl:'Điện thoại',phoneOptional:'(không bắt buộc)',phoneRequired:'(bắt buộc)',
+    total:'Tổng',checkout:'Đặt hàng',clear:'Xoá giỏ',cartEmpty:'Giỏ trống.',add:'Thêm',itemsShort:'món',
+    alertTable:'Nhập số bàn.',alertPickup:'Nhập số phút lấy món.',alertPhone:'Nhập số điện thoại.',alertAddr:'Nhập địa chỉ giao.',
+    orderAccepted:'Đã nhận đơn ✔',typeLabel:'Loại',comp:'Thành phần',allergens:'Dị ứng',spicy:'Độ cay',kcal:'Năng lượng',portion:'Khẩu phần'};
+  I18N.pl={navHome:'Start',navMenu:'Menu',navKaraoke:'Karaoke',navContact:'Kontakt',
+    sheetTitle:'Twoje zamówienie',orderTypeTitle:'Rodzaj zamówienia',otOnSite:'Na miejscu',otTakeaway:'Na wynos',otDelivery:'Dostawa',
+    tableLbl:'Stolik',pickupLbl:'Za ile odebrać (min)',addrLbl:'Adres dostawy',phoneLbl:'Telefon',phoneOptional:'(opcjonalnie)',phoneRequired:'(wymagane)',
+    total:'Razem',checkout:'Zamów',clear:'Wyczyść koszyk',cartEmpty:'Koszyk jest pusty.',add:'Dodaj',itemsShort:'szt.',
+    alertTable:'Podaj numer stolika.',alertPickup:'Podaj liczbę minut do odbioru.',alertPhone:'Podaj telefon.',alertAddr:'Podaj adres dostawy.',
+    orderAccepted:'Zamówienie przyjęte ✔',typeLabel:'Typ',comp:'Skład',allergens:'Alergeny',spicy:'Ostrość',kcal:'Kalorie',portion:'Porcja'};
+  I18N.de={navHome:'Start',navMenu:'Menü',navKaraoke:'Karaoke',navContact:'Kontakt',
+    sheetTitle:'Ihre Bestellung',orderTypeTitle:'Bestellart',otOnSite:'Vor Ort',otTakeaway:'Zum Mitnehmen',otDelivery:'Lieferung',
+    tableLbl:'Tisch',pickupLbl:'Abholung in (Min.)',addrLbl:'Lieferadresse',phoneLbl:'Telefon',phoneOptional:'(optional)',phoneRequired:'(erforderlich)',
+    total:'Summe',checkout:'Bestellen',clear:'Warenkorb leeren',cartEmpty:'Warenkorb ist leer.',add:'Hinzufügen',itemsShort:'Stk.',
+    alertTable:'Bitte Tischnummer angeben.',alertPickup:'Bitte Abhol-Minuten angeben.',alertPhone:'Bitte Telefon angeben.',alertAddr:'Bitte Lieferadresse angeben.',
+    orderAccepted:'Bestellung angenommen ✔',typeLabel:'Art',comp:'Zutaten',allergens:'Allergene',spicy:'Schärfe',kcal:'Kalorien',portion:'Portion'};
+  I18N.zh={navHome:'主页',navMenu:'菜单',navKaraoke:'卡拉OK',navContact:'联系',
+    sheetTitle:'您的订单',orderTypeTitle:'下单类型',otOnSite:'堂食',otTakeaway:'外带',otDelivery:'外送',
+    tableLbl:'桌号',pickupLbl:'几分钟后取',addrLbl:'配送地址',phoneLbl:'电话',phoneOptional:'（可选）',phoneRequired:'（必填）',
+    total:'合计',checkout:'下单',clear:'清空购物车',cartEmpty:'购物车为空。',add:'加入',itemsShort:'件',
+    alertTable:'请输入桌号。',alertPickup:'请输入取餐分钟。',alertPhone:'请输入电话。',alertAddr:'请输入配送地址。',
+    orderAccepted:'订单已接收 ✔',typeLabel:'类型',comp:'配料',allergens:'过敏原',spicy:'辣度',kcal:'热量',portion:'份量'};
+
+  // ---------- Categories ----------
+  const CAT_LABELS={
+    'VORSPEISEN':{ru:'Закуски',vn:'Khai vị',en:'Starters',ua:'Закуски',pl:'Przystawki',de:'Vorspeisen',zh:'前菜'},
+    'HAUPTSPEISEN':{ru:'Основные блюда',vn:'Món chính',en:'Mains',ua:'Основні страви',pl:'Dania główne',de:'Hauptgerichte',zh:'主菜'},
+    'SUSHI':{ru:'Суши',vn:'Sushi',en:'Sushi',ua:'Суші',pl:'Sushi',de:'Sushi',zh:'寿司'},
+    'NACHSPEISEN':{ru:'Десерты',vn:'Tráng miệng',en:'Desserts',ua:'Десерти',pl:'Desery',de:'Nachspeisen',zh:'甜品'},
+    'BEILAGEN':{ru:'Гарниры',vn:'Món phụ',en:'Sides',ua:'Гарніри',pl:'Dodatki',de:'Beilagen',zh:'配菜'},
+    'GETRÄNKE':{ru:'Напитки',vn:'Đồ uống',en:'Drinks',ua:'Напої',pl:'Napoje',de:'Getränke',zh:'饮品'}
+  };
+  const catLabel=k=>(CAT_LABELS[k]?.[LANG]||CAT_LABELS[k]?.en||k);
+
+  // ---------- DESCRIPTIONS ----------
+  let DESCR={};
+  async function loadDescriptions(){
+    try{
+      const r=await fetch('descriptions.json',{cache:'no-store'});
+      if(r.ok){ DESCR=await r.json(); }
+    }catch(e){ console.warn('No descriptions.json', e); }
+  }
+
+  // ---------- HELPERS ----------
+  const $=s=>document.querySelector(s);
+  const $$=s=>document.querySelectorAll(s);
+  const fmt=n=>(Number(n).toFixed(2)+' '+CURRENCY);
+  const itemName=it=>it.translations?.[LANG]||it.translations?.en||it.key.replaceAll('_',' ');
+
+  function getDesc(it){
+    const fromJson = DESCR[it.key]?.description;
+    return (fromJson && (fromJson[LANG]||fromJson.en)) || it.short || it.description || it.desc || '';
+  }
+
+  // загрузка миниатюры с перебором расширений и фолбэком
+  function buildThumb(imgEl, key){
+    let i=0;
+    const trySet=()=>{ imgEl.src = IMG_DIR + key + '.' + IMG_EXTS[i]; };
+    imgEl.onerror = ()=>{ i++; if(i<IMG_EXTS.length){ trySet(); } else { const t=imgEl.closest('.thumb'); if(t) t.classList.add('noimg'); imgEl.remove(); } };
+    trySet();
+  }
+
+  // ---------- STATE ----------
+  const cart=new Map(); let currentCat=null;
+
+  // ---------- RENDER ----------
+  function renderPills(){
+    const keys=Object.keys(menuData); currentCat=currentCat||keys[0];
+    const wrap=$('#catPills');
+    wrap.innerHTML=keys.map(k=>`<button class="pill ${k===currentCat?'active':''}" data-cat="${k}">${catLabel(k)}</button>`).join('');
+    wrap.onclick=e=>{
+      const b=e.target.closest('.pill'); if(!b) return;
+      $$('#catPills .pill').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active'); currentCat=b.dataset.cat;
+      renderList();
+    };
+  }
+
+  function renderList(){
+    const wrap=$('#list'); const items=menuData[currentCat]||[]; const L=I18N[LANG];
+    wrap.innerHTML=items.map((it,idx)=>{
+      const name=itemName(it); const id=`${currentCat}:${idx}`; const qty=cart.get(id)||0; const price=it.price??0;
+      const btn=qty?`<div class="qty" data-qty="${id}"><button data-dec="${id}">−</button><span>${qty}</span><button data-inc="${id}">+</button></div>`
+                   :`<button class="add" data-add="${id}">${L.add}</button>`;
+      const descText=getDesc(it);
+      return `<div class="item" data-id="${id}">
+        <div class="thumb">${USE_IMAGES?'<img loading="lazy" decoding="async" alt="'+name+'">':''}</div>
+        <div>
+          <div class="name-row">
+            <div class="name">${name}</div>
+            <button class="info" title="i" data-toggle="${id}">i</button>
+          </div>
+          ${descText?`<p class="desc">${descText}</p>`:''}
+        </div>
+        <div style="display:grid;gap:8px;justify-items:end">
+          <div class="price">${fmt(price)}</div>
+          ${btn}
+        </div>
+        <div class="more"></div>
+      </div>`}).join('');
+
+    // подставляем изображения
+    if(USE_IMAGES){
+      wrap.querySelectorAll('.item').forEach(row=>{
+        const id=row.getAttribute('data-id'); const [cat,idx]=id.split(':');
+        const key=(menuData[cat]?.[+idx]?.key)||''; const img=row.querySelector('.thumb img');
+        if(img && key) buildThumb(img,key);
+      });
+    }
+  }
+
+  function renderCartSheet(){
+    const lines=$('#cartLines'); const L=I18N[LANG];
+    if(cart.size===0){lines.innerHTML=`<div class="muted">${L.cartEmpty}</div>`; $('#cartMeta').textContent=`${L.total}: `+fmt(0); return;}
+    let sum=0; lines.innerHTML='';
+    for(const [id,qty] of cart){
+      const [cat,idx]=id.split(':'); const it=menuData[cat]?.[+idx]; if(!it) continue;
+      const name=itemName(it); const lineSum=(it.price||0)*qty; sum+=lineSum;
+      const el=document.createElement('div'); el.className='line';
+      el.innerHTML=`<div><strong>${name}</strong><div class="muted">${fmt(it.price||0)} × ${qty}</div></div>
+        <div class="qty" data-qty="${id}"><button data-dec="${id}">−</button><span>${qty}</span><button data-inc="${id}">+</button></div>`;
+      lines.appendChild(el);
+    }
+    $('#cartMeta').textContent=`${I18N[LANG].total}: `+fmt(sum);
+  }
+
+  function renderFab(){
+    let items=0,sum=0;
+    for(const [id,qty] of cart){ const [cat,idx]=id.split(':'); const it=menuData[cat]?.[+idx]; if(!it) continue; items+=qty; sum+=(it.price||0)*qty; }
+    $('#fabText').textContent=`${items} ${I18N[LANG].itemsShort} • ${fmt(sum).replace(' ',' ')}`;
+  }
+
+  // ---------- UI TEXTS ----------
+  function setUITexts(){
+    const L=I18N[LANG];
+    $('#navHome').textContent=`🏠 ${L.navHome}`;
+    $('#navMenu').textContent=`🍜 ${L.navMenu}`;
+    $('#navKaraoke').textContent=`🎤 ${L.navKaraoke}`;
+    $('#navContact').textContent=`📞 ${L.navContact}`;
+    $('#sheetTitle').textContent=L.sheetTitle;
+    $('#orderTypeTitle').textContent=L.orderTypeTitle;
+    $('#otOnSite').textContent=L.otOnSite;
+    $('#otTakeaway').textContent=L.otTakeaway;
+    $('#otDelivery').textContent=L.otDelivery;
+    $('#tableLbl').innerHTML=`${L.tableLbl} <span class="muted">${L.phoneRequired}</span>`;
+    $('#pickupLbl').innerHTML=`${L.pickupLbl} <span class="muted">${L.phoneRequired}</span>`;
+    $('#addrLbl').innerHTML=`${L.addrLbl} <span class="muted">${L.phoneRequired}</span>`;
+    $('#phoneLbl').childNodes[0].nodeValue=`${L.phoneLbl} `;
+    $('#checkoutBtn').textContent=L.checkout;
+    $('#clearBtn').textContent=L.clear;
+    renderPills(); renderList(); renderCartSheet(); renderFab();
+  }
+
+  // ---------- EVENTS ----------
+  document.addEventListener('click', e=>{
+    const add=e.target.closest('[data-add]');
+    if(add){const id=add.dataset.add; cart.set(id,(cart.get(id)||0)+1); renderList(); renderFab(); return;}
+    const inc=e.target.closest('[data-inc]');
+    if(inc){const id=inc.dataset.inc; cart.set(id,(cart.get(id)||0)+1); renderList(); renderCartSheet(); renderFab(); return;}
+    const dec=e.target.closest('[data-dec]');
+    if(dec){const id=dec.dataset.dec; const q=(cart.get(id)||0)-1; if(q<=0) cart.delete(id); else cart.set(id,q); renderList(); renderCartSheet(); renderFab(); return;}
+
+    // expand card
+    const infoBtn=e.target.closest('[data-toggle]');
+    const itemEl=infoBtn?document.querySelector(`.item[data-id="${infoBtn.dataset.toggle}"]`):e.target.closest('.item');
+    if(itemEl && !e.target.closest('.add') && !e.target.closest('.qty')){ itemEl.classList.toggle('expanded'); return; }
+
+    // open cart
+    if(e.target.closest('#cartFab')){
+      document.body.style.overflow='hidden';
+      $('#overlay').classList.add('show');
+      const sh=$('#sheet'); sh.classList.add('open'); sh.scrollTop=0;
+      renderCartSheet(); return;
+    }
+
+    // overlay closes
+    if(e.target.id==='overlay'){ closeSheet(); }
+
+    // clear
+    if(e.target.id==='clearBtn'){ cart.clear(); renderList(); renderCartSheet(); renderFab(); }
+  });
+
+  function closeSheet(){
+    document.body.style.overflow='';
+    $('#overlay').classList.remove('show');
+    $('#sheet').classList.remove('open');
+  }
+
+  // burger menu
+  const burger=$('#burger'), navPop=$('#navPop');
+  burger.addEventListener('click',()=>{const open=navPop.classList.toggle('open'); burger.setAttribute('aria-expanded',String(open));});
+  document.addEventListener('click',e=>{if(!navPop.contains(e.target)&&e.target!==burger){navPop.classList.remove('open'); burger.setAttribute('aria-expanded','false');}});
+
+  // order type
+  const otWrap=$('#orderType'), tableField=$('#tableField'), takeawayField=$('#takeawayField'), addrField=$('#addrField');
+  const tableNo=$('#tableNo'), pickupIn=$('#pickupIn'), address=$('#address'), phone=$('#phone'), phoneHint=$('#phoneHint');
+  function show(el,on){el.style.display=on?'grid':'none'}
+  function setPhoneHint(req){phoneHint.textContent=req?I18N[LANG].phoneRequired:I18N[LANG].phoneOptional}
+  function setOrderType(v){
+    if(v==='on_site'){show(tableField,true);show(takeawayField,false);show(addrField,false);setPhoneHint(false);tableNo.required=true;pickupIn.required=false;address.required=false;}
+    else if(v==='takeaway'){show(tableField,false);show(takeawayField,true);show(addrField,false);setPhoneHint(true);tableNo.required=false;pickupIn.required=true;address.required=false;}
+    else{show(tableField,false);show(takeawayField,false);show(addrField,true);setPhoneHint(true);tableNo.required=false;pickupIn.required=false;address.required=true;}
+  }
+  otWrap.addEventListener('click',e=>{const b=e.target.closest('[data-ot]'); if(!b) return; $$('#orderType .chip').forEach(x=>x.classList.remove('active')); b.classList.add('active'); setOrderType(b.dataset.ot);});
+
+  // checkout
+  $('#checkoutBtn').addEventListener('click',()=>{
+    const L=I18N[LANG]; const ot=document.querySelector('#orderType .chip.active')?.dataset.ot;
+    if(ot==='on_site'){ if(!tableNo.value.trim()){alert(L.alertTable);return;} }
+    else if(ot==='takeaway'){ if(!pickupIn.value.trim()){alert(L.alertPickup);return;} if(!phone.value.trim()){alert(L.alertPhone);return;} }
+    else { if(!address.value.trim()){alert(L.alertAddr);return;} if(!phone.value.trim()){alert(L.alertPhone);return;} }
+    const meta=[]; if(ot==='on_site') meta.push(L.tableLbl+': '+tableNo.value.trim());
+    if(ot==='takeaway') meta.push(L.pickupLbl+': '+pickupIn.value.trim()+' min');
+    if(ot==='delivery') meta.push(L.addrLbl+': '+address.value.trim());
+    if(phone.value.trim()) meta.push(L.phoneLbl+': '+phone.value.trim());
+    alert(`${L.orderAccepted}\n${L.typeLabel}: ${I18N[LANG][ ot==='on_site'?'otOnSite': ot==='takeaway'?'otTakeaway':'otDelivery' ]}\n${meta.join('\n')}`);
+    closeSheet();
+  });
+
+  // language
+  const selA=$('#langSel'), selB=$('#langSelMenu');
+  function setLang(v){
+    LANG=v; selA.value=v; selB.value=v; document.documentElement.lang=v;
+    setUITexts(); const activeOT=document.querySelector('#orderType .chip.active')?.dataset.ot||'on_site'; setOrderType(activeOT);
+  }
+  selA.addEventListener('change',e=>setLang(e.target.value));
+  selB.addEventListener('change',e=>setLang(e.target.value));
+
+  // ---------- INIT ----------
+  (async ()=>{
+    await loadDescriptions();
+    setLang(LANG);
+    renderPills(); renderList(); renderFab(); setOrderType('on_site');
+  })();
+  </script>
+</body>
+</html>

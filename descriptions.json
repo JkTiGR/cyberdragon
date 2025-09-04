@@ -1,0 +1,2169 @@
+{
+  "VORSPEISEN_SUPPEN_SUP_TOM_YAM": {
+    "description": {
+      "ru": "Кисло‑острый тайский суп с лемонграссом, лаймом и чили.",
+      "vn": "Súp Tom Yum chua cay với sả, chanh và ớt.",
+      "ua": "Кисло‑гострий тайський суп із лемонграсом, лаймом та чилі.",
+      "en": "Hot & sour Thai soup with lemongrass, lime and chili.",
+      "pl": "Kwaśno‑ostra tajska zupa z trawą cytrynową, limonką i chili.",
+      "de": "Sauer‑pikante thailändische Suppe mit Zitronengras, Limette und Chili.",
+      "zh": "酸辣泰式冬荫汤，配香茅、青柠与辣椒。"
+    }
+  },
+  "VORSPEISEN_SUPPEN_MISOSUPPE": {
+    "description": {
+      "ru": "Классический мисо‑суп с тофу, вакаме и зелёным луком.",
+      "vn": "Súp miso cổ điển với đậu phụ, wakame và hành lá.",
+      "ua": "Класичний місо‑суп із тофу, вакаме та зеленою цибулькою.",
+      "en": "Classic miso soup with tofu, wakame and scallion.",
+      "pl": "Klasyczna zupa miso z tofu, wakame i szczypiorkiem.",
+      "de": "Klassische Miso‑Suppe mit Tofu, Wakame und Frühlingszwiebeln.",
+      "zh": "经典味噌汤，配豆腐、裙带菜与葱。"
+    }
+  },
+  "VORSPEISEN_SUPPEN_SUP_CAI": {
+    "description": {
+      "ru": "Лёгкий суп из пак‑чоя с имбирём.",
+      "vn": "Súp cải thìa thanh nhẹ với gừng.",
+      "ua": "Легкий суп із пак‑чою з імбиром.",
+      "en": "Light pak choi soup with ginger.",
+      "pl": "Lekka zupa z pak choi z imbirem.",
+      "de": "Leichte Pak‑Choi‑Suppe mit Ingwer.",
+      "zh": "清爽小白菜汤，配姜。"
+    }
+  },
+  "VORSPEISEN_SUPPEN_PHO_BO": {
+    "description": {
+      "ru": "Традиционный вьетнамский суп фо с говядиной, рисовой лапшой и свежими травами.",
+      "vn": "Phở Việt Nam truyền thống với bò, bánh phở và rau thơm.",
+      "ua": "Традиційний в'єтнамський фо з яловичиною, рисовою локшиною та зеленню.",
+      "en": "Traditional Vietnamese pho with beef, rice noodles and fresh herbs.",
+      "pl": "Tradycyjne wietnamskie pho z wołowiną, makaronem ryżowym i świeżymi ziołami.",
+      "de": "Traditionelle vietnamesische Pho-Suppe mit Rindfleisch, Reisbandnudeln und frischen Kräutern.",
+      "zh": "越南传统河粉，配牛肉、米粉与新鲜香草。"
+    }
+  },
+  "VORSPEISEN_CHA_GIO": {
+    "description": {
+      "ru": "Хрустящие жареные спринг‑роллы с овощами, подаются с соусом.",
+      "vn": "Chả giò chiên giòn với rau củ, ăn kèm nước chấm.",
+      "ua": "Хрусткі смажені спрінг‑ролли з овочами, подаються з соусом.",
+      "en": "Crispy fried spring rolls with vegetables and dipping sauce.",
+      "pl": "Chrupiące smażone spring rollsy z warzywami i sosem.",
+      "de": "Knusprige Frühlingsrollen mit Gemüse und Dip.",
+      "zh": "香脆炸春卷，配蘸酱。"
+    }
+  },
+  "VORSPEISEN_NEM_DE": {
+    "description": {
+      "ru": "Хрустящие жареные спринг‑роллы с овощами, подаются с соусом.",
+      "vn": "Chả giò chiên giòn với rau củ, ăn kèm nước chấm.",
+      "ua": "Хрусткі смажені спрінг‑ролли з овочами, подаються з соусом.",
+      "en": "Crispy fried spring rolls with vegetables and dipping sauce.",
+      "pl": "Chrupiące smażone spring rollsy z warzywami i sosem.",
+      "de": "Knusprige Frühlingsrollen mit Gemüse und Dip.",
+      "zh": "香脆炸春卷，配蘸酱。"
+    }
+  },
+  "VORSPEISEN_NEM_HAI_SAN": {
+    "description": {
+      "ru": "Хрустящие жареные спринг‑роллы с овощами, подаются с соусом.",
+      "vn": "Chả giò chiên giòn với rau củ, ăn kèm nước chấm.",
+      "ua": "Хрусткі смажені спрінг‑ролли з овочами, подаються з соусом.",
+      "en": "Crispy fried spring rolls with vegetables and dipping sauce.",
+      "pl": "Chrupiące smażone spring rollsy z warzywami i sosem.",
+      "de": "Knusprige Frühlingsrollen mit Gemüse und Dip.",
+      "zh": "香脆炸春卷，配蘸酱。"
+    }
+  },
+  "VORSPEISEN_NEM_CHAY": {
+    "description": {
+      "ru": "Хрустящие жареные спринг‑роллы с овощами, подаются с соусом.",
+      "vn": "Chả giò chiên giòn với rau củ, ăn kèm nước chấm.",
+      "ua": "Хрусткі смажені спрінг‑ролли з овочами, подаються з соусом.",
+      "en": "Crispy fried spring rolls with vegetables and dipping sauce.",
+      "pl": "Chrupiące smażone spring rollsy z warzywami i sosem.",
+      "de": "Knusprige Frühlingsrollen mit Gemüse und Dip.",
+      "zh": "香脆炸春卷，配蘸酱。"
+    }
+  },
+  "VORSPEISEN_CHA_LA_LOT": {
+    "description": {
+      "ru": "Свинина, запечённая в листьях бетеля, с рисовой лапшой и соусом.",
+      "vn": "Chả lá lốt thịt heo, ăn kèm bún và nước chấm.",
+      "ua": "Свинина, запечена в листі бетелю, з рисовою локшиною та соусом.",
+      "en": "Pork wrapped in betel leaves, served with rice noodles and dip.",
+      "pl": "Wieprzowina w liściach betelu, podawana z makaronem ryżowym i sosem.",
+      "de": "Schweinefleisch in Betelblättern mit Reisnudeln und Dip.",
+      "zh": "蒌叶包猪肉，配米粉与蘸酱。"
+    }
+  },
+  "VORSPEISEN_HUEHNERSPIEßE": {
+    "description": {
+      "ru": "Куриные шашлычки на гриле, подаются с соусом терияки или арахисовым.",
+      "vn": "Xiên gà nướng, dùng kèm sốt teriyaki hoặc đậu phộng.",
+      "ua": "Курячі шпажки на грилі з соусом теріякі або арахісовим.",
+      "en": "Grilled chicken skewers with teriyaki or peanut sauce.",
+      "pl": "Grillowane szaszłyki z kurczaka z sosem teriyaki lub orzechowym.",
+      "de": "Gegrillte Hähnchenspieße mit Teriyaki‑ oder Erdnuss‑Soße.",
+      "zh": "炭烤鸡肉串，配照烧或花生酱。"
+    }
+  },
+  "VORSPEISEN_TOM_CHIEN": {
+    "description": {
+      "ru": "Горячая закуска азиатского стиля.",
+      "vn": "Khai vị phong cách Á Đông.",
+      "ua": "Гаряча закуска в азійському стилі.",
+      "en": "Asian‑style hot appetizer.",
+      "pl": "Gorąca przystawka w stylu azjatyckim.",
+      "de": "Warme asiatische Vorspeise.",
+      "zh": "亚洲风味热前菜。"
+    }
+  },
+  "VORSPEISEN_EDAMAME": {
+    "description": {
+      "ru": "Тёплые стручки сои, слегка подсоленные.",
+      "vn": "Đậu nành edamame ấm, rắc muối nhẹ.",
+      "ua": "Теплі стручки сої, злегка підсолені.",
+      "en": "Warm salted edamame pods.",
+      "pl": "Ciepłe, lekko solone strąki edamame.",
+      "de": "Warme, leicht gesalzene Edamame.",
+      "zh": "温热轻盐毛豆。"
+    }
+  },
+  "VORSPEISEN_MONEY_TASCHE": {
+    "description": {
+      "ru": "Горячая закуска азиатского стиля.",
+      "vn": "Khai vị phong cách Á Đông.",
+      "ua": "Гаряча закуска в азійському стилі.",
+      "en": "Asian‑style hot appetizer.",
+      "pl": "Gorąca przystawka w stylu azjatyckim.",
+      "de": "Warme asiatische Vorspeise.",
+      "zh": "亚洲风味热前菜。"
+    }
+  },
+  "VORSPEISEN_NEM_MIX": {
+    "description": {
+      "ru": "Хрустящие жареные спринг‑роллы с овощами, подаются с соусом.",
+      "vn": "Chả giò chiên giòn với rau củ, ăn kèm nước chấm.",
+      "ua": "Хрусткі смажені спрінг‑ролли з овочами, подаються з соусом.",
+      "en": "Crispy fried spring rolls with vegetables and dipping sauce.",
+      "pl": "Chrupiące smażone spring rollsy z warzywami i sosem.",
+      "de": "Knusprige Frühlingsrollen mit Gemüse und Dip.",
+      "zh": "香脆炸春卷，配蘸酱。"
+    }
+  },
+  "VORSPEISEN_TOM_KHAOI_CHIEN": {
+    "description": {
+      "ru": "Горячая закуска азиатского стиля.",
+      "vn": "Khai vị phong cách Á Đông.",
+      "ua": "Гаряча закуска в азійському стилі.",
+      "en": "Asian‑style hot appetizer.",
+      "pl": "Gorąca przystawka w stylu azjatyckim.",
+      "de": "Warme asiatische Vorspeise.",
+      "zh": "亚洲风味热前菜。"
+    }
+  },
+  "VORSPEISEN_SALAT_XANH": {
+    "description": {
+      "ru": "Зелений салат із помидорами черрі та огірком у маракуйя‑дресингу.",
+      "vn": "Salad xanh với cà chua bi, dưa chuột và sốt chanh dây.",
+      "ua": "Зелений салат з томатами чері та огірком у соусі з маракуї.",
+      "en": "Green salad with cherry tomatoes and cucumber in passion fruit dressing.",
+      "pl": "Zielona sałata z pomidorkami i ogórkiem w sosie z marakui.",
+      "de": "Grüner Salat mit Kirschtomaten und Gurke im Maracuja‑Dressing.",
+      "zh": "绿色沙拉，百香果酱。"
+    }
+  },
+  "VORSPEISEN_SALAT_NOM_XOAI": {
+    "description": {
+      "ru": "Закуска.",
+      "vn": "Món khai vị.",
+      "ua": "Закуска.",
+      "en": "Appetizer.",
+      "pl": "Przystawka.",
+      "de": "Vorspeise.",
+      "zh": "前菜。"
+    }
+  },
+  "VORSPEISEN_SALAT_WAKAME": {
+    "description": {
+      "ru": "Салат из водорослей вакаме.",
+      "vn": "Salad rong biển wakame.",
+      "ua": "Салат з водоростей вакаме.",
+      "en": "Wakame seaweed salad.",
+      "pl": "Sałatka z wodorostów wakame.",
+      "de": "Wakame‑Algensalat.",
+      "zh": "裙带菜沙拉。"
+    }
+  },
+  "VORSPEISEN_SALAT_DU_DU": {
+    "description": {
+      "ru": "Салат із зеленої папаї з креветками, лаймом та арахісом.",
+      "vn": "Gỏi đu đủ xanh với tôm, chanh và đậu phộng.",
+      "ua": "Салат із зеленої папаї з креветками, лаймом та арахісом.",
+      "en": "Green papaya salad with shrimp, lime and peanuts.",
+      "pl": "Sałatka z zielonej papai z krewetkami, limonką i orzeszkami.",
+      "de": "Grüner Papaya‑Salat mit Garnelen, Limette und Erdnüssen.",
+      "zh": "青木瓜沙拉，配虾、青柠与花生。"
+    }
+  },
+  "VORSPEISEN_DUMPLINGS_VEGGIE_DUMPLINGS": {
+    "description": {
+      "ru": "Овощные дамплинги на пару с соевым дип‑соусом.",
+      "vn": "Há cảo rau củ hấp, chấm xì dầu.",
+      "ua": "Овочеві дамплінги на парі з соєвим соусом.",
+      "en": "Steamed veggie dumplings with soy dip.",
+      "pl": "Gotowane na parze pierożki warzywne z sosem sojowym.",
+      "de": "Gedämpfte Gemüse‑Dumplings mit Sojadip.",
+      "zh": "清蒸蔬菜饺，配酱油蘸料。"
+    }
+  },
+  "VORSPEISEN_DUMPLINGS_KIMCHI_DUMPLINGS": {
+    "description": {
+      "ru": "Дамплинги с кимчи — пикантные и ароматные.",
+      "vn": "Há cảo nhân kimchi — chua cay, thơm nồng.",
+      "ua": "Дамплінги з кімчі — пікантні та ароматні.",
+      "en": "Dumplings with kimchi — tangy and aromatic.",
+      "pl": "Pierożki z kimchi — pikantne i aromatyczne.",
+      "de": "Dumplings mit Kimchi — würzig und aromatisch.",
+      "zh": "泡菜饺，酸辣芬芳。"
+    }
+  },
+  "VORSPEISEN_DUMPLINGS_CHICKEN_DUMPLINGS": {
+    "description": {
+      "ru": "Дамплинги с курицей, приготовленные на пару, с соевым соусом.",
+      "vn": "Há cảo nhân gà hấp, chấm xì dầu.",
+      "ua": "Дамплінги з куркою, приготовані на парі, з соєвим соусом.",
+      "en": "Steamed chicken dumplings with soy sauce.",
+      "pl": "Pierożki z kurczakiem na parze z sosem sojowym.",
+      "de": "Gedämpfte Hähnchen‑Dumplings mit Sojasoße.",
+      "zh": "清蒸鸡肉饺，配酱油。"
+    }
+  },
+  "VORSPEISEN_DUMPLINGS_SHAO_MAI": {
+    "description": {
+      "ru": "Горячая закуска азиатского стиля.",
+      "vn": "Khai vị phong cách Á Đông.",
+      "ua": "Гаряча закуска в азійському стилі.",
+      "en": "Asian‑style hot appetizer.",
+      "pl": "Gorąca przystawka w stylu azjatyckim.",
+      "de": "Warme asiatische Vorspeise.",
+      "zh": "亚洲风味热前菜。"
+    }
+  },
+  "VORSPEISEN_DUMPLINGS_DUMPLINGS_MIX": {
+    "description": {
+      "ru": "Закуска.",
+      "vn": "Món khai vị.",
+      "ua": "Закуска.",
+      "en": "Appetizer.",
+      "pl": "Przystawka.",
+      "de": "Vorspeise.",
+      "zh": "前菜。"
+    }
+  },
+  "VORSPEISEN_SOMMERROLLEN_SOMMERROLLEN": {
+    "description": {
+      "ru": "Свежие летние роллы в рисовой бумаге с травами и выбором начинки.",
+      "vn": "Gỏi cuốn tươi bọc bánh tráng với rau thơm và nhân tuỳ chọn.",
+      "ua": "Свіжі літні роли у рисовому папері з зеленню та вибором начинки.",
+      "en": "Fresh summer rolls in rice paper with herbs and your choice of filling.",
+      "pl": "Świeże sajgonki w papierze ryżowym z ziołami i nadzieniem do wyboru.",
+      "de": "Frische Sommerrollen im Reispapier mit Kräutern und Füllung nach Wahl.",
+      "zh": "越南鲜春卷，米纸包裹香草与自选馅料。"
+    }
+  },
+  "VORSPEISEN_SOMMERROLLEN_HUEHNERSPIEßE": {
+    "description": {
+      "ru": "Куриные шашлычки на гриле, подаются с соусом терияки или арахисовым.",
+      "vn": "Xiên gà nướng, dùng kèm sốt teriyaki hoặc đậu phộng.",
+      "ua": "Курячі шпажки на грилі з соусом теріякі або арахісовим.",
+      "en": "Grilled chicken skewers with teriyaki or peanut sauce.",
+      "pl": "Grillowane szaszłyki z kurczaka z sosem teriyaki lub orzechowym.",
+      "de": "Gegrillte Hähnchenspieße mit Teriyaki‑ oder Erdnuss‑Soße.",
+      "zh": "炭烤鸡肉串，配照烧或花生酱。"
+    }
+  },
+  "VORSPEISEN_SOMMERROLLEN_GARNELEN": {
+    "description": {
+      "ru": "Свежие летние роллы в рисовой бумаге с травами и выбором начинки.",
+      "vn": "Gỏi cuốn tươi bọc bánh tráng với rau thơm và nhân tuỳ chọn.",
+      "ua": "Свіжі літні роли у рисовому папері з зеленню та вибором начинки.",
+      "en": "Fresh summer rolls in rice paper with herbs and your choice of filling.",
+      "pl": "Świeże sajgonki w papierze ryżowym z ziołami i nadzieniem do wyboru.",
+      "de": "Frische Sommerrollen im Reispapier mit Kräutern und Füllung nach Wahl.",
+      "zh": "越南鲜春卷，米纸包裹香草与自选馅料。"
+    }
+  },
+  "VORSPEISEN_SOMMERROLLEN_TOFU": {
+    "description": {
+      "ru": "Свежие летние роллы в рисовой бумаге с травами и выбором начинки.",
+      "vn": "Gỏi cuốn tươi bọc bánh tráng với rau thơm và nhân tuỳ chọn.",
+      "ua": "Свіжі літні роли у рисовому папері з зеленню та вибором начинки.",
+      "en": "Fresh summer rolls in rice paper with herbs and your choice of filling.",
+      "pl": "Świeże sajgonki w papierze ryżowym z ziołami i nadzieniem do wyboru.",
+      "de": "Frische Sommerrollen im Reispapier mit Kräutern und Füllung nach Wahl.",
+      "zh": "越南鲜春卷，米纸包裹香草与自选馅料。"
+    }
+  },
+  "VORSPEISEN_SOMMERROLLEN_LACHS": {
+    "description": {
+      "ru": "Свежие летние роллы в рисовой бумаге с травами и выбором начинки.",
+      "vn": "Gỏi cuốn tươi bọc bánh tráng với rau thơm và nhân tuỳ chọn.",
+      "ua": "Свіжі літні роли у рисовому папері з зеленню та вибором начинки.",
+      "en": "Fresh summer rolls in rice paper with herbs and your choice of filling.",
+      "pl": "Świeże sajgonki w papierze ryżowym z ziołami i nadzieniem do wyboru.",
+      "de": "Frische Sommerrollen im Reispapier mit Kräutern und Füllung nach Wahl.",
+      "zh": "越南鲜春卷，米纸包裹香草与自选馅料。"
+    }
+  },
+  "VORSPEISEN_SOMMERROLLEN_ENTE": {
+    "description": {
+      "ru": "Свежие летние роллы в рисовой бумаге с травами и выбором начинки.",
+      "vn": "Gỏi cuốn tươi bọc bánh tráng với rau thơm và nhân tuỳ chọn.",
+      "ua": "Свіжі літні роли у рисовому папері з зеленню та вибором начинки.",
+      "en": "Fresh summer rolls in rice paper with herbs and your choice of filling.",
+      "pl": "Świeże sajgonki w papierze ryżowym z ziołami i nadzieniem do wyboru.",
+      "de": "Frische Sommerrollen im Reispapier mit Kräutern und Füllung nach Wahl.",
+      "zh": "越南鲜春卷，米纸包裹香草与自选馅料。"
+    }
+  },
+  "HAUPTSPEISEN_PHO_BO": {
+    "description": {
+      "ru": "Традиционный вьетнамский суп фо с говядиной, рисовой лапшой и свежими травами.",
+      "vn": "Phở Việt Nam truyền thống với bò, bánh phở và rau thơm.",
+      "ua": "Традиційний в'єтнамський фо з яловичиною, рисовою локшиною та зеленню.",
+      "en": "Traditional Vietnamese pho with beef, rice noodles and fresh herbs.",
+      "pl": "Tradycyjne wietnamskie pho z wołowiną, makaronem ryżowym i świeżymi ziołami.",
+      "de": "Traditionelle vietnamesische Pho-Suppe mit Rindfleisch, Reisbandnudeln und frischen Kräutern.",
+      "zh": "越南传统河粉，配牛肉、米粉与新鲜香草。"
+    }
+  },
+  "HAUPTSPEISEN_PHO_GA": {
+    "description": {
+      "ru": "Традиционный вьетнамский суп фо с курицей, рисовой лапшой и свежими травами.",
+      "vn": "Phở Việt Nam truyền thống với gà, bánh phở và rau thơm.",
+      "ua": "Традиційний в'єтнамський фо з куркою, рисовою локшиною та зеленню.",
+      "en": "Traditional Vietnamese pho with chicken, rice noodles and fresh herbs.",
+      "pl": "Tradycyjne wietnamskie pho z kurczakiem, makaronem ryżowym i świeżymi ziołami.",
+      "de": "Traditionelle vietnamesische Pho-Suppe mit Hähnchen, Reisbandnudeln und frischen Kräutern.",
+      "zh": "越南传统河粉，配鸡肉、米粉与新鲜香草。"
+    }
+  },
+  "HAUPTSPEISEN_PHO_TOFU": {
+    "description": {
+      "ru": "Традиционный вьетнамский суп фо с тофу, рисовой лапшой и свежими травами.",
+      "vn": "Phở Việt Nam truyền thống với đậu phụ, bánh phở và rau thơm.",
+      "ua": "Традиційний в'єтнамський фо з тофу, рисовою локшиною та зеленню.",
+      "en": "Traditional Vietnamese pho with tofu, rice noodles and fresh herbs.",
+      "pl": "Tradycyjne wietnamskie pho z tofu, makaronem ryżowym i świeżymi ziołami.",
+      "de": "Traditionelle vietnamesische Pho-Suppe mit Tofu, Reisbandnudeln und frischen Kräutern.",
+      "zh": "越南传统河粉，配豆腐、米粉与新鲜香草。"
+    }
+  },
+  "HAUPTSPEISEN_PHO_TRON_THAP_CAM": {
+    "description": {
+      "ru": "Свежая рисовая лапша, травы, орехи и мясо/креветки — в соусе нуок‑чам.",
+      "vn": "Bánh phở tươi, rau thơm, đậu phộng và thịt/tôm cùng nước chấm.",
+      "ua": "Свіжа рисова локшина, трави, арахіс та м'ясо/креветки у соусі нуок‑чам.",
+      "en": "Fresh rice noodles with herbs, peanuts and meat/shrimp in nuoc‑cham.",
+      "pl": "Świeży makaron ryżowy z ziołami, orzeszkami i mięsem/krewetkami w sosie nuoc‑cham.",
+      "de": "Frische Reisbandnudeln mit Kräutern, Erdnüssen und Fleisch/Garnelen in vietnamesischer Soße.",
+      "zh": "新鲜河粉配香草、花生与肉/虾，拌鱼露。"
+    }
+  },
+  "HAUPTSPEISEN_PHO_XAO_BO": {
+    "description": {
+      "ru": "Жареная рисовая лапша фо с говядиной и овощами.",
+      "vn": "Phở xào với bò và rau củ.",
+      "ua": "Смажена рисова локшина фо з яловичиною та овочами.",
+      "en": "Stir‑fried pho rice noodles with beef and vegetables.",
+      "pl": "Smażony makaron ryżowy pho z wołowiną i warzywami.",
+      "de": "Gebratene Pho-Reisbandnudeln mit Rindfleisch und Gemüse.",
+      "zh": "炒河粉，配牛肉与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_PHO_XAO_GA": {
+    "description": {
+      "ru": "Жареная рисовая лапша фо с хрустящей курицей и овощами.",
+      "vn": "Phở xào với gà giòn và rau củ.",
+      "ua": "Смажена рисова локшина фо з хрусткою куркою та овочами.",
+      "en": "Stir‑fried pho rice noodles with crispy chicken and vegetables.",
+      "pl": "Smażony makaron ryżowy pho z chrupiącym kurczakiem i warzywami.",
+      "de": "Gebratene Pho-Reisbandnudeln mit knusprigem Hähnchen und Gemüse.",
+      "zh": "炒河粉，配香脆鸡肉与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_PHO_XAO_GA_GION": {
+    "description": {
+      "ru": "Жареная рисовая лапша фо с хрустящей курицей и овощами.",
+      "vn": "Phở xào với gà giòn và rau củ.",
+      "ua": "Смажена рисова локшина фо з хрусткою куркою та овочами.",
+      "en": "Stir‑fried pho rice noodles with crispy chicken and vegetables.",
+      "pl": "Smażony makaron ryżowy pho z chrupiącym kurczakiem i warzywami.",
+      "de": "Gebratene Pho-Reisbandnudeln mit knusprigem Hähnchen und Gemüse.",
+      "zh": "炒河粉，配香脆鸡肉与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_PHO_XAO_TOFU": {
+    "description": {
+      "ru": "Жареная рисовая лапша фо с тофу и овощами.",
+      "vn": "Phở xào với đậu phụ và rau củ.",
+      "ua": "Смажена рисова локшина фо з тофу та овочами.",
+      "en": "Stir‑fried pho rice noodles with tofu and vegetables.",
+      "pl": "Smażony makaron ryżowy pho z tofu i warzywami.",
+      "de": "Gebratene Pho-Reisbandnudeln mit Tofu und Gemüse.",
+      "zh": "炒河粉，配豆腐与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_PHO_XAO_TOM": {
+    "description": {
+      "ru": "Жареная рисовая лапша фо с креветками и овощами.",
+      "vn": "Phở xào với tôm và rau củ.",
+      "ua": "Смажена рисова локшина фо з креветками та овочами.",
+      "en": "Stir‑fried pho rice noodles with shrimp and vegetables.",
+      "pl": "Smażony makaron ryżowy pho z krewetkami i warzywami.",
+      "de": "Gebratene Pho-Reisbandnudeln mit Garnelen und Gemüse.",
+      "zh": "炒河粉，配虾与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_BUN_THIT_NUONG": {
+    "description": {
+      "ru": "Рисовая вермишель с овощами, свежими травами и соусом нуок-чам.",
+      "vn": "Bún Việt Nam với rau củ, rau thơm và nước chấm.",
+      "ua": "Рисова вермішель з овочами, свіжими травами та соусом нуок-чам.",
+      "en": "Vietnamese rice vermicelli with vegetables, fresh herbs and nuoc‑cham.",
+      "pl": "Wietnamski makaron ryżowy z warzywami, świeżymi ziołami i sosem nuoc‑cham.",
+      "de": "Vietnamesische Reisnudeln mit Gemüse, frischen Kräutern und hausgemachter Fischsoße.",
+      "zh": "越南拌米粉，配蔬菜、香草与鱼露。"
+    }
+  },
+  "HAUPTSPEISEN_BUN_CHA_NEM": {
+    "description": {
+      "ru": "Рисовая вермишель с овощами, свежими травами и соусом нуок-чам.",
+      "vn": "Bún Việt Nam với rau củ, rau thơm và nước chấm.",
+      "ua": "Рисова вермішель з овочами, свіжими травами та соусом нуок-чам.",
+      "en": "Vietnamese rice vermicelli with vegetables, fresh herbs and nuoc‑cham.",
+      "pl": "Wietnamski makaron ryżowy z warzywami, świeżymi ziołami i sosem nuoc‑cham.",
+      "de": "Vietnamesische Reisnudeln mit Gemüse, frischen Kräutern und hausgemachter Fischsoße.",
+      "zh": "越南拌米粉，配蔬菜、香草与鱼露。"
+    }
+  },
+  "HAUPTSPEISEN_BUN_DAU": {
+    "description": {
+      "ru": "Рисовая вермишель с овощами, свежими травами и соусом нуок-чам.",
+      "vn": "Bún Việt Nam với rau củ, rau thơm và nước chấm.",
+      "ua": "Рисова вермішель з овочами, свіжими травами та соусом нуок-чам.",
+      "en": "Vietnamese rice vermicelli with vegetables, fresh herbs and nuoc‑cham.",
+      "pl": "Wietnamski makaron ryżowy z warzywami, świeżymi ziołami i sosem nuoc‑cham.",
+      "de": "Vietnamesische Reisnudeln mit Gemüse, frischen Kräutern und hausgemachter Fischsoße.",
+      "zh": "越南拌米粉，配蔬菜、香草与鱼露。"
+    }
+  },
+  "HAUPTSPEISEN_BUN_NAM_BO": {
+    "description": {
+      "ru": "Рисовая вермишель с говядиной, свежими травами и соусом нуок-чам.",
+      "vn": "Bún Việt Nam với bò, rau thơm và nước chấm.",
+      "ua": "Рисова вермішель з яловичиною, свіжими травами та соусом нуок-чам.",
+      "en": "Vietnamese rice vermicelli with beef, fresh herbs and nuoc‑cham.",
+      "pl": "Wietnamski makaron ryżowy z wołowiną, świeżymi ziołami i sosem nuoc‑cham.",
+      "de": "Vietnamesische Reisnudeln mit Rindfleisch, frischen Kräutern und hausgemachter Fischsoße.",
+      "zh": "越南拌米粉，配牛肉、香草与鱼露。"
+    }
+  },
+  "HAUPTSPEISEN_BUN_CHA_LA_LOT": {
+    "description": {
+      "ru": "Рисовая вермишель с свининой, свежими травами и соусом нуок-чам.",
+      "vn": "Bún Việt Nam với thịt heo, rau thơm và nước chấm.",
+      "ua": "Рисова вермішель з свининою, свіжими травами та соусом нуок-чам.",
+      "en": "Vietnamese rice vermicelli with pork, fresh herbs and nuoc‑cham.",
+      "pl": "Wietnamski makaron ryżowy z wieprzowiną, świeżymi ziołami i sosem nuoc‑cham.",
+      "de": "Vietnamesische Reisnudeln mit Schweinefleisch, frischen Kräutern und hausgemachter Fischsoße.",
+      "zh": "越南拌米粉，配猪肉、香草与鱼露。"
+    }
+  },
+  "HAUPTSPEISEN_BUN_GA_NUONG": {
+    "description": {
+      "ru": "Рисовая вермишель с курицей, свежими травами и соусом нуок-чам.",
+      "vn": "Bún Việt Nam với gà, rau thơm và nước chấm.",
+      "ua": "Рисова вермішель з куркою, свіжими травами та соусом нуок-чам.",
+      "en": "Vietnamese rice vermicelli with chicken, fresh herbs and nuoc‑cham.",
+      "pl": "Wietnamski makaron ryżowy z kurczakiem, świeżymi ziołami i sosem nuoc‑cham.",
+      "de": "Vietnamesische Reisnudeln mit Hähnchen, frischen Kräutern und hausgemachter Fischsoße.",
+      "zh": "越南拌米粉，配鸡肉、香草与鱼露。"
+    }
+  },
+  "HAUPTSPEISEN_BUN_NEM_THIT_NUONG": {
+    "description": {
+      "ru": "Рисовая вермишель с овощами, свежими травами и соусом нуок-чам.",
+      "vn": "Bún Việt Nam với rau củ, rau thơm và nước chấm.",
+      "ua": "Рисова вермішель з овочами, свіжими травами та соусом нуок-чам.",
+      "en": "Vietnamese rice vermicelli with vegetables, fresh herbs and nuoc‑cham.",
+      "pl": "Wietnamski makaron ryżowy z warzywami, świeżymi ziołami i sosem nuoc‑cham.",
+      "de": "Vietnamesische Reisnudeln mit Gemüse, frischen Kräutern und hausgemachter Fischsoße.",
+      "zh": "越南拌米粉，配蔬菜、香草与鱼露。"
+    }
+  },
+  "HAUPTSPEISEN_MIEN_XAO_BO": {
+    "description": {
+      "ru": "Жареная стеклянная лапша с говядиной, овощами и арахисом.",
+      "vn": "Miến xào với bò, rau củ và đậu phộng.",
+      "ua": "Смажена скляна локшина з яловичиною, овочами та арахісом.",
+      "en": "Stir‑fried glass noodles with beef, vegetables and peanuts.",
+      "pl": "Smażony makaron szklany z wołowiną, warzywami i orzeszkami.",
+      "de": "Gebratene Glasnudeln mit Rindfleisch, Gemüse und Erdnüssen.",
+      "zh": "炒粉丝，配牛肉、蔬菜与花生。"
+    }
+  },
+  "HAUPTSPEISEN_MIEN_XAO_GA": {
+    "description": {
+      "ru": "Жареная стеклянная лапша с хрустящей курицей, овощами и арахисом.",
+      "vn": "Miến xào với gà giòn, rau củ và đậu phộng.",
+      "ua": "Смажена скляна локшина з хрусткою куркою, овочами та арахісом.",
+      "en": "Stir‑fried glass noodles with crispy chicken, vegetables and peanuts.",
+      "pl": "Smażony makaron szklany z chrupiącym kurczakiem, warzywami i orzeszkami.",
+      "de": "Gebratene Glasnudeln mit knusprigem Hähnchen, Gemüse und Erdnüssen.",
+      "zh": "炒粉丝，配香脆鸡肉、蔬菜与花生。"
+    }
+  },
+  "HAUPTSPEISEN_MIEN_XAO_GA_GION": {
+    "description": {
+      "ru": "Жареная стеклянная лапша с хрустящей курицей, овощами и арахисом.",
+      "vn": "Miến xào với gà giòn, rau củ và đậu phộng.",
+      "ua": "Смажена скляна локшина з хрусткою куркою, овочами та арахісом.",
+      "en": "Stir‑fried glass noodles with crispy chicken, vegetables and peanuts.",
+      "pl": "Smażony makaron szklany z chrupiącym kurczakiem, warzywami i orzeszkami.",
+      "de": "Gebratene Glasnudeln mit knusprigem Hähnchen, Gemüse und Erdnüssen.",
+      "zh": "炒粉丝，配香脆鸡肉、蔬菜与花生。"
+    }
+  },
+  "HAUPTSPEISEN_MIEN_XAO_TOFU": {
+    "description": {
+      "ru": "Жареная стеклянная лапша с тофу, овощами и арахисом.",
+      "vn": "Miến xào với đậu phụ, rau củ và đậu phộng.",
+      "ua": "Смажена скляна локшина з тофу, овочами та арахісом.",
+      "en": "Stir‑fried glass noodles with tofu, vegetables and peanuts.",
+      "pl": "Smażony makaron szklany z tofu, warzywami i orzeszkami.",
+      "de": "Gebratene Glasnudeln mit Tofu, Gemüse und Erdnüssen.",
+      "zh": "炒粉丝，配豆腐、蔬菜与花生。"
+    }
+  },
+  "HAUPTSPEISEN_MIEN_XAO_TOM": {
+    "description": {
+      "ru": "Жареная стеклянная лапша с креветками, овощами и арахисом.",
+      "vn": "Miến xào với tôm, rau củ và đậu phộng.",
+      "ua": "Смажена скляна локшина з креветками, овочами та арахісом.",
+      "en": "Stir‑fried glass noodles with shrimp, vegetables and peanuts.",
+      "pl": "Smażony makaron szklany z krewetkami, warzywami i orzeszkami.",
+      "de": "Gebratene Glasnudeln mit Garnelen, Gemüse und Erdnüssen.",
+      "zh": "炒粉丝，配虾、蔬菜与花生。"
+    }
+  },
+  "HAUPTSPEISEN_BO_CURRY": {
+    "description": {
+      "ru": "Жареное блюдо с говядиной и овощами в мягком карри.",
+      "vn": "Món xào với bò và rau củ, sốt cà ri vị nhẹ.",
+      "ua": "Смажена страва з яловичиною та овочами, у м'якому карі.",
+      "en": "Stir‑fried beef with vegetables, in mild curry sauce.",
+      "pl": "Danie smażone z wołowiną i warzywami, w łagodnym sosie curry.",
+      "de": "Gebratenes Gericht mit Rindfleisch und Gemüse, in milder Currysauce.",
+      "zh": "牛肉配蔬菜，配温和咖喱酱。"
+    }
+  },
+  "HAUPTSPEISEN_BO_TERIYAKI": {
+    "description": {
+      "ru": "Жареное блюдо с говядиной и овощами в соусе терияки.",
+      "vn": "Món xào với bò và rau củ, sốt teriyaki.",
+      "ua": "Смажена страва з яловичиною та овочами, у соусі теріякі.",
+      "en": "Stir‑fried beef with vegetables, in teriyaki sauce.",
+      "pl": "Danie smażone z wołowiną i warzywami, w sosie teriyaki.",
+      "de": "Gebratenes Gericht mit Rindfleisch und Gemüse, in Teriyaki-Soße.",
+      "zh": "牛肉配蔬菜，配照烧酱。"
+    }
+  },
+  "HAUPTSPEISEN_BO_XAO_XA": {
+    "description": {
+      "ru": "Жареное блюдо с говядиной и овощами с лемонграссом и чили.",
+      "vn": "Món xào với bò và rau củ, xả ớt.",
+      "ua": "Смажена страва з яловичиною та овочами, з лемонграсом та чилі.",
+      "en": "Stir‑fried beef with vegetables, with lemongrass & chili.",
+      "pl": "Danie smażone z wołowiną i warzywami, z trawą cytrynową i chili.",
+      "de": "Gebratenes Gericht mit Rindfleisch und Gemüse, mit Zitronengras & Chili.",
+      "zh": "牛肉配蔬菜，配香茅与辣椒。"
+    }
+  },
+  "HAUPTSPEISEN_BO_CHUA_NGOT": {
+    "description": {
+      "ru": "Жареное блюдо с говядиной и овощами в кисло-сладком соусе.",
+      "vn": "Món xào với bò và rau củ, sốt chua ngọt.",
+      "ua": "Смажена страва з яловичиною та овочами, у кисло-солодкому соусі.",
+      "en": "Stir‑fried beef with vegetables, in sweet & sour sauce.",
+      "pl": "Danie smażone z wołowiną i warzywami, w sosie słodko-kwaśnym.",
+      "de": "Gebratenes Gericht mit Rindfleisch und Gemüse, in süß-saurer Soße.",
+      "zh": "牛肉配蔬菜，配糖醋酱。"
+    }
+  },
+  "HAUPTSPEISEN_GA_GION_CURRY": {
+    "description": {
+      "ru": "Жареное блюдо с хрустящей курицей и овощами в мягком карри.",
+      "vn": "Món xào với gà giòn và rau củ, sốt cà ri vị nhẹ.",
+      "ua": "Смажена страва з хрусткою куркою та овочами, у м'якому карі.",
+      "en": "Stir‑fried crispy chicken with vegetables, in mild curry sauce.",
+      "pl": "Danie smażone z chrupiącym kurczakiem i warzywami, w łagodnym sosie curry.",
+      "de": "Gebratenes Gericht mit knusprigem Hähnchen und Gemüse, in milder Currysauce.",
+      "zh": "香脆鸡肉配蔬菜，配温和咖喱酱。"
+    }
+  },
+  "HAUPTSPEISEN_GA_GION_ERDNUSS": {
+    "description": {
+      "ru": "Жареное блюдо с хрустящей курицей и овощами в арахисовом соусе.",
+      "vn": "Món xào với gà giòn và rau củ, sốt đậu phộng.",
+      "ua": "Смажена страва з хрусткою куркою та овочами, в арахісовому соусі.",
+      "en": "Stir‑fried crispy chicken with vegetables, in peanut sauce.",
+      "pl": "Danie smażone z chrupiącym kurczakiem i warzywami, w sosie orzechowym.",
+      "de": "Gebratenes Gericht mit knusprigem Hähnchen und Gemüse, in Erdnuss-Soße.",
+      "zh": "香脆鸡肉配蔬菜，配花生酱。"
+    }
+  },
+  "HAUPTSPEISEN_GA_GION_TERIYAKI": {
+    "description": {
+      "ru": "Жареное блюдо с хрустящей курицей и овощами в соусе терияки.",
+      "vn": "Món xào với gà giòn và rau củ, sốt teriyaki.",
+      "ua": "Смажена страва з хрусткою куркою та овочами, у соусі теріякі.",
+      "en": "Stir‑fried crispy chicken with vegetables, in teriyaki sauce.",
+      "pl": "Danie smażone z chrupiącym kurczakiem i warzywami, w sosie teriyaki.",
+      "de": "Gebratenes Gericht mit knusprigem Hähnchen und Gemüse, in Teriyaki-Soße.",
+      "zh": "香脆鸡肉配蔬菜，配照烧酱。"
+    }
+  },
+  "HAUPTSPEISEN_GA_GION_CHUA_NGOT": {
+    "description": {
+      "ru": "Жареное блюдо с хрустящей курицей и овощами в кисло-сладком соусе.",
+      "vn": "Món xào với gà giòn và rau củ, sốt chua ngọt.",
+      "ua": "Смажена страва з хрусткою куркою та овочами, у кисло-солодкому соусі.",
+      "en": "Stir‑fried crispy chicken with vegetables, in sweet & sour sauce.",
+      "pl": "Danie smażone z chrupiącym kurczakiem i warzywami, w sosie słodko-kwaśnym.",
+      "de": "Gebratenes Gericht mit knusprigem Hähnchen und Gemüse, in süß-saurer Soße.",
+      "zh": "香脆鸡肉配蔬菜，配糖醋酱。"
+    }
+  },
+  "HAUPTSPEISEN_GA_CURRY": {
+    "description": {
+      "ru": "Жареное блюдо с курицей и овощами в мягком карри.",
+      "vn": "Món xào với gà và rau củ, sốt cà ri vị nhẹ.",
+      "ua": "Смажена страва з куркою та овочами, у м'якому карі.",
+      "en": "Stir‑fried chicken with vegetables, in mild curry sauce.",
+      "pl": "Danie smażone z kurczakiem i warzywami, w łagodnym sosie curry.",
+      "de": "Gebratenes Gericht mit Hähnchen und Gemüse, in milder Currysauce.",
+      "zh": "鸡肉配蔬菜，配温和咖喱酱。"
+    }
+  },
+  "HAUPTSPEISEN_GA_ERDNUSS": {
+    "description": {
+      "ru": "Жареное блюдо с курицей и овощами в арахисовом соусе.",
+      "vn": "Món xào với gà và rau củ, sốt đậu phộng.",
+      "ua": "Смажена страва з куркою та овочами, в арахісовому соусі.",
+      "en": "Stir‑fried chicken with vegetables, in peanut sauce.",
+      "pl": "Danie smażone z kurczakiem i warzywami, w sosie orzechowym.",
+      "de": "Gebratenes Gericht mit Hähnchen und Gemüse, in Erdnuss-Soße.",
+      "zh": "鸡肉配蔬菜，配花生酱。"
+    }
+  },
+  "HAUPTSPEISEN_GA_TERIYAKI": {
+    "description": {
+      "ru": "Жареное блюдо с курицей и овощами в соусе терияки.",
+      "vn": "Món xào với gà và rau củ, sốt teriyaki.",
+      "ua": "Смажена страва з куркою та овочами, у соусі теріякі.",
+      "en": "Stir‑fried chicken with vegetables, in teriyaki sauce.",
+      "pl": "Danie smażone z kurczakiem i warzywami, w sosie teriyaki.",
+      "de": "Gebratenes Gericht mit Hähnchen und Gemüse, in Teriyaki-Soße.",
+      "zh": "鸡肉配蔬菜，配照烧酱。"
+    }
+  },
+  "HAUPTSPEISEN_GA_MEM_CHUA_NGOT": {
+    "description": {
+      "ru": "Жареное блюдо с курицей и овощами в кисло-сладком соусе.",
+      "vn": "Món xào với gà và rau củ, sốt chua ngọt.",
+      "ua": "Смажена страва з куркою та овочами, у кисло-солодкому соусі.",
+      "en": "Stir‑fried chicken with vegetables, in sweet & sour sauce.",
+      "pl": "Danie smażone z kurczakiem i warzywami, w sosie słodko-kwaśnym.",
+      "de": "Gebratenes Gericht mit Hähnchen und Gemüse, in süß-saurer Soße.",
+      "zh": "鸡肉配蔬菜，配糖醋酱。"
+    }
+  },
+  "HAUPTSPEISEN_GA_MEM_XAO": {
+    "description": {
+      "ru": "Горячее блюдо вьетнамской кухни.",
+      "vn": "Món chính phong cách Việt.",
+      "ua": "Гаряча страва в’єтнамської кухні.",
+      "en": "Vietnamese main course.",
+      "pl": "Danie główne kuchni wietnamskiej.",
+      "de": "Vietnamesisches Hauptgericht.",
+      "zh": "越南风味主菜。"
+    }
+  },
+  "HAUPTSPEISEN_VIT_GION_CURRY": {
+    "description": {
+      "ru": "Жареное блюдо с хрустящей уткой и овощами в мягком карри.",
+      "vn": "Món xào với vịt giòn và rau củ, sốt cà ri vị nhẹ.",
+      "ua": "Смажена страва з хрусткою качкою та овочами, у м'якому карі.",
+      "en": "Stir‑fried crispy duck with vegetables, in mild curry sauce.",
+      "pl": "Danie smażone z chrupiącą kaczką i warzywami, w łagodnym sosie curry.",
+      "de": "Gebratenes Gericht mit knuspriger Ente und Gemüse, in milder Currysauce.",
+      "zh": "香脆鸭肉配蔬菜，配温和咖喱酱。"
+    }
+  },
+  "HAUPTSPEISEN_VIT_GION_ERDNUSS": {
+    "description": {
+      "ru": "Жареное блюдо с хрустящей уткой и овощами в арахисовом соусе.",
+      "vn": "Món xào với vịt giòn và rau củ, sốt đậu phộng.",
+      "ua": "Смажена страва з хрусткою качкою та овочами, в арахісовому соусі.",
+      "en": "Stir‑fried crispy duck with vegetables, in peanut sauce.",
+      "pl": "Danie smażone z chrupiącą kaczką i warzywami, w sosie orzechowym.",
+      "de": "Gebratenes Gericht mit knuspriger Ente und Gemüse, in Erdnuss-Soße.",
+      "zh": "香脆鸭肉配蔬菜，配花生酱。"
+    }
+  },
+  "HAUPTSPEISEN_VIT_GION_TERIYAKI": {
+    "description": {
+      "ru": "Жареное блюдо с хрустящей уткой и овощами в соусе терияки.",
+      "vn": "Món xào với vịt giòn và rau củ, sốt teriyaki.",
+      "ua": "Смажена страва з хрусткою качкою та овочами, у соусі теріякі.",
+      "en": "Stir‑fried crispy duck with vegetables, in teriyaki sauce.",
+      "pl": "Danie smażone z chrupiącą kaczką i warzywami, w sosie teriyaki.",
+      "de": "Gebratenes Gericht mit knuspriger Ente und Gemüse, in Teriyaki-Soße.",
+      "zh": "香脆鸭肉配蔬菜，配照烧酱。"
+    }
+  },
+  "HAUPTSPEISEN_VIT_GION_CHUA_NGOT": {
+    "description": {
+      "ru": "Жареное блюдо с хрустящей уткой и овощами в кисло-сладком соусе.",
+      "vn": "Món xào với vịt giòn và rau củ, sốt chua ngọt.",
+      "ua": "Смажена страва з хрусткою качкою та овочами, у кисло-солодкому соусі.",
+      "en": "Stir‑fried crispy duck with vegetables, in sweet & sour sauce.",
+      "pl": "Danie smażone z chrupiącą kaczką i warzywami, w sosie słodko-kwaśnym.",
+      "de": "Gebratenes Gericht mit knuspriger Ente und Gemüse, in süß-saurer Soße.",
+      "zh": "香脆鸭肉配蔬菜，配糖醋酱。"
+    }
+  },
+  "HAUPTSPEISEN_TOFU_CURRY": {
+    "description": {
+      "ru": "Жареное блюдо с тофу и овощами в мягком карри.",
+      "vn": "Món xào với đậu phụ và rau củ, sốt cà ri vị nhẹ.",
+      "ua": "Смажена страва з тофу та овочами, у м'якому карі.",
+      "en": "Stir‑fried tofu with vegetables, in mild curry sauce.",
+      "pl": "Danie smażone z tofu i warzywami, w łagodnym sosie curry.",
+      "de": "Gebratenes Gericht mit Tofu und Gemüse, in milder Currysauce.",
+      "zh": "豆腐配蔬菜，配温和咖喱酱。"
+    }
+  },
+  "HAUPTSPEISEN_TOFU_ERDNUSS": {
+    "description": {
+      "ru": "Жареное блюдо с тофу и овощами в арахисовом соусе.",
+      "vn": "Món xào với đậu phụ và rau củ, sốt đậu phộng.",
+      "ua": "Смажена страва з тофу та овочами, в арахісовому соусі.",
+      "en": "Stir‑fried tofu with vegetables, in peanut sauce.",
+      "pl": "Danie smażone z tofu i warzywami, w sosie orzechowym.",
+      "de": "Gebratenes Gericht mit Tofu und Gemüse, in Erdnuss-Soße.",
+      "zh": "豆腐配蔬菜，配花生酱。"
+    }
+  },
+  "HAUPTSPEISEN_TOFU_TERIYAKI": {
+    "description": {
+      "ru": "Жареное блюдо с тофу и овощами в соусе терияки.",
+      "vn": "Món xào với đậu phụ và rau củ, sốt teriyaki.",
+      "ua": "Смажена страва з тофу та овочами, у соусі теріякі.",
+      "en": "Stir‑fried tofu with vegetables, in teriyaki sauce.",
+      "pl": "Danie smażone z tofu i warzywami, w sosie teriyaki.",
+      "de": "Gebratenes Gericht mit Tofu und Gemüse, in Teriyaki-Soße.",
+      "zh": "豆腐配蔬菜，配照烧酱。"
+    }
+  },
+  "HAUPTSPEISEN_TOFU_RAU_XAO": {
+    "description": {
+      "ru": "Горячее блюдо вьетнамской кухни.",
+      "vn": "Món chính phong cách Việt.",
+      "ua": "Гаряча страва в’єтнамської кухні.",
+      "en": "Vietnamese main course.",
+      "pl": "Danie główne kuchni wietnamskiej.",
+      "de": "Vietnamesisches Hauptgericht.",
+      "zh": "越南风味主菜。"
+    }
+  },
+  "HAUPTSPEISEN_TOFU_CHUA_NGOT": {
+    "description": {
+      "ru": "Жареное блюдо с тофу и овощами в кисло-сладком соусе.",
+      "vn": "Món xào với đậu phụ và rau củ, sốt chua ngọt.",
+      "ua": "Смажена страва з тофу та овочами, у кисло-солодкому соусі.",
+      "en": "Stir‑fried tofu with vegetables, in sweet & sour sauce.",
+      "pl": "Danie smażone z tofu i warzywami, w sosie słodko-kwaśnym.",
+      "de": "Gebratenes Gericht mit Tofu und Gemüse, in süß-saurer Soße.",
+      "zh": "豆腐配蔬菜，配糖醋酱。"
+    }
+  },
+  "HAUPTSPEISEN_COM_RANG": {
+    "description": {
+      "ru": "Жареный рис с яйцом, овощами и овощами.",
+      "vn": "Cơm rang trứng với rau củ và Rau củ.",
+      "ua": "Смажений рис з яйцем, овочами та овочами.",
+      "en": "Egg fried rice with vegetables and vegetables.",
+      "pl": "Smażony ryż z jajkiem, warzywami i warzywami.",
+      "de": "Gebratener Eierreis mit Gemüse und Gemüse.",
+      "zh": "蛋炒饭，配蔬菜与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_COM_RANG_GA_GION": {
+    "description": {
+      "ru": "Жареный рис с яйцом, хрустящей курицей и овощами.",
+      "vn": "Cơm rang trứng với gà giòn và Rau củ.",
+      "ua": "Смажений рис з яйцем, хрусткою куркою та овочами.",
+      "en": "Egg fried rice with crispy chicken and vegetables.",
+      "pl": "Smażony ryż z jajkiem, chrupiącym kurczakiem i warzywami.",
+      "de": "Gebratener Eierreis mit knusprigem Hähnchen und Gemüse.",
+      "zh": "蛋炒饭，配香脆鸡肉与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_COM_RANG_GA": {
+    "description": {
+      "ru": "Жареный рис с яйцом, хрустящей курицей и овощами.",
+      "vn": "Cơm rang trứng với gà giòn và Rau củ.",
+      "ua": "Смажений рис з яйцем, хрусткою куркою та овочами.",
+      "en": "Egg fried rice with crispy chicken and vegetables.",
+      "pl": "Smażony ryż z jajkiem, chrupiącym kurczakiem i warzywami.",
+      "de": "Gebratener Eierreis mit knusprigem Hähnchen und Gemüse.",
+      "zh": "蛋炒饭，配香脆鸡肉与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_COM_RANG_BO": {
+    "description": {
+      "ru": "Жареный рис с яйцом, говядиной и овощами.",
+      "vn": "Cơm rang trứng với bò và Rau củ.",
+      "ua": "Смажений рис з яйцем, яловичиною та овочами.",
+      "en": "Egg fried rice with beef and vegetables.",
+      "pl": "Smażony ryż z jajkiem, wołowiną i warzywami.",
+      "de": "Gebratener Eierreis mit Rindfleisch und Gemüse.",
+      "zh": "蛋炒饭，配牛肉与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_COM_RANG_LACHS": {
+    "description": {
+      "ru": "Жареный рис с яйцом, лососем и овощами.",
+      "vn": "Cơm rang trứng với cá hồi và Rau củ.",
+      "ua": "Смажений рис з яйцем, лососем та овочами.",
+      "en": "Egg fried rice with salmon and vegetables.",
+      "pl": "Smażony ryż z jajkiem, łososia i warzywami.",
+      "de": "Gebratener Eierreis mit Lachs und Gemüse.",
+      "zh": "蛋炒饭，配三文鱼与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_COM_RANG_VIT_GION": {
+    "description": {
+      "ru": "Жареный рис с яйцом, хрустящей уткой и овощами.",
+      "vn": "Cơm rang trứng với vịt giòn và Rau củ.",
+      "ua": "Смажений рис з яйцем, хрусткою качкою та овочами.",
+      "en": "Egg fried rice with crispy duck and vegetables.",
+      "pl": "Smażony ryż z jajkiem, chrupiącą kaczką i warzywami.",
+      "de": "Gebratener Eierreis mit knuspriger Ente und Gemüse.",
+      "zh": "蛋炒饭，配香脆鸭肉与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_MI_XAO_RAU": {
+    "description": {
+      "ru": "Жареная яичная лапша с овощами и овощами.",
+      "vn": "Mì xào với rau củ và rau củ.",
+      "ua": "Смажена яєчна локшина з овочами та овочами.",
+      "en": "Stir‑fried egg noodles with vegetables and vegetables.",
+      "pl": "Smażony makaron jajeczny z warzywami i warzywami.",
+      "de": "Gebratene Eiernudeln mit Gemüse und Gemüse.",
+      "zh": "炒蛋面，配蔬菜与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_MI_XAO_GA_GION": {
+    "description": {
+      "ru": "Жареная яичная лапша с хрустящей курицей и овощами.",
+      "vn": "Mì xào với gà giòn và rau củ.",
+      "ua": "Смажена яєчна локшина з хрусткою куркою та овочами.",
+      "en": "Stir‑fried egg noodles with crispy chicken and vegetables.",
+      "pl": "Smażony makaron jajeczny z chrupiącym kurczakiem i warzywami.",
+      "de": "Gebratene Eiernudeln mit knusprigem Hähnchen und Gemüse.",
+      "zh": "炒蛋面，配香脆鸡肉与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_MI_XAO_GA": {
+    "description": {
+      "ru": "Жареная яичная лапша с хрустящей курицей и овощами.",
+      "vn": "Mì xào với gà giòn và rau củ.",
+      "ua": "Смажена яєчна локшина з хрусткою куркою та овочами.",
+      "en": "Stir‑fried egg noodles with crispy chicken and vegetables.",
+      "pl": "Smażony makaron jajeczny z chrupiącym kurczakiem i warzywami.",
+      "de": "Gebratene Eiernudeln mit knusprigem Hähnchen und Gemüse.",
+      "zh": "炒蛋面，配香脆鸡肉与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_MI_XAO_BO": {
+    "description": {
+      "ru": "Жареная яичная лапша с говядиной и овощами.",
+      "vn": "Mì xào với bò và rau củ.",
+      "ua": "Смажена яєчна локшина з яловичиною та овочами.",
+      "en": "Stir‑fried egg noodles with beef and vegetables.",
+      "pl": "Smażony makaron jajeczny z wołowiną i warzywami.",
+      "de": "Gebratene Eiernudeln mit Rindfleisch und Gemüse.",
+      "zh": "炒蛋面，配牛肉与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_MI_XAO_VIT_GION": {
+    "description": {
+      "ru": "Жареная яичная лапша с хрустящей уткой и овощами.",
+      "vn": "Mì xào với vịt giòn và rau củ.",
+      "ua": "Смажена яєчна локшина з хрусткою качкою та овочами.",
+      "en": "Stir‑fried egg noodles with crispy duck and vegetables.",
+      "pl": "Smażony makaron jajeczny z chrupiącą kaczką i warzywami.",
+      "de": "Gebratene Eiernudeln mit knuspriger Ente und Gemüse.",
+      "zh": "炒蛋面，配香脆鸭肉与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_UDON_XAO_RAU": {
+    "description": {
+      "ru": "Жареные удон‑лапша с овощами и овощами.",
+      "vn": "Udon xào với rau củ và rau củ.",
+      "ua": "Смажена локшина удон з овочами та овочами.",
+      "en": "Stir‑fried udon noodles with vegetables and vegetables.",
+      "pl": "Smażony makaron udon z warzywami i warzywami.",
+      "de": "Gebratene Udon-Nudeln mit Gemüse und Gemüse.",
+      "zh": "炒乌冬面，配蔬菜与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_UDON_XAO_BO": {
+    "description": {
+      "ru": "Жареные удон‑лапша с говядиной и овощами.",
+      "vn": "Udon xào với bò và rau củ.",
+      "ua": "Смажена локшина удон з яловичиною та овочами.",
+      "en": "Stir‑fried udon noodles with beef and vegetables.",
+      "pl": "Smażony makaron udon z wołowiną i warzywami.",
+      "de": "Gebratene Udon-Nudeln mit Rindfleisch und Gemüse.",
+      "zh": "炒乌冬面，配牛肉与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_UDON_XAO_GA_GION": {
+    "description": {
+      "ru": "Жареные удон‑лапша с хрустящей курицей и овощами.",
+      "vn": "Udon xào với gà giòn và rau củ.",
+      "ua": "Смажена локшина удон з хрусткою куркою та овочами.",
+      "en": "Stir‑fried udon noodles with crispy chicken and vegetables.",
+      "pl": "Smażony makaron udon z chrupiącym kurczakiem i warzywami.",
+      "de": "Gebratene Udon-Nudeln mit knusprigem Hähnchen und Gemüse.",
+      "zh": "炒乌冬面，配香脆鸡肉与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_UDON_XAO_GA": {
+    "description": {
+      "ru": "Жареные удон‑лапша с хрустящей курицей и овощами.",
+      "vn": "Udon xào với gà giòn và rau củ.",
+      "ua": "Смажена локшина удон з хрусткою куркою та овочами.",
+      "en": "Stir‑fried udon noodles with crispy chicken and vegetables.",
+      "pl": "Smażony makaron udon z chrupiącym kurczakiem i warzywami.",
+      "de": "Gebratene Udon-Nudeln mit knusprigem Hähnchen und Gemüse.",
+      "zh": "炒乌冬面，配香脆鸡肉与蔬菜。"
+    }
+  },
+  "HAUPTSPEISEN_UDON_XAO_VIT_GION": {
+    "description": {
+      "ru": "Жареные удон‑лапша с хрустящей уткой и овощами.",
+      "vn": "Udon xào với vịt giòn và rau củ.",
+      "ua": "Смажена локшина удон з хрусткою качкою та овочами.",
+      "en": "Stir‑fried udon noodles with crispy duck and vegetables.",
+      "pl": "Smażony makaron udon z chrupiącą kaczką i warzywami.",
+      "de": "Gebratene Udon-Nudeln mit knuspriger Ente und Gemüse.",
+      "zh": "炒乌冬面，配香脆鸭肉与蔬菜。"
+    }
+  },
+  "SUSHI_NIGIRI_AVOCADO": {
+    "description": {
+      "ru": "Нигири с авокадо. (2 шт.)",
+      "vn": "Nigiri với avocado. (2 miếng)",
+      "ua": "Нігірі з авокадо. (2 шт.)",
+      "en": "Nigiri with avocado. (2 pcs)",
+      "pl": "Nigiri z avocado. (2 szt.)",
+      "de": "Nigiri mit avocado. (2 Stk.)",
+      "zh": "握寿司：avocado。（2 份）"
+    }
+  },
+  "SUSHI_NIGIRI_LACHS": {
+    "description": {
+      "ru": "Нигири с лосось. (2 шт.)",
+      "vn": "Nigiri với lachs. (2 miếng)",
+      "ua": "Нігірі з лосось. (2 шт.)",
+      "en": "Nigiri with lachs. (2 pcs)",
+      "pl": "Nigiri z lachs. (2 szt.)",
+      "de": "Nigiri mit lachs. (2 Stk.)",
+      "zh": "握寿司：lachs。（2 份）"
+    }
+  },
+  "SUSHI_NIGIRI_EBI": {
+    "description": {
+      "ru": "Нигири с креветка. (2 шт.)",
+      "vn": "Nigiri với ebi. (2 miếng)",
+      "ua": "Нігірі з креветка. (2 шт.)",
+      "en": "Nigiri with ebi. (2 pcs)",
+      "pl": "Nigiri z ebi. (2 szt.)",
+      "de": "Nigiri mit ebi. (2 Stk.)",
+      "zh": "握寿司：ebi。（2 份）"
+    }
+  },
+  "SUSHI_NIGIRI_TUNA": {
+    "description": {
+      "ru": "Нигири с тунец. (2 шт.)",
+      "vn": "Nigiri với tuna. (2 miếng)",
+      "ua": "Нігірі з тунец. (2 шт.)",
+      "en": "Nigiri with tuna. (2 pcs)",
+      "pl": "Nigiri z tuna. (2 szt.)",
+      "de": "Nigiri mit tuna. (2 Stk.)",
+      "zh": "握寿司：tuna。（2 份）"
+    }
+  },
+  "SUSHI_NIGIRI_GUNKAN_SPICY_SALMON": {
+    "description": {
+      "ru": "Нигири с ингредиентом. (2 шт.)",
+      "vn": "Nigiri với spicy salmon. (2 miếng)",
+      "ua": "Нігірі з інгредієнтом. (2 шт.)",
+      "en": "Nigiri with spicy salmon. (2 pcs)",
+      "pl": "Nigiri z spicy salmon. (2 szt.)",
+      "de": "Nigiri mit spicy salmon. (2 Stk.)",
+      "zh": "握寿司：spicy salmon。（2 份）"
+    }
+  },
+  "SUSHI_NIGIRI_GUNKAN_SPICY_TUNA": {
+    "description": {
+      "ru": "Нигири с тунец. (2 шт.)",
+      "vn": "Nigiri với tuna. (2 miếng)",
+      "ua": "Нігірі з тунец. (2 шт.)",
+      "en": "Nigiri with tuna. (2 pcs)",
+      "pl": "Nigiri z tuna. (2 szt.)",
+      "de": "Nigiri mit tuna. (2 Stk.)",
+      "zh": "握寿司：tuna。（2 份）"
+    }
+  },
+  "SUSHI_MAKI_AVOCADO": {
+    "description": {
+      "ru": "Ролл маки с avocado. (6 шт.)",
+      "vn": "Maki cuộn với avocado. (6 miếng)",
+      "ua": "Макі рол з avocado. (6 шт.)",
+      "en": "Maki roll with avocado. (6 pcs)",
+      "pl": "Roll maki z avocado. (6 szt.)",
+      "de": "Maki‑Rolle mit avocado. (6 Stk.)",
+      "zh": "海苔卷：avocado。（6 份）"
+    }
+  },
+  "SUSHI_MAKI_KAPPA": {
+    "description": {
+      "ru": "Ролл маки с cucumber. (6 шт.)",
+      "vn": "Maki cuộn với cucumber. (6 miếng)",
+      "ua": "Макі рол з cucumber. (6 шт.)",
+      "en": "Maki roll with cucumber. (6 pcs)",
+      "pl": "Roll maki z cucumber. (6 szt.)",
+      "de": "Maki‑Rolle mit cucumber. (6 Stk.)",
+      "zh": "海苔卷：cucumber。（6 份）"
+    }
+  },
+  "SUSHI_MAKI_MANGO": {
+    "description": {
+      "ru": "Ролл маки с mango. (6 шт.)",
+      "vn": "Maki cuộn với mango. (6 miếng)",
+      "ua": "Макі рол з mango. (6 шт.)",
+      "en": "Maki roll with mango. (6 pcs)",
+      "pl": "Roll maki z mango. (6 szt.)",
+      "de": "Maki‑Rolle mit mango. (6 Stk.)",
+      "zh": "海苔卷：mango。（6 份）"
+    }
+  },
+  "SUSHI_MAKI_TORI": {
+    "description": {
+      "ru": "Ролл маки с chicken teriyaki. (6 шт.)",
+      "vn": "Maki cuộn với chicken teriyaki. (6 miếng)",
+      "ua": "Макі рол з chicken teriyaki. (6 шт.)",
+      "en": "Maki roll with chicken teriyaki. (6 pcs)",
+      "pl": "Roll maki z chicken teriyaki. (6 szt.)",
+      "de": "Maki‑Rolle mit chicken teriyaki. (6 Stk.)",
+      "zh": "海苔卷：chicken teriyaki。（6 份）"
+    }
+  },
+  "SUSHI_MAKI_SAKE": {
+    "description": {
+      "ru": "Ролл маки с salmon. (6 шт.)",
+      "vn": "Maki cuộn với salmon. (6 miếng)",
+      "ua": "Макі рол з salmon. (6 шт.)",
+      "en": "Maki roll with salmon. (6 pcs)",
+      "pl": "Roll maki z salmon. (6 szt.)",
+      "de": "Maki‑Rolle mit salmon. (6 Stk.)",
+      "zh": "海苔卷：salmon。（6 份）"
+    }
+  },
+  "SUSHI_MAKI_TUNA": {
+    "description": {
+      "ru": "Ролл маки с tuna. (6 шт.)",
+      "vn": "Maki cuộn với tuna. (6 miếng)",
+      "ua": "Макі рол з tuna. (6 шт.)",
+      "en": "Maki roll with tuna. (6 pcs)",
+      "pl": "Roll maki z tuna. (6 szt.)",
+      "de": "Maki‑Rolle mit tuna. (6 Stk.)",
+      "zh": "海苔卷：tuna。（6 份）"
+    }
+  },
+  "SUSHI_MAKI_EBI": {
+    "description": {
+      "ru": "Ролл маки с shrimp. (6 шт.)",
+      "vn": "Maki cuộn với shrimp. (6 miếng)",
+      "ua": "Макі рол з shrimp. (6 шт.)",
+      "en": "Maki roll with shrimp. (6 pcs)",
+      "pl": "Roll maki z shrimp. (6 szt.)",
+      "de": "Maki‑Rolle mit shrimp. (6 Stk.)",
+      "zh": "海苔卷：shrimp。（6 份）"
+    }
+  },
+  "SUSHI_MAKI_SPICY_LACHS": {
+    "description": {
+      "ru": "Ролл маки с spicy salmon. (6 шт.)",
+      "vn": "Maki cuộn với spicy salmon. (6 miếng)",
+      "ua": "Макі рол з spicy salmon. (6 шт.)",
+      "en": "Maki roll with spicy salmon. (6 pcs)",
+      "pl": "Roll maki z spicy salmon. (6 szt.)",
+      "de": "Maki‑Rolle mit spicy salmon. (6 Stk.)",
+      "zh": "海苔卷：spicy salmon。（6 份）"
+    }
+  },
+  "SUSHI_MAKI_SPICY_TUNA": {
+    "description": {
+      "ru": "Ролл маки с tuna. (6 шт.)",
+      "vn": "Maki cuộn với tuna. (6 miếng)",
+      "ua": "Макі рол з tuna. (6 шт.)",
+      "en": "Maki roll with tuna. (6 pcs)",
+      "pl": "Roll maki z tuna. (6 szt.)",
+      "de": "Maki‑Rolle mit tuna. (6 Stk.)",
+      "zh": "海苔卷：tuna。（6 份）"
+    }
+  },
+  "SUSHI_INSIDE_OUT_CHIKIN_SESAM": {
+    "description": {
+      "ru": "Ролл inside‑out с chicken & sesame. (8 шт.)",
+      "vn": "Cuộn inside‑out với chicken & sesame. (8 miếng)",
+      "ua": "Рол inside‑out з chicken & sesame. (8 шт.)",
+      "en": "Inside‑out roll with chicken & sesame. (8 pcs)",
+      "pl": "Rolka inside‑out z chicken & sesame. (8 szt.)",
+      "de": "Inside‑out‑Rolle mit chicken & sesame. (8 Stk.)",
+      "zh": "反卷寿司：chicken & sesame。（8 份）"
+    }
+  },
+  "SUSHI_INSIDE_OUT_CALIFORNIA": {
+    "description": {
+      "ru": "Ролл inside‑out с avocado & surimi. (8 шт.)",
+      "vn": "Cuộn inside‑out với avocado & surimi. (8 miếng)",
+      "ua": "Рол inside‑out з avocado & surimi. (8 шт.)",
+      "en": "Inside‑out roll with avocado & surimi. (8 pcs)",
+      "pl": "Rolka inside‑out z avocado & surimi. (8 szt.)",
+      "de": "Inside‑out‑Rolle mit avocado & surimi. (8 Stk.)",
+      "zh": "反卷寿司：avocado & surimi。（8 份）"
+    }
+  },
+  "SUSHI_INSIDE_OUT_PHILADELPHIA": {
+    "description": {
+      "ru": "Ролл inside‑out с avocado & cream cheese. (8 шт.)",
+      "vn": "Cuộn inside‑out với avocado & cream cheese. (8 miếng)",
+      "ua": "Рол inside‑out з avocado & cream cheese. (8 шт.)",
+      "en": "Inside‑out roll with avocado & cream cheese. (8 pcs)",
+      "pl": "Rolka inside‑out z avocado & cream cheese. (8 szt.)",
+      "de": "Inside‑out‑Rolle mit avocado & cream cheese. (8 Stk.)",
+      "zh": "反卷寿司：avocado & cream cheese。（8 份）"
+    }
+  },
+  "SUSHI_INSIDE_OUT_ALASKA": {
+    "description": {
+      "ru": "Ролл inside‑out с salmon & avocado. (8 шт.)",
+      "vn": "Cuộn inside‑out với salmon & avocado. (8 miếng)",
+      "ua": "Рол inside‑out з salmon & avocado. (8 шт.)",
+      "en": "Inside‑out roll with salmon & avocado. (8 pcs)",
+      "pl": "Rolka inside‑out z salmon & avocado. (8 szt.)",
+      "de": "Inside‑out‑Rolle mit salmon & avocado. (8 Stk.)",
+      "zh": "反卷寿司：salmon & avocado。（8 份）"
+    }
+  },
+  "SUSHI_INSIDE_OUT_MANGO_ROLL": {
+    "description": {
+      "ru": "Ролл inside‑out с mango & cream cheese. (8 шт.)",
+      "vn": "Cuộn inside‑out với mango & cream cheese. (8 miếng)",
+      "ua": "Рол inside‑out з mango & cream cheese. (8 шт.)",
+      "en": "Inside‑out roll with mango & cream cheese. (8 pcs)",
+      "pl": "Rolka inside‑out z mango & cream cheese. (8 szt.)",
+      "de": "Inside‑out‑Rolle mit mango & cream cheese. (8 Stk.)",
+      "zh": "反卷寿司：mango & cream cheese。（8 份）"
+    }
+  },
+  "SUSHI_INSIDE_OUT_TUNAWAII": {
+    "description": {
+      "ru": "Ролл inside‑out с tuna & avocado. (8 шт.)",
+      "vn": "Cuộn inside‑out với tuna & avocado. (8 miếng)",
+      "ua": "Рол inside‑out з tuna & avocado. (8 шт.)",
+      "en": "Inside‑out roll with tuna & avocado. (8 pcs)",
+      "pl": "Rolka inside‑out z tuna & avocado. (8 szt.)",
+      "de": "Inside‑out‑Rolle mit tuna & avocado. (8 Stk.)",
+      "zh": "反卷寿司：tuna & avocado。（8 份）"
+    }
+  },
+  "SUSHI_INSIDE_OUT_DRAGON_URAMAKI": {
+    "description": {
+      "ru": "Ролл маки с filling. (6 шт.)",
+      "vn": "Maki cuộn với filling. (6 miếng)",
+      "ua": "Макі рол з filling. (6 шт.)",
+      "en": "Maki roll with filling. (6 pcs)",
+      "pl": "Roll maki z filling. (6 szt.)",
+      "de": "Maki‑Rolle mit filling. (6 Stk.)",
+      "zh": "海苔卷：filling。（6 份）"
+    }
+  },
+  "SUSHI_INSIDE_OUT_OCEAN": {
+    "description": {
+      "ru": "Ролл inside‑out с assorted fillings. (8 шт.)",
+      "vn": "Cuộn inside‑out với assorted fillings. (8 miếng)",
+      "ua": "Рол inside‑out з assorted fillings. (8 шт.)",
+      "en": "Inside‑out roll with assorted fillings. (8 pcs)",
+      "pl": "Rolka inside‑out z assorted fillings. (8 szt.)",
+      "de": "Inside‑out‑Rolle mit assorted fillings. (8 Stk.)",
+      "zh": "反卷寿司：assorted fillings。（8 份）"
+    }
+  },
+  "SUSHI_INSIDE_OUT_TERIYAKI_SALMON": {
+    "description": {
+      "ru": "Ролл inside‑out с cooked salmon & rocket. (8 шт.)",
+      "vn": "Cuộn inside‑out với cooked salmon & rocket. (8 miếng)",
+      "ua": "Рол inside‑out з cooked salmon & rocket. (8 шт.)",
+      "en": "Inside‑out roll with cooked salmon & rocket. (8 pcs)",
+      "pl": "Rolka inside‑out z cooked salmon & rocket. (8 szt.)",
+      "de": "Inside‑out‑Rolle mit cooked salmon & rocket. (8 Stk.)",
+      "zh": "反卷寿司：cooked salmon & rocket。（8 份）"
+    }
+  },
+  "SUSHI_TEMPURA_VEGGIE_CRUNCHY": {
+    "description": {
+      "ru": "Жареный темпура‑ролл с mango, avocado & cucumber. (10 шт.)",
+      "vn": "Cuộn tempura chiên giòn với mango, avocado & cucumber. (10 miếng)",
+      "ua": "Смажений темпура‑рол із mango, avocado & cucumber. (10 шт.)",
+      "en": "Crispy tempura roll with mango, avocado & cucumber. (10 pcs)",
+      "pl": "Chrupiący rol w tempurze z mango, avocado & cucumber. (10 szt.)",
+      "de": "Knusprige Tempura‑Rolle mit mango, avocado & cucumber. (10 Stk.)",
+      "zh": "天妇罗炸卷：mango, avocado & cucumber。（10 份）"
+    }
+  },
+  "SUSHI_TEMPURA_CHIKIN_CRUNCHY": {
+    "description": {
+      "ru": "Жареный темпура‑ролл с chicken, avocado & surimi. (10 шт.)",
+      "vn": "Cuộn tempura chiên giòn với chicken, avocado & surimi. (10 miếng)",
+      "ua": "Смажений темпура‑рол із chicken, avocado & surimi. (10 шт.)",
+      "en": "Crispy tempura roll with chicken, avocado & surimi. (10 pcs)",
+      "pl": "Chrupiący rol w tempurze z chicken, avocado & surimi. (10 szt.)",
+      "de": "Knusprige Tempura‑Rolle mit chicken, avocado & surimi. (10 Stk.)",
+      "zh": "天妇罗炸卷：chicken, avocado & surimi。（10 份）"
+    }
+  },
+  "SUSHI_TEMPURA_SALMON_CRUNCHY": {
+    "description": {
+      "ru": "Жареный темпура‑ролл с salmon, avocado & surimi. (10 шт.)",
+      "vn": "Cuộn tempura chiên giòn với salmon, avocado & surimi. (10 miếng)",
+      "ua": "Смажений темпура‑рол із salmon, avocado & surimi. (10 шт.)",
+      "en": "Crispy tempura roll with salmon, avocado & surimi. (10 pcs)",
+      "pl": "Chrupiący rol w tempurze z salmon, avocado & surimi. (10 szt.)",
+      "de": "Knusprige Tempura‑Rolle mit salmon, avocado & surimi. (10 Stk.)",
+      "zh": "天妇罗炸卷：salmon, avocado & surimi。（10 份）"
+    }
+  },
+  "SUSHI_TEMPURA_SCHRIMP_CRUNCHY": {
+    "description": {
+      "ru": "Жареный темпура‑ролл с shrimp tempura, avocado & cream cheese. (10 шт.)",
+      "vn": "Cuộn tempura chiên giòn với shrimp tempura, avocado & cream cheese. (10 miếng)",
+      "ua": "Смажений темпура‑рол із shrimp tempura, avocado & cream cheese. (10 шт.)",
+      "en": "Crispy tempura roll with shrimp tempura, avocado & cream cheese. (10 pcs)",
+      "pl": "Chrupiący rol w tempurze z shrimp tempura, avocado & cream cheese. (10 szt.)",
+      "de": "Knusprige Tempura‑Rolle mit shrimp tempura, avocado & cream cheese. (10 Stk.)",
+      "zh": "天妇罗炸卷：shrimp tempura, avocado & cream cheese。（10 份）"
+    }
+  },
+  "SUSHI_DRAGON_SPECIAL_URAMAKI_TIGER_ROLL": {
+    "description": {
+      "ru": "Ролл маки с filling. (6 шт.)",
+      "vn": "Maki cuộn với filling. (6 miếng)",
+      "ua": "Макі рол з filling. (6 шт.)",
+      "en": "Maki roll with filling. (6 pcs)",
+      "pl": "Roll maki z filling. (6 szt.)",
+      "de": "Maki‑Rolle mit filling. (6 Stk.)",
+      "zh": "海苔卷：filling。（6 份）"
+    }
+  },
+  "SUSHI_DRAGON_SPECIAL_URAMAKI_GURKEN_BLUETE": {
+    "description": {
+      "ru": "Ролл маки с filling. (6 шт.)",
+      "vn": "Maki cuộn với filling. (6 miếng)",
+      "ua": "Макі рол з filling. (6 шт.)",
+      "en": "Maki roll with filling. (6 pcs)",
+      "pl": "Roll maki z filling. (6 szt.)",
+      "de": "Maki‑Rolle mit filling. (6 Stk.)",
+      "zh": "海苔卷：filling。（6 份）"
+    }
+  },
+  "SUSHI_DRAGON_SPECIAL_URAMAKI_GREEN_DRAGON": {
+    "description": {
+      "ru": "Ролл маки с filling. (6 шт.)",
+      "vn": "Maki cuộn với filling. (6 miếng)",
+      "ua": "Макі рол з filling. (6 шт.)",
+      "en": "Maki roll with filling. (6 pcs)",
+      "pl": "Roll maki z filling. (6 szt.)",
+      "de": "Maki‑Rolle mit filling. (6 Stk.)",
+      "zh": "海苔卷：filling。（6 份）"
+    }
+  },
+  "SUSHI_DRAGON_SPECIAL_URAMAKI_CALI": {
+    "description": {
+      "ru": "Ролл маки с filling. (6 шт.)",
+      "vn": "Maki cuộn với filling. (6 miếng)",
+      "ua": "Макі рол з filling. (6 шт.)",
+      "en": "Maki roll with filling. (6 pcs)",
+      "pl": "Roll maki z filling. (6 szt.)",
+      "de": "Maki‑Rolle mit filling. (6 Stk.)",
+      "zh": "海苔卷：filling。（6 份）"
+    }
+  },
+  "SUSHI_DRAGON_SPECIAL_URAMAKI_RED_DRAGON": {
+    "description": {
+      "ru": "Ролл маки с filling. (6 шт.)",
+      "vn": "Maki cuộn với filling. (6 miếng)",
+      "ua": "Макі рол з filling. (6 шт.)",
+      "en": "Maki roll with filling. (6 pcs)",
+      "pl": "Roll maki z filling. (6 szt.)",
+      "de": "Maki‑Rolle mit filling. (6 Stk.)",
+      "zh": "海苔卷：filling。（6 份）"
+    }
+  },
+  "SUSHI_SASHIMI_SALMON_SASHIMI": {
+    "description": {
+      "ru": "Сашими из salmon.",
+      "vn": "Sashimi salmon.",
+      "ua": "Сашімі з salmon.",
+      "en": "Sashimi — salmon.",
+      "pl": "Sashimi — salmon.",
+      "de": "Sashimi — salmon.",
+      "zh": "刺身：salmon。"
+    }
+  },
+  "SUSHI_SASHIMI_TUNA_SASHIMI": {
+    "description": {
+      "ru": "Сашими из tuna.",
+      "vn": "Sashimi tuna.",
+      "ua": "Сашімі з tuna.",
+      "en": "Sashimi — tuna.",
+      "pl": "Sashimi — tuna.",
+      "de": "Sashimi — tuna.",
+      "zh": "刺身：tuna。"
+    }
+  },
+  "SUSHI_SASHIMI_SASHIMI_MIX": {
+    "description": {
+      "ru": "Сашими из salmon & tuna.",
+      "vn": "Sashimi salmon & tuna.",
+      "ua": "Сашімі з salmon & tuna.",
+      "en": "Sashimi — salmon & tuna.",
+      "pl": "Sashimi — salmon & tuna.",
+      "de": "Sashimi — salmon & tuna.",
+      "zh": "刺身：salmon & tuna。"
+    }
+  },
+  "SUSHI_TATAR_SAKE_TATAR": {
+    "description": {
+      "ru": "Тартар из salmon с авокадо, перцем чили и зеленью.",
+      "vn": "Tartare salmon với bơ, ớt và rau thơm.",
+      "ua": "Тартар з salmon з авокадо, чилі та зеленню.",
+      "en": "salmon tartare with avocado, chili and herbs.",
+      "pl": "Tatar z salmon z awokado, chili i ziołami.",
+      "de": "Tatar aus salmon mit Avocado, Chili und Kräutern.",
+      "zh": "salmon塔塔，配牛油果、辣椒与香草。"
+    }
+  },
+  "SUSHI_TATAR_TUNA_TATAR": {
+    "description": {
+      "ru": "Тартар из tuna с авокадо, перцем чили и зеленью.",
+      "vn": "Tartare tuna với bơ, ớt và rau thơm.",
+      "ua": "Тартар з tuna з авокадо, чилі та зеленню.",
+      "en": "tuna tartare with avocado, chili and herbs.",
+      "pl": "Tatar z tuna z awokado, chili i ziołami.",
+      "de": "Tatar aus tuna mit Avocado, Chili und Kräutern.",
+      "zh": "tuna塔塔，配牛油果、辣椒与香草。"
+    }
+  },
+  "SUSHI_SETS_VEGGIE": {
+    "description": {
+      "ru": "Набор суши и роллов: ассорти позиций согласно описанию.",
+      "vn": "Set sushi & roll tổng hợp theo mô tả.",
+      "ua": "Сет суші та ролів: асорті за описом.",
+      "en": "Sushi & roll set — assorted items as described.",
+      "pl": "Zestaw sushi i rolek — asortyment zgodnie z opisem.",
+      "de": "Sushi‑Set — Auswahl pozycji zgodnie z opisem.",
+      "zh": "寿司拼盘——组合详见说明。"
+    }
+  },
+  "SUSHI_SETS_SAKE_SENSEI": {
+    "description": {
+      "ru": "Набор суши и роллов: ассорти позиций согласно описанию.",
+      "vn": "Set sushi & roll tổng hợp theo mô tả.",
+      "ua": "Сет суші та ролів: асорті за описом.",
+      "en": "Sushi & roll set — assorted items as described.",
+      "pl": "Zestaw sushi i rolek — asortyment zgodnie z opisem.",
+      "de": "Sushi‑Set — Auswahl pozycji zgodnie z opisem.",
+      "zh": "寿司拼盘——组合详见说明。"
+    }
+  },
+  "SUSHI_SETS_SAKURA": {
+    "description": {
+      "ru": "Набор суши и роллов: ассорти позиций согласно описанию.",
+      "vn": "Set sushi & roll tổng hợp theo mô tả.",
+      "ua": "Сет суші та ролів: асорті за описом.",
+      "en": "Sushi & roll set — assorted items as described.",
+      "pl": "Zestaw sushi i rolek — asortyment zgodnie z opisem.",
+      "de": "Sushi‑Set — Auswahl pozycji zgodnie z opisem.",
+      "zh": "寿司拼盘——组合详见说明。"
+    }
+  },
+  "SUSHI_SETS_TOKYO": {
+    "description": {
+      "ru": "Набор суши и роллов: ассорти позиций согласно описанию.",
+      "vn": "Set sushi & roll tổng hợp theo mô tả.",
+      "ua": "Сет суші та ролів: асорті за описом.",
+      "en": "Sushi & roll set — assorted items as described.",
+      "pl": "Zestaw sushi i rolek — asortyment zgodnie z opisem.",
+      "de": "Sushi‑Set — Auswahl pozycji zgodnie z opisem.",
+      "zh": "寿司拼盘——组合详见说明。"
+    }
+  },
+  "SUSHI_SETS_SPECIAL_FOR_TWO": {
+    "description": {
+      "ru": "Набор суши и роллов: ассорти позиций согласно описанию.",
+      "vn": "Set sushi & roll tổng hợp theo mô tả.",
+      "ua": "Сет суші та ролів: асорті за описом.",
+      "en": "Sushi & roll set — assorted items as described.",
+      "pl": "Zestaw sushi i rolek — asortyment zgodnie z opisem.",
+      "de": "Sushi‑Set — Auswahl pozycji zgodnie z opisem.",
+      "zh": "寿司拼盘——组合详见说明。"
+    }
+  },
+  "NACHSPEISEN_MOCHI_MIX": {
+    "description": {
+      "ru": "Микс моти (японские рисовые пирожные).",
+      "vn": "Mochi tổng hợp.",
+      "ua": "Мікс моті.",
+      "en": "Mochi mix.",
+      "pl": "Mieszanka mochi.",
+      "de": "Mochi‑Mix.",
+      "zh": "麻糬拼盘。"
+    }
+  },
+  "NACHSPEISEN_KEM_VUNG_DEN": {
+    "description": {
+      "ru": "Мороженое из чёрного кунжута.",
+      "vn": "Kem mè đen.",
+      "ua": "Морозиво з чорного кунжуту.",
+      "en": "Black sesame ice cream.",
+      "pl": "Lody z czarnego sezamu.",
+      "de": "Schwarzes Sesam‑Eis.",
+      "zh": "黑芝麻冰淇淋。"
+    }
+  },
+  "NACHSPEISEN_KEM_TRA_XANH": {
+    "description": {
+      "ru": "Мороженое из зелёного чая.",
+      "vn": "Kem trà xanh.",
+      "ua": "Морозиво з зеленого чаю.",
+      "en": "Green tea ice cream.",
+      "pl": "Lody z zielonej herbaty.",
+      "de": "Grüntee‑Eis.",
+      "zh": "抹茶冰淇淋。"
+    }
+  },
+  "NACHSPEISEN_KOKOS_BAELCHEN": {
+    "description": {
+      "ru": "Кокосовые шарики, подаются с мороженым.",
+      "vn": "Bánh dừa viên, dùng kèm kem.",
+      "ua": "Кокосові кульки з морозивом.",
+      "en": "Coconut balls served with ice cream.",
+      "pl": "Kokosowe kuleczki z lodami.",
+      "de": "Kokos‑Bällchen, serviert mit Eis.",
+      "zh": "椰子球配冰淇淋。"
+    }
+  },
+  "BEILAGEN_GEKOCHTER_REIS": {
+    "description": {
+      "ru": "Отварной рис.",
+      "vn": "Cơm trắng.",
+      "ua": "Відварений рис.",
+      "en": "Steamed rice.",
+      "pl": "Ryż gotowany.",
+      "de": "Gekochter Reis.",
+      "zh": "白米饭。"
+    }
+  },
+  "BEILAGEN_ERDNUSS_TERIYAKI_CURRY_SOSSE": {
+    "description": {
+      "ru": "Соусы: арахисовый / терияки / карри.",
+      "vn": "Sốt: đậu phộng / teriyaki / cà ri.",
+      "ua": "Соуси: арахісовий / теріякі / карі.",
+      "en": "Sauces: peanut / teriyaki / curry.",
+      "pl": "Sosy: orzechowy / teriyaki / curry.",
+      "de": "Soßen: Erdnuss / Teriyaki / Curry.",
+      "zh": "酱料：花生 / 照烧 / 咖喱。"
+    }
+  },
+  "BEILAGEN_FRISCHE_CHILI": {
+    "description": {
+      "ru": "Свежий чили.",
+      "vn": "Ớt tươi.",
+      "ua": "Свіжий чилі.",
+      "en": "Fresh chili.",
+      "pl": "Świeże chili.",
+      "de": "Frische Chili.",
+      "zh": "新鲜辣椒。"
+    }
+  },
+  "BEILAGEN_GEBRATENER_EIERRIS": {
+    "description": {
+      "ru": "Жареный рис с яйцом.",
+      "vn": "Cơm rang trứng.",
+      "ua": "Смажений рис з яйцем.",
+      "en": "Egg fried rice.",
+      "pl": "Smażony ryż z jajkiem.",
+      "de": "Gebratener Eierreis.",
+      "zh": "蛋炒饭。"
+    }
+  },
+  "BEILAGEN_GEBRATENE_GEMUESE": {
+    "description": {
+      "ru": "Жареные овощи.",
+      "vn": "Rau xào.",
+      "ua": "Смажені овочі.",
+      "en": "Stir‑fried vegetables.",
+      "pl": "Warzywa smażone.",
+      "de": "Gebratenes Gemüse.",
+      "zh": "清炒蔬菜。"
+    }
+  },
+  "BEILAGEN_GEBRATENE_NUDELN": {
+    "description": {
+      "ru": "Жареная лапша.",
+      "vn": "Mì xào.",
+      "ua": "Смажена локшина.",
+      "en": "Fried noodles.",
+      "pl": "Smażony makaron.",
+      "de": "Gebratene Nudeln.",
+      "zh": "炒面。"
+    }
+  },
+  "BEILAGEN_INGWER": {
+    "description": {
+      "ru": "Имбирь.",
+      "vn": "Gừng.",
+      "ua": "Імбир.",
+      "en": "Ginger.",
+      "pl": "Imbir.",
+      "de": "Ingwer.",
+      "zh": "姜。"
+    }
+  },
+  "BEILAGEN_WASABI": {
+    "description": {
+      "ru": "Васаби.",
+      "vn": "Wasabi.",
+      "ua": "Васабі.",
+      "en": "Wasabi.",
+      "pl": "Wasabi.",
+      "de": "Wasabi.",
+      "zh": "芥末。"
+    }
+  },
+  "GETRÄNKE_COCA_COLA": {
+    "description": {
+      "ru": "Газированный напиток.",
+      "vn": "Nước ngọt có ga.",
+      "ua": "Газований напій.",
+      "en": "Carbonated soft drink.",
+      "pl": "Napój gazowany.",
+      "de": "Kohlensäurehaltiges Erfrischungsgetränk.",
+      "zh": "碳酸饮料。"
+    }
+  },
+  "GETRÄNKE_COLA_LIGHT": {
+    "description": {
+      "ru": "Газированный напиток.",
+      "vn": "Nước ngọt có ga.",
+      "ua": "Газований напій.",
+      "en": "Carbonated soft drink.",
+      "pl": "Napój gazowany.",
+      "de": "Kohlensäurehaltiges Erfrischungsgetränk.",
+      "zh": "碳酸饮料。"
+    }
+  },
+  "GETRÄNKE_COLA_MIX": {
+    "description": {
+      "ru": "Газированный напиток.",
+      "vn": "Nước ngọt có ga.",
+      "ua": "Газований напій.",
+      "en": "Carbonated soft drink.",
+      "pl": "Napój gazowany.",
+      "de": "Kohlensäurehaltiges Erfrischungsgetränk.",
+      "zh": "碳酸饮料。"
+    }
+  },
+  "GETRÄNKE_SPRITE": {
+    "description": {
+      "ru": "Газированный напиток.",
+      "vn": "Nước ngọt có ga.",
+      "ua": "Газований напій.",
+      "en": "Carbonated soft drink.",
+      "pl": "Napój gazowany.",
+      "de": "Kohlensäurehaltiges Erfrischungsgetränk.",
+      "zh": "碳酸饮料。"
+    }
+  },
+  "GETRÄNKE_GINGER_ALE": {
+    "description": {
+      "ru": "Газированный напиток.",
+      "vn": "Nước ngọt có ga.",
+      "ua": "Газований напій.",
+      "en": "Carbonated soft drink.",
+      "pl": "Napój gazowany.",
+      "de": "Kohlensäurehaltiges Erfrischungsgetränk.",
+      "zh": "碳酸饮料。"
+    }
+  },
+  "COCKTAILS_MOJITO": {
+    "description": {
+      "ru": "Коктейль.",
+      "vn": "Cocktail.",
+      "ua": "Коктейль.",
+      "en": "Cocktail.",
+      "pl": "Koktajl.",
+      "de": "Cocktail.",
+      "zh": "鸡尾酒。"
+    }
+  },
+  "COCKTAILS_INGWER_MOJITO": {
+    "description": {
+      "ru": "Коктейль.",
+      "vn": "Cocktail.",
+      "ua": "Коктейль.",
+      "en": "Cocktail.",
+      "pl": "Koktajl.",
+      "de": "Cocktail.",
+      "zh": "鸡尾酒。"
+    }
+  },
+  "COCKTAILS_MANGO_MOJITO": {
+    "description": {
+      "ru": "Коктейль.",
+      "vn": "Cocktail.",
+      "ua": "Коктейль.",
+      "en": "Cocktail.",
+      "pl": "Koktajl.",
+      "de": "Cocktail.",
+      "zh": "鸡尾酒。"
+    }
+  },
+  "COCKTAILS_MAI_TAI": {
+    "description": {
+      "ru": "Коктейль.",
+      "vn": "Cocktail.",
+      "ua": "Коктейль.",
+      "en": "Cocktail.",
+      "pl": "Koktajl.",
+      "de": "Cocktail.",
+      "zh": "鸡尾酒。"
+    }
+  },
+  "COCKTAILS_APEROL_SPRITZ": {
+    "description": {
+      "ru": "Коктейль.",
+      "vn": "Cocktail.",
+      "ua": "Коктейль.",
+      "en": "Cocktail.",
+      "pl": "Koktajl.",
+      "de": "Cocktail.",
+      "zh": "鸡尾酒。"
+    }
+  },
+  "COCKTAILS_HUGO": {
+    "description": {
+      "ru": "Коктейль.",
+      "vn": "Cocktail.",
+      "ua": "Коктейль.",
+      "en": "Cocktail.",
+      "pl": "Koktajl.",
+      "de": "Cocktail.",
+      "zh": "鸡尾酒。"
+    }
+  },
+  "COCKTAILS_CAIPIRINHA": {
+    "description": {
+      "ru": "Коктейль.",
+      "vn": "Cocktail.",
+      "ua": "Коктейль.",
+      "en": "Cocktail.",
+      "pl": "Koktajl.",
+      "de": "Cocktail.",
+      "zh": "鸡尾酒。"
+    }
+  },
+  "COCKTAILS_GIN_TONIC": {
+    "description": {
+      "ru": "Коктейль.",
+      "vn": "Cocktail.",
+      "ua": "Коктейль.",
+      "en": "Cocktail.",
+      "pl": "Koktajl.",
+      "de": "Cocktail.",
+      "zh": "鸡尾酒。"
+    }
+  },
+  "COCKTAILS_LILET": {
+    "description": {
+      "ru": "Коктейль.",
+      "vn": "Cocktail.",
+      "ua": "Коктейль.",
+      "en": "Cocktail.",
+      "pl": "Koktajl.",
+      "de": "Cocktail.",
+      "zh": "鸡尾酒。"
+    }
+  },
+  "COCKTAILS_TROPICAL_ROSE": {
+    "description": {
+      "ru": "Коктейль.",
+      "vn": "Cocktail.",
+      "ua": "Коктейль.",
+      "en": "Cocktail.",
+      "pl": "Koktajl.",
+      "de": "Cocktail.",
+      "zh": "鸡尾酒。"
+    }
+  },
+  "GETRÄNKE_PROSECCO": {
+    "description": {
+      "ru": "Алкогольный напиток.",
+      "vn": "Đồ uống có cồn.",
+      "ua": "Алкогольний напій.",
+      "en": "Alcoholic beverage.",
+      "pl": "Napój alkoholowy.",
+      "de": "Alkoholisches Getränk.",
+      "zh": "含酒精饮品。"
+    }
+  },
+  "GETRÄNKE_CAMPARI_ORANGE": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  },
+  "GETRÄNKE_BACARDI_COLA": {
+    "description": {
+      "ru": "Газированный напиток.",
+      "vn": "Nước ngọt có ga.",
+      "ua": "Газований напій.",
+      "en": "Carbonated soft drink.",
+      "pl": "Napój gazowany.",
+      "de": "Kohlensäurehaltiges Erfrischungsgetränk.",
+      "zh": "碳酸饮料。"
+    }
+  },
+  "GETRÄNKE_RAMAZOTTI": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  },
+  "GETRÄNKE_AVERNA": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  },
+  "GETRÄNKE_JAEGERMEISTER": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  },
+  "GETRÄNKE_JOHNNY_WALKER_RED": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  },
+  "GETRÄNKE_JOHNNY_WALKER_BLACK": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  },
+  "GETRÄNKE_TRA_CHANH": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  },
+  "GETRÄNKE_TRA_DAU_BIEC": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  },
+  "GETRÄNKE_TRA_DAO": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  },
+  "GETRÄNKE_MARACUJA_LIMO": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  },
+  "GETRÄNKE_BASIL_ORANGE": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  },
+  "GETRÄNKE_VIRGIN_CAIPIRINHA": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  },
+  "GETRÄNKE_VIRGIN_MULE": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  },
+  "GETRÄNKE_VIRGIN_HUGO": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  },
+  "GETRÄNKE_COCO_KISS": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  },
+  "GETRÄNKE_PARADISE": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  },
+  "GETRÄNKE_ESPRESSO": {
+    "description": {
+      "ru": "Горячий напиток.",
+      "vn": "Đồ uống nóng.",
+      "ua": "Гарячий напій.",
+      "en": "Hot beverage.",
+      "pl": "Gorący napój.",
+      "de": "Heißgetränk.",
+      "zh": "热饮。"
+    }
+  },
+  "GETRÄNKE_DOPPELTER_ESPRESSO": {
+    "description": {
+      "ru": "Горячий напиток.",
+      "vn": "Đồ uống nóng.",
+      "ua": "Гарячий напій.",
+      "en": "Hot beverage.",
+      "pl": "Gorący napój.",
+      "de": "Heißgetränk.",
+      "zh": "热饮。"
+    }
+  },
+  "GETRÄNKE_CAPPUCCINO": {
+    "description": {
+      "ru": "Горячий напиток.",
+      "vn": "Đồ uống nóng.",
+      "ua": "Гарячий напій.",
+      "en": "Hot beverage.",
+      "pl": "Gorący napój.",
+      "de": "Heißgetränk.",
+      "zh": "热饮。"
+    }
+  },
+  "GETRÄNKE_MILCHKAFFEE_LATTE_MACHIATTO": {
+    "description": {
+      "ru": "Горячий напиток.",
+      "vn": "Đồ uống nóng.",
+      "ua": "Гарячий напій.",
+      "en": "Hot beverage.",
+      "pl": "Gorący napój.",
+      "de": "Heißgetränk.",
+      "zh": "热饮。"
+    }
+  },
+  "GETRÄNKE_LUGANA_0_1": {
+    "description": {
+      "ru": "Алкогольный напиток.",
+      "vn": "Đồ uống có cồn.",
+      "ua": "Алкогольний напій.",
+      "en": "Alcoholic beverage.",
+      "pl": "Napój alkoholowy.",
+      "de": "Alkoholisches Getränk.",
+      "zh": "含酒精饮品。"
+    }
+  },
+  "GETRÄNKE_LUGANA_0_2": {
+    "description": {
+      "ru": "Алкогольный напиток.",
+      "vn": "Đồ uống có cồn.",
+      "ua": "Алкогольний напій.",
+      "en": "Alcoholic beverage.",
+      "pl": "Napój alkoholowy.",
+      "de": "Alkoholisches Getränk.",
+      "zh": "含酒精饮品。"
+    }
+  },
+  "GETRÄNKE_CHARDONNAY_0_1": {
+    "description": {
+      "ru": "Алкогольный напиток.",
+      "vn": "Đồ uống có cồn.",
+      "ua": "Алкогольний напій.",
+      "en": "Alcoholic beverage.",
+      "pl": "Napój alkoholowy.",
+      "de": "Alkoholisches Getränk.",
+      "zh": "含酒精饮品。"
+    }
+  },
+  "GETRÄNKE_CHARDONNAY_0_2": {
+    "description": {
+      "ru": "Алкогольный напиток.",
+      "vn": "Đồ uống có cồn.",
+      "ua": "Алкогольний напій.",
+      "en": "Alcoholic beverage.",
+      "pl": "Napój alkoholowy.",
+      "de": "Alkoholisches Getränk.",
+      "zh": "含酒精饮品。"
+    }
+  },
+  "GETRÄNKE_RIESLING_0_1": {
+    "description": {
+      "ru": "Алкогольный напиток.",
+      "vn": "Đồ uống có cồn.",
+      "ua": "Алкогольний напій.",
+      "en": "Alcoholic beverage.",
+      "pl": "Napój alkoholowy.",
+      "de": "Alkoholisches Getränk.",
+      "zh": "含酒精饮品。"
+    }
+  },
+  "GETRÄNKE_RIESLING_0_2": {
+    "description": {
+      "ru": "Алкогольный напиток.",
+      "vn": "Đồ uống có cồn.",
+      "ua": "Алкогольний напій.",
+      "en": "Alcoholic beverage.",
+      "pl": "Napój alkoholowy.",
+      "de": "Alkoholisches Getränk.",
+      "zh": "含酒精饮品。"
+    }
+  },
+  "GETRÄNKE_WEINSCHORLE_0_2": {
+    "description": {
+      "ru": "Алкогольный напиток.",
+      "vn": "Đồ uống có cồn.",
+      "ua": "Алкогольний напій.",
+      "en": "Alcoholic beverage.",
+      "pl": "Napój alkoholowy.",
+      "de": "Alkoholisches Getränk.",
+      "zh": "含酒精饮品。"
+    }
+  },
+  "GETRÄNKE_WEINSCHORLE_0_5": {
+    "description": {
+      "ru": "Алкогольный напиток.",
+      "vn": "Đồ uống có cồn.",
+      "ua": "Алкогольний напій.",
+      "en": "Alcoholic beverage.",
+      "pl": "Napój alkoholowy.",
+      "de": "Alkoholisches Getränk.",
+      "zh": "含酒精饮品。"
+    }
+  },
+  "GETRÄNKE_PRIMITIVO_0_1": {
+    "description": {
+      "ru": "Алкогольный напиток.",
+      "vn": "Đồ uống có cồn.",
+      "ua": "Алкогольний напій.",
+      "en": "Alcoholic beverage.",
+      "pl": "Napój alkoholowy.",
+      "de": "Alkoholisches Getränk.",
+      "zh": "含酒精饮品。"
+    }
+  },
+  "GETRÄNKE_PRIMITIVO_0_2": {
+    "description": {
+      "ru": "Алкогольный напиток.",
+      "vn": "Đồ uống có cồn.",
+      "ua": "Алкогольний напій.",
+      "en": "Alcoholic beverage.",
+      "pl": "Napój alkoholowy.",
+      "de": "Alkoholisches Getränk.",
+      "zh": "含酒精饮品。"
+    }
+  },
+  "GETRÄNKE_MERLOT_0_1": {
+    "description": {
+      "ru": "Алкогольный напиток.",
+      "vn": "Đồ uống có cồn.",
+      "ua": "Алкогольний напій.",
+      "en": "Alcoholic beverage.",
+      "pl": "Napój alkoholowy.",
+      "de": "Alkoholisches Getränk.",
+      "zh": "含酒精饮品。"
+    }
+  },
+  "GETRÄNKE_MERLOT_0_2": {
+    "description": {
+      "ru": "Алкогольный напиток.",
+      "vn": "Đồ uống có cồn.",
+      "ua": "Алкогольний напій.",
+      "en": "Alcoholic beverage.",
+      "pl": "Napój alkoholowy.",
+      "de": "Alkoholisches Getränk.",
+      "zh": "含酒精饮品。"
+    }
+  },
+  "GETRÄNKE_SPÄTBURGUNDER_0_1": {
+    "description": {
+      "ru": "Алкогольный напиток.",
+      "vn": "Đồ uống có cồn.",
+      "ua": "Алкогольний напій.",
+      "en": "Alcoholic beverage.",
+      "pl": "Napój alkoholowy.",
+      "de": "Alkoholisches Getränk.",
+      "zh": "含酒精饮品。"
+    }
+  },
+  "GETRÄNKE_SPÄTBURGUNDER_0_2": {
+    "description": {
+      "ru": "Алкогольный напиток.",
+      "vn": "Đồ uống có cồn.",
+      "ua": "Алкогольний напій.",
+      "en": "Alcoholic beverage.",
+      "pl": "Napój alkoholowy.",
+      "de": "Alkoholisches Getränk.",
+      "zh": "含酒精饮品。"
+    }
+  },
+  "GETRÄNKE_LAGREIN_0_1": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  },
+  "GETRÄNKE_LAGREIN_0_2": {
+    "description": {
+      "ru": "Напиток.",
+      "vn": "Thức uống.",
+      "ua": "Напій.",
+      "en": "Beverage.",
+      "pl": "Napój.",
+      "de": "Getränk.",
+      "zh": "饮品。"
+    }
+  }
+}
