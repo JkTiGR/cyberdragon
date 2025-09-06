@@ -99,6 +99,14 @@
     /* Map */
     .map{border:1px solid var(--line); border-radius:14px; overflow:hidden; height:260px}
     iframe{width:100%; height:100%; border:0}
+
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+
   </style>
 </head>
 <body>
@@ -121,7 +129,7 @@
 
         <button class="burger" id="burger" aria-haspopup="true" aria-expanded="false" aria-controls="navPop">☰</button>
         <nav class="nav-pop" id="navPop" role="menu" aria-label="Main menu">
-          <a href="home.html" role="menuitem" id="navHome">🏠 HOME</a>
+          <a href="index.html" role="menuitem" id="navHome">🏠 HOME</a>
           <a href="menu.html" role="menuitem" id="navMenu">🍜 MENU</a>
           <a href="karaoke.html" role="menuitem" id="navKaraoke">🎤 KARAOKE</a>
           <a href="contact.html" role="menuitem" id="navContact">📞 KONTAKT</a>
@@ -180,9 +188,15 @@
         <a class="btn ghost" href="#gallery" id="openGallery">🖼 Галерея</a>
       </div>
       <div class="gallery" id="gallery" style="margin-top:10px">
-        <div class="ph" aria-hidden="true"></div>
-        <div class="ph" aria-hidden="true"></div>
-        <div class="ph" aria-hidden="true"></div>
+        <div class="ph">
+          <img src="images/pho.jpg" alt="Pho Soup">
+        </div>
+        <div class="ph">
+          <img src="images/sushi.jpg" alt="Sushi Rolls">
+        </div>
+        <div class="ph">
+          <img src="images/wok.jpg" alt="Wok Noodles">
+        </div>
       </div>
     </section>
 
