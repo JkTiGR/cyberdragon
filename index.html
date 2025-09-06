@@ -1,34 +1,36 @@
 <!doctype html>
 <html lang="ru">
-<link rel="icon" type="image/png" href="logo.png">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#0b0f1a" />
+  <link rel="icon" href="logo.png" />
   <title>CYBER DRAGON — Home</title>
   <style>
     :root{
-      --bg:#0b0f1a; --glass:rgba(12,16,28,.55); --glass-strong:rgba(20,28,46,.72);
-      --line:rgba(255,255,255,.12); --text:#eaf6ff; --muted:#9fb3c8;
-      --brandA:#4fd3ff; --brandB:#8f00ff;
+      --bg:#0b0f1a; --text:#fff; --muted:#9fb3c8;
+      --glass:rgba(255,255,255,.06); --glass-2:rgba(16,22,36,.72);
+      --line:rgba(255,255,255,.12);
+      --brandA:#4fd3ff; --brandB:#8f00ff; --accent:#ffcc33;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     html{-webkit-text-size-adjust:100%}
     body{
       margin:0;color:var(--text);
-      background:
-        radial-gradient(1200px 1200px at 15% -10%, #183055 0%, transparent 60%),
-        radial-gradient(1200px 1200px at 85% 110%, #2a1250 0%, transparent 55%),
-        var(--bg);
       font:16px/1.48 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
-      -webkit-tap-highlight-color:transparent;
+      background:url('fon.png') center/cover fixed no-repeat, var(--bg);
+      -webkit-font-smoothing:antialiased; -webkit-tap-highlight-color:transparent;
+    }
+    body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+      background:
+        radial-gradient(1100px 900px at 10% -10%, #4168ff22, transparent 60%),
+        radial-gradient(1100px 900px at 90% 110%, #b34dff22, transparent 55%);
     }
     .app{
-      max-width:430px;margin:0 auto;
-      padding:calc(14px + env(safe-area-inset-top)) calc(14px + env(safe-area-inset-right))
-              calc(28px + env(safe-area-inset-bottom)) calc(14px + env(safe-area-inset-left));
-      min-height:100dvh;
+      max-width:430px;margin:0 auto;min-height:100dvh;
+      padding:calc(14px + env(safe-area-inset-top)) 14px calc(28px + env(safe-area-inset-bottom));
+      overscroll-behavior-y: contain;
     }
 
     /* Header */
@@ -36,19 +38,23 @@
     .bar{
       display:flex; align-items:center; gap:10px; padding:8px;
       backdrop-filter:saturate(140%) blur(12px);
-      background:linear-gradient(to bottom, rgba(10,15,26,.75), rgba(10,15,26,.35));
-      border-bottom:1px solid var(--line); border-radius:16px;
+      background:linear-gradient(to bottom, rgba(10,15,26,.8), rgba(10,15,26,.45));
+      border:1px solid var(--line); border-radius:16px;
     }
-    .brand{margin:0;font-size:1.06rem;letter-spacing:.35px;text-shadow:0 1px 6px #0009;display:flex;align-items:center;gap:6px}
-    .brand .mark{height:18px;width:auto;vertical-align:middle;filter:drop-shadow(0 0 6px #00eaff66)}
-    .lang{margin-left:auto;display:flex;align-items:center;gap:6px}
-    .lang select{appearance:none;border-radius:10px;padding:10px 28px 10px 12px;min-height:44px;
-      color:var(--text);background:var(--glass-strong);border:1px solid var(--line);outline:none}
-    .burger{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);
-      background:var(--glass-strong);color:#fff;display:grid;place-items:center;cursor:pointer}
+    .brand{margin:0;font-size:1.06rem;letter-spacing:.35px;font-weight:900;display:flex;align-items:center;gap:6px}
+    .brand .mark{height:18px;width:auto;vertical-align:middle;filter:drop-shadow(0 0 8px #9b5bff99)}
+    .lang{margin-left:auto}
+    .lang select{
+      appearance:none;border-radius:10px;padding:10px 28px 10px 12px;min-height:44px;
+      color:var(--text);background:var(--glass-2);border:1px solid var(--line);outline:none
+    }
+    .burger{
+      width:44px;height:44px;border-radius:12px;border:1px solid var(--line);
+      background:var(--glass-2);color:#fff;display:grid;place-items:center;cursor:pointer
+    }
     .burger:active{transform:scale(.98)}
     .nav-pop{
-      position:absolute;right:14px;top:64px;background:rgba(10,14,24,.94);backdrop-filter:blur(14px) saturate(140%);
+      position:absolute;right:14px;top:64px;background:rgba(10,14,24,.95);backdrop-filter:blur(14px) saturate(140%);
       border:1px solid var(--line);border-radius:14px;padding:8px;display:none;min-width:220px;z-index:40
     }
     .nav-pop.open{display:block}
@@ -57,27 +63,23 @@
     }
     .nav-pop a:hover,.nav-pop .lang-inline:hover{background:var(--glass)}
     .nav-pop hr{border:0;height:1px;background:var(--line);margin:6px 0}
-    .nav-pop .lang-inline select{flex:1;background:var(--glass-strong);border:1px solid var(--line);color:#fff;border-radius:10px;padding:8px 10px;min-height:44px}
+    .nav-pop .lang-inline select{flex:1;background:var(--glass-2);border:1px solid var(--line);color:#fff;border-radius:10px;padding:8px 10px;min-height:44px}
 
-    /* Hero with video */
+    /* Hero */
     .hero{
       position:relative; overflow:hidden; border-radius:18px; height:62vh; min-height:440px;
       border:1px solid var(--line); box-shadow:0 18px 28px #001a2f66;
-      background:linear-gradient(135deg,#183a63,#522a8a);
+      background:linear-gradient(135deg,#183a63,#522a8a); margin-top:10px;
     }
-    .hero video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:brightness(.75) contrast(1.05)}
-    .hero .veil{position:absolute; inset:0; background:radial-gradient(60% 60% at 50% 45%, rgba(0,0,0,.25), rgba(0,0,0,.55))}
-    .hero .center{
-      position:absolute; inset:0; display:grid; place-items:center; text-align:center; padding:24px;
-    }
+    .hero video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:brightness(.78) contrast(1.05)}
+    .hero .veil{position:absolute; inset:0; background:radial-gradient(60% 60% at 50% 45%, rgba(0,0,0,.25), rgba(0,0,0,.58))}
+    .hero .center{position:absolute; inset:0; display:grid; place-items:center; text-align:center; gap:14px; padding:22px}
     .logoBig{width:210px; max-width:65%; filter:drop-shadow(0 0 14px #b44cffaa)}
     .btn{
       border:none; border-radius:999px; padding:14px 22px; font-weight:900; cursor:pointer; min-height:52px;
-      color:#001027; background:linear-gradient(90deg,var(--brandA),var(--brandB)); box-shadow:0 18px 28px #4fd3ff33;
+      color:#001027; background:linear-gradient(90deg,var(--brandA),var(--brandB)); text-decoration:none
     }
-    .apps{
-      position:absolute; left:0; right:0; bottom:14px; display:flex; gap:10px; justify-content:center; padding:0 10px;
-    }
+    .apps{position:absolute; left:0; right:0; bottom:14px; display:flex; gap:10px; justify-content:center; padding:0 10px}
     .app-badge{
       display:flex; align-items:center; gap:8px; padding:8px 12px; min-width:86px;
       background:rgba(0,0,0,.45); border:1px solid var(--line); color:#fff; border-radius:12px; text-decoration:none;
@@ -85,36 +87,97 @@
     }
     .app-badge svg{width:18px;height:18px}
 
-    /* Sections */
+    /* Tabs */
+    .tabs{position:sticky;top:10px;margin-top:10px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.05);backdrop-filter:blur(8px)}
+    .tabs-inner{display:flex;gap:18px;overflow:auto;padding:10px 12px}
+    .tab{white-space:nowrap;opacity:.85;cursor:pointer;font-weight:800}
+    .tab.active{opacity:1;position:relative}
+    .tab.active::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:3px;border-radius:3px;background:var(--accent)}
+
+    /* Sections/cards */
     .section{background:var(--glass);border:1px solid var(--line);border-radius:18px;padding:14px;backdrop-filter:blur(10px);margin-top:10px}
-    .section h3{margin:0 0 8px}
     .muted{color:var(--muted)}
-    .grid{display:grid; gap:10px}
+    .cta-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .ghost{background:transparent;color:#fff;border:1px dashed var(--line)}
     .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-    .ph{aspect-ratio:1/1;border-radius:14px;background:linear-gradient(135deg,#334b7a,#6842a6);border:1px solid var(--line)}
-    .row{display:flex; gap:10px; flex-wrap:wrap}
-    .chip{padding:8px 12px; border-radius:999px; background:var(--glass-strong); border:1px solid var(--line)}
-    .cta-row{display:grid; grid-template-columns:1fr 1fr; gap:8px}
-    .ghost{background:transparent; color:#fff; border:1px dashed var(--line)}
+    .ph{aspect-ratio:1/1;border-radius:14px;border:1px solid var(--line);overflow:hidden;background:linear-gradient(135deg,#334b7a,#6842a6)}
+    .gallery img{width:100%;height:100%;object-fit:cover;display:block}
 
-    /* Map */
-    .map{border:1px solid var(--line); border-radius:14px; overflow:hidden; height:260px}
-    iframe{width:100%; height:100%; border:0}
+    /* Контент: заголовок + кнопка вида */
+    .head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+    .view-toggle{
+      width:40px;height:40px;border-radius:12px;border:1px solid var(--line);
+      background:var(--glass-2);color:#fff;display:grid;place-items:center;cursor:pointer
+    }
+    .view-toggle:active{transform:scale(.98)}
+    .view-toggle svg{width:22px;height:22px;display:none}
+    .view-toggle[data-view="grid"] .ico-list{display:block} /* сейчас сетка → показываем иконку списка */
+    .view-toggle[data-view="list"] .ico-grid{display:block} /* сейчас список → показываем иконку сетки */
 
-    .gallery img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;   /* картинка полностью заполняет квадрат, обрезается лишнее */
-      border-radius: 14px; /* скругление как у карточек */
-      display: block;
+    /* Сетка карточек + режим списка */
+    .list{display:grid;gap:10px;margin-top:8px;grid-template-columns:repeat(2,minmax(0,1fr))}
+    .card{display:grid;grid-template-rows:auto auto auto;gap:8px;
+      padding:10px;border-radius:18px;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(10px);position:relative;overflow:hidden}
+    .thumb-wrap{position:relative}
+    .thumb{width:100%;aspect-ratio:1/1;border-radius:20px;overflow:hidden;background:linear-gradient(135deg,#3a517f,#7a45cc)}
+    .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit}
+    @supports (clip-path: inset(0 round 20px)){ .thumb{clip-path: inset(0 round 20px);} }
+    .info{position:absolute;right:8px;top:8px;width:28px;height:28px;border-radius:999px;border:1px solid var(--line);
+      background:var(--glass-2);color:#fff;cursor:pointer;display:grid;place-items:center;font-weight:800}
+    .name{font-weight:800;line-height:1.2;min-height:2.4em}
+    .foot{display:flex;align-items:center;justify-content:space-between;gap:8px}
+    .price{font-weight:800}
+    .add{border:none;border-radius:999px;padding:10px 14px;background:linear-gradient(90deg,var(--brandA),var(--brandB));
+      color:#001027;font-weight:800;cursor:pointer;min-height:40px;flex:1}
+
+    /* Список */
+    .list.as-list{grid-template-columns:1fr}
+    .list.as-list .card{grid-template-columns:92px 1fr auto;grid-template-rows:auto auto;gap:10px}
+    .list.as-list .thumb{width:92px;height:92px;aspect-ratio:auto;border-radius:14px}
+    .list.as-list .thumb-wrap{grid-row:1/3}
+    .list.as-list .name{grid-column:2}
+    .list.as-list .foot{grid-column:2/4;justify-content:space-between}
+
+    .qty{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:6px 8px}
+    .qty button{width:32px;height:32px;border:none;border-radius:10px;background:var(--glass-2);color:#fff;cursor:pointer}
+
+    .map{border:1px solid var(--line);border-radius:14px;overflow:hidden;height:260px}
+    iframe{width:100%;height:100%;border:0}
+
+    .fab{position:sticky;bottom:calc(14px + env(safe-area-inset-bottom));display:flex;justify-content:center;margin-top:14px;z-index:35}
+    .cart-fab{
+      display:inline-flex;align-items:center;gap:10px;border:none;border-radius:999px;padding:12px 18px;cursor:pointer;color:#001027;
+      background:linear-gradient(90deg,var(--brandA),var(--brandB));font-weight:800;box-shadow:0 18px 28px #001a2f66;min-height:48px
     }
 
-
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:.2s opacity;z-index:40}
+    .overlay.show{opacity:1;pointer-events:auto}
+    .sheet{
+      position:fixed;left:0;right:0;bottom:0;width:100%;max-width:430px;margin:0 auto;
+      background:rgba(10,14,24,.96);backdrop-filter:blur(16px) saturate(140%);
+      border-top-left-radius:18px;border-top-right-radius:18px;border:1px solid var(--line);
+      padding:14px;padding-bottom:calc(14px + env(safe-area-inset-bottom));
+      transition:.25s transform; transform:translateY(100%);
+      z-index:41; max-height:85dvh; overflow:auto; overscroll-behavior: contain;
+    }
+    .sheet.open{ transform:translateY(0) }
+    .sheet h3{margin:0 0 8px}
+    .cart-lines{display:grid;gap:10px;max-height:38dvh;overflow:auto;padding-right:4px}
+    .line{display:grid;grid-template-columns:1fr auto;align-items:center;gap:10px;padding:8px;border-radius:12px;border:1px dashed var(--line)}
+    .group{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{padding:10px 14px;border-radius:999px;background:var(--glass);border:1px solid var(--line);cursor:pointer;min-height:44px}
+    .chip.active{background:linear-gradient(90deg,var(--brandA),var(--brandB));color:#001027;border:none;font-weight:800}
+    .field{display:grid;gap:6px;margin-top:8px}
+    .field input,.field textarea{border-radius:10px;padding:12px;background:var(--glass-2);color:#fff;border:1px solid var(--line);outline:none;font-size:1rem;min-height:44px}
+    .field textarea{min-height:72px;resize:vertical}
+    .checkout{display:grid;gap:8px;margin-top:10px}
+    .btn.primary{background:linear-gradient(90deg,var(--brandA),var(--brandB));color:#001027}
+    .btn.ghost{background:transparent;border:1px dashed var(--line);color:#fff}
   </style>
 </head>
 <body>
-  <div class="app">
-    <!-- Header -->
+  <div class="app" id="top">
+    <!-- HEADER -->
     <header class="header">
       <div class="bar">
         <h1 class="brand">
@@ -157,13 +220,11 @@
       <div class="veil"></div>
       <div class="center">
         <img class="logoBig" src="logo.png" alt="Cyber Dragon">
-        <a class="btn" href="menu.html" id="btnMenu">🍜 MENU</a>
+        <a class="btn" href="menu.html" id="btnMenu">🍜 Меню</a>
       </div>
 
-      <!-- App badges -->
       <div class="apps">
         <a class="app-badge" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
-          <!-- IG icon -->
           <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="white" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="white" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
           IG
         </a>
@@ -182,184 +243,508 @@
       </div>
     </section>
 
-    <!-- RESTAURANT / MENU / GALLERY -->
-    <section class="section" id="rest">
-      <h3 id="secRest">Ресторан • Меню • Галерея</h3>
-      <p class="muted" id="restText">Свежие роллы, супы, воки и десерты. Смотрите меню и фото блюд.</p>
-      <div class="cta-row">
-        <a class="btn" href="nemu.html" id="openMenu">🍜 Открыть меню</a>
-        <a class="btn ghost" href="#gallery" id="openGallery">🖼 Галерея</a>
+    <!-- TABS -->
+    <nav class="tabs">
+      <div class="tabs-inner" id="tabs">
+        <div class="tab active" onclick="switchTab('promo')">Промоакции</div>
+        <div class="tab" onclick="switchTab('popular')">Самое популярное</div>
+        <div class="tab" onclick="switchTab('baked')">Запечённые роли</div>
+        <div class="tab" onclick="switchTab('sushirrito')">Суширито</div>
+        <div class="tab" onclick="switchTab('sets')">Сеты</div>
+        <div class="tab" onclick="switchTab('soups')">Супы</div>
+        <div class="tab" onclick="switchTab('wok')">WOK • Лапша • Рис</div>
+        <div class="tab" onclick="switchTab('salads')">Салаты</div>
+        <div class="tab" onclick="switchTab('snacks')">Закуски</div>
       </div>
-      <div class="gallery" id="gallery" style="margin-top:10px">
-        <div class="ph">
-          <img src="images/pho.jpg" alt="Pho Soup">
-        </div>
-        <div class="ph">
-          <img src="images/sushi.jpg" alt="Sushi Rolls">
-        </div>
-        <div class="ph">
-          <img src="images/wok.jpg" alt="Wok Noodles">
-        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <section class="section" id="content">
+      <div class="head">
+        <h3 id="contentTitle">Промоакции</h3>
+        <button class="view-toggle" id="viewToggle" data-view="grid" aria-label="Вид списком" title="Вид списком">
+          <!-- иконка "список" -->
+          <svg class="ico-list" viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="6"  width="16" height="2" rx="1" fill="white"/>
+            <rect x="4" y="11" width="16" height="2" rx="1" fill="white"/>
+            <rect x="4" y="16" width="16" height="2" rx="1" fill="white"/>
+          </svg>
+          <!-- иконка "сетка" -->
+          <svg class="ico-grid" viewBox="0 0 24 24" fill="none">
+            <rect x="4"  y="4"  width="7" height="7" rx="1" stroke="white" stroke-width="1.6"/>
+            <rect x="13" y="4"  width="7" height="7" rx="1" stroke="white" stroke-width="1.6"/>
+            <rect x="4"  y="13" width="7" height="7" rx="1" stroke="white" stroke-width="1.6"/>
+            <rect x="13" y="13" width="7" height="7" rx="1" stroke="white" stroke-width="1.6"/>
+          </svg>
+        </button>
       </div>
+      <div class="list" id="promoList"></div>
     </section>
 
-    <!-- KARAOKE -->
-    <section class="section" id="karaoke">
-      <h3 id="secKaraoke">Караоке</h3>
-      <p class="muted" id="karaText">Отдельные кабинки, качественный звук и миллионы треков.</p>
-      <div class="row">
-        <span class="chip">🎤 2–8 гостей</span>
-        <span class="chip">🎚 Профессиональная акустика</span>
-        <span class="chip">🍹 Бар и закуски</span>
+    <!-- REST/GALLERY -->
+    <section class="section" id="rest">
+      <h3>Ресторан • Меню • Галерея</h3>
+      <p class="muted">Свежие роллы, супы, воки и десерты. Смотрите меню и фото блюд.</p>
+      <div class="cta-row">
+        <a class="btn" href="menu.html">🍜 Открыть меню</a>
+        <a class="btn ghost" href="#gallery">🖼 Галерея</a>
       </div>
-      <div class="cta-row" style="margin-top:10px">
-        <a class="btn" href="tel:+48600000000" id="bookRoom">📞 Забронировать</a>
-        <a class="btn ghost" href="karaoke.html" id="karaMore">➜ Подробнее</a>
+      <div class="gallery" id="gallery" style="margin-top:10px">
+        <div class="ph"><img src="images/VORSPEISEN_SUPPEN_PHO_BO.png" alt="Pho"></div>
+        <div class="ph"><img src="images/SUSHI_NIGIRI_AVOCADO.png" alt="Sushi"></div>
+        <div class="ph"><img src="images/VORSPEISEN_SUPPEN_TOM_YAM.png" onerror="this.src='images/VORSPEISEN_SUPPEN_SUP_TOM_YAM.png'" alt="Wok"></div>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section class="section" id="contact">
-      <h3 id="secContact">Контакты</h3>
-      <div class="grid">
-        <div class="row"><span class="chip">☎</span> <a href="tel:+48600000000" id="cPhone">+48 600 000 000</a></div>
-        <div class="row"><span class="chip">📧</span> <a href="mailto:hello@cyberdragon.rest" id="cMail">hello@cyberdragon.rest</a></div>
-        <div class="row"><span class="chip">📍</span> <span id="cAddr">54 Summit Street, Fremont</span></div>
-        <div class="row"><span class="chip">🕒</span> <span id="cHours">Пн–Чт 11:00–22:00 • Пт–Сб 11:00–23:00 • Вс 11:00–22:00</span></div>
+      <h3>Контакты</h3>
+      <div class="list" style="grid-template-columns:1fr">
+        <div class="card" style="grid-template-rows:auto auto">
+          <div><b>Телефон:</b> <a href="tel:+48600000000" style="color:#fff">+48 600 000 000</a></div>
+          <div><b>E-mail:</b> <a href="mailto:hello@cyberdragon.rest" style="color:#fff">hello@cyberdragon.rest</a></div>
+          <div><b>Адрес:</b> 54 Summit Street, Fremont</div>
+          <div class="muted">Пн–Чт 11:00–22:00 • Пт–Сб 11:00–23:00 • Вс 11:00–22:00</div>
+        </div>
       </div>
     </section>
 
     <!-- MAP -->
     <section class="section" id="map">
-      <h3 id="secMap">Карта</h3>
+      <h3>Карта</h3>
       <div class="map">
-        <!-- Замените q= на ваш адрес -->
-        <iframe
-          src="https://www.google.com/maps?q=54%20Summit%20Street%20Fremont&output=embed"
-          loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps?q=54%20Summit%20Street%20Fremont&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="cta-row" style="margin-top:10px">
-        <a class="btn" target="_blank" rel="noopener" href="https://maps.google.com/?q=54+Summit+Street+Fremont" id="openMaps">📍 Открыть в Maps</a>
-        <a class="btn ghost" href="#top" id="backTop">↑ Наверх</a>
+        <a class="btn" target="_blank" rel="noopener" href="https://maps.google.com/?q=54+Summit+Street+Fremont">📍 Открыть в Maps</a>
+        <a class="btn ghost" href="#top">↑ Наверх</a>
       </div>
     </section>
+
+    <!-- FAB CART -->
+    <div class="fab">
+      <button class="cart-fab" id="cartFab" aria-haspopup="dialog">🛒 <span id="fabText">0 шт. • 0.00 €</span></button>
+    </div>
   </div>
 
-  <script>
-  // -------- persist language across pages --------
-  const savedLang = localStorage.getItem('CYBER_LANG') || 'ru';
-  let LANG = savedLang; document.documentElement.lang = LANG;
+  <!-- Bottom Sheet -->
+  <div class="overlay" id="overlay"></div>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <h3 id="sheetTitle">Ваш заказ</h3>
+    <div class="cart-lines" id="cartLines"></div>
 
-  // -------- i18n --------
-  const T = {
-    ru:{ navHome:'Главная',navMenu:'Меню',navKaraoke:'Караоке',navContact:'Контакты',
-         btnMenu:'Меню', rest:'Ресторан • Меню • Галерея', restText:'Свежие роллы, супы, воки и десерты. Смотрите меню и фото блюд.',
-         openMenu:'Открыть меню', openGal:'Галерея',
-         kara:'Караоке', karaText:'Отдельные кабинки, качественный звук и миллионы треков.', book:'Забронировать', more:'Подробнее',
-         contact:'Контакты', addr:'54 Summit Street, Fremont', hours:'Пн–Чт 11:00–22:00 • Пт–Сб 11:00–23:00 • Вс 11:00–22:00',
-         map:'Карта', openMaps:'Открыть в Maps', backTop:'Наверх'
-    },
-    en:{ navHome:'Home',navMenu:'Menu',navKaraoke:'Karaoke',navContact:'Contact',
-         btnMenu:'Menu', rest:'Restaurant • Menu • Gallery', restText:'Fresh rolls, hot soups & woks. See our menu and food photos.',
-         openMenu:'Open menu', openGal:'Gallery',
-         kara:'Karaoke', karaText:'Private rooms, pro sound, millions of tracks.', book:'Book now', more:'Details',
-         contact:'Contact', addr:'54 Summit Street, Fremont', hours:'Mon–Thu 11–22 • Fri–Sat 11–23 • Sun 11–22',
-         map:'Map', openMaps:'Open in Maps', backTop:'Back to top'
-    },
-    ua:{ navHome:'Головна',navMenu:'Меню',navKaraoke:'Караоке',navContact:'Контакти',
-         btnMenu:'Меню', rest:'Ресторан • Меню • Галерея', restText:'Свіжі роли, гарячі супи та воки. Меню і фото страв.',
-         openMenu:'Відкрити меню', openGal:'Галерея',
-         kara:'Караоке', karaText:'Окремі кабінки, професійний звук, мільйони треків.', book:'Забронювати', more:'Детальніше',
-         contact:'Контакти', addr:'54 Summit Street, Fremont', hours:'Пн–Чт 11–22 • Пт–Сб 11–23 • Нд 11–22',
-         map:'Карта', openMaps:'Відкрити в Maps', backTop:'Вгору'
-    },
-    vn:{ navHome:'Trang chủ',navMenu:'Thực đơn',navKaraoke:'Karaoke',navContact:'Liên hệ',
-         btnMenu:'Menu', rest:'Nhà hàng • Menu • Bộ sưu tập', restText:'Sushi tươi, súp nóng & wok. Xem menu và ảnh món.',
-         openMenu:'Xem menu', openGal:'Bộ sưu tập',
-         kara:'Karaoke', karaText:'Phòng riêng, âm thanh xịn, hàng triệu bài.', book:'Đặt phòng', more:'Chi tiết',
-         contact:'Liên hệ', addr:'54 Summit Street, Fremont', hours:'T2–T5 11–22 • T6–T7 11–23 • CN 11–22',
-         map:'Bản đồ', openMaps:'Mở trong Maps', backTop:'Lên đầu'
-    },
-    pl:{ navHome:'Start',navMenu:'Menu',navKaraoke:'Karaoke',navContact:'Kontakt',
-         btnMenu:'Menu', rest:'Restauracja • Menu • Galeria', restText:'Świeże rolki, gorące zupy i woki. Zobacz menu i zdjęcia.',
-         openMenu:'Otwórz menu', openGal:'Galeria',
-         kara:'Karaoke', karaText:'Prywatne pokoje, pro audio, miliony utworów.', book:'Rezerwuj', more:'Szczegóły',
-         contact:'Kontakt', addr:'54 Summit Street, Fremont', hours:'Pn–Cz 11–22 • Pt–Sb 11–23 • Nd 11–22',
-         map:'Mapa', openMaps:'Otwórz w Maps', backTop:'Do góry'
-    },
-    de:{ navHome:'Start',navMenu:'Menü',navKaraoke:'Karaoke',navContact:'Kontakt',
-         btnMenu:'Menü', rest:'Restaurant • Menü • Galerie', restText:'Frische Rollen, heiße Suppen & Woks. Speisekarte und Fotos.',
-         openMenu:'Speisekarte öffnen', openGal:'Galerie',
-         kara:'Karaoke', karaText:'Privaträume, Pro Sound, Millionen Songs.', book:'Reservieren', more:'Details',
-         contact:'Kontakt', addr:'54 Summit Street, Fremont', hours:'Mo–Do 11–22 • Fr–Sa 11–23 • So 11–22',
-         map:'Karte', openMaps:'In Maps öffnen', backTop:'Nach oben'
-    },
-    zh:{ navHome:'主页',navMenu:'菜单',navKaraoke:'卡拉OK',navContact:'联系',
-         btnMenu:'菜单', rest:'餐厅 • 菜单 • 相册', restText:'新鲜寿司、热汤与炒锅。查看菜单与菜品照片。',
-         openMenu:'打开菜单', openGal:'相册',
-         kara:'卡拉OK', karaText:'独立包间，专业音响，数百万曲库。', book:'预订', more:'详情',
-         contact:'联系', addr:'54 Summit Street, Fremont', hours:'周一–周四 11–22 • 周五–周六 11–23 • 周日 11–22',
-         map:'地图', openMaps:'在 Maps 打开', backTop:'返回顶部'
+    <div class="section">
+      <div class="muted" id="orderTypeTitle" style="margin-bottom:6px">Тип заказа</div>
+      <div class="group" id="orderType">
+        <button class="chip active" data-ot="on_site" id="otOnSite">На месте</button>
+        <button class="chip" data-ot="takeaway" id="otTakeaway">На вынос</button>
+        <button class="chip" data-ot="delivery" id="otDelivery">Доставка</button>
+      </div>
+
+      <div class="field" id="tableField" style="display:grid">
+        <label for="tableNo" id="tableLbl">Стол <span class="muted">(обязательно)</span></label>
+        <input id="tableNo" type="number" min="1" inputmode="numeric" placeholder="Например, 5">
+      </div>
+
+      <div class="field" id="takeawayField" style="display:none">
+        <label for="pickupIn" id="pickupLbl">Через сколько забрать (мин) <span class="muted">(обязательно)</span></label>
+        <input id="pickupIn" type="number" min="5" step="5" placeholder="15">
+      </div>
+
+      <div class="field" id="addrField" style="display:none">
+        <label for="address" id="addrLbl">Адрес доставки <span class="muted">(обязательно)</span></label>
+        <textarea id="address" placeholder="Город, улица, дом, подъезд..."></textarea>
+      </div>
+
+      <div class="field" id="phoneField">
+        <label for="phone" id="phoneLbl">Телефон <span class="muted" id="phoneHint">(необязательно)</span></label>
+        <input id="phone" type="tel" placeholder="+48 600 000 000">
+      </div>
+    </div>
+
+    <div class="checkout">
+      <div class="muted" id="cartMeta">Итого: 0.00 €</div>
+      <button class="btn primary" id="checkoutBtn">Оформить</button>
+      <button class="btn ghost" id="clearBtn">Очистить корзину</button>
+    </div>
+  </div>
+
+  <!-- DATA -->
+  <script src="menu.js"></script>
+  <script>
+    if (typeof menuData !== 'undefined' && !window.menuData) { window.menuData = menuData; }
+  </script>
+
+  <script>
+  /* ===== Telegram ===== */
+  const TG = {
+    BOT_TOKEN: "6819820426:AAEWwwN8tYLVPo6U-g6EjWCo4evnJ2SaGk4",
+    CHAT_ID: -1002156259709,
+    PROXY_URL: ""
+  };
+  const TG_ENDPOINT = (b)=> (TG.PROXY_URL || "https://api.telegram.org/bot"+b+"/sendMessage");
+
+  /* ===== Helpers & state ===== */
+  const $ = s => document.querySelector(s);
+  const $$ = s => document.querySelectorAll(s);
+  const CURRENCY='€';
+  const IMG_DIR='images/'; const IMG_EXTS=['webp','jpg','jpeg','png'];
+
+  function buildThumb(imgEl, key){
+    let i=0; const trySet=()=>imgEl.src=IMG_DIR + key + '.' + IMG_EXTS[i];
+    imgEl.onerror=()=>{ i++; if(i<IMG_EXTS.length){ trySet(); } else { imgEl.closest('.thumb')?.classList.add('noimg'); imgEl.remove(); } };
+    trySet();
+  }
+  function itemName(it){
+    return (it?.translations?.ru) || (it?.translations?.en) || (it?.key||'').replaceAll('_',' ');
+  }
+
+  /* ===== Burger ===== */
+  const burger = $('#burger'), navPop = $('#navPop');
+  burger.addEventListener('click', ()=>{ const open=navPop.classList.toggle('open'); burger.setAttribute('aria-expanded', String(open)); });
+  document.addEventListener('click', e=>{ if(!navPop.contains(e.target) && e.target!==burger){ navPop.classList.remove('open'); burger.setAttribute('aria-expanded','false'); } });
+
+  /* ===== Cart ===== */
+  const cart = new Map();
+  function getItemById(id){
+    const [cat,idx] = id.split(':'); const arr = (window.menuData||{})[cat]||[];
+    return arr[+idx];
+  }
+  function renderFab(){
+    let items=0,sum=0;
+    for(const [id,qty] of cart){ const it=getItemById(id); if(!it) continue; items+=qty; sum+=(Number(it.price||0)*qty); }
+    $('#fabText').textContent = items + " шт. • " + sum.toFixed(2) + " " + CURRENCY;
+  }
+  function renderCartSheet(){
+    const lines = $('#cartLines');
+    if(cart.size===0){
+      lines.innerHTML = '<div class="muted">Корзина пуста.</div>';
+      $('#cartMeta').textContent = 'Итого: 0.00 ' + CURRENCY;
+      return;
     }
+    let sum=0; lines.innerHTML='';
+    for(const [id,qty] of cart){
+      const it=getItemById(id); if(!it) continue;
+      const name=itemName(it); const price=Number(it.price||0); sum+=price*qty;
+      const el=document.createElement('div'); el.className='line';
+      el.innerHTML='<div><strong>'+name+'</strong><div class="muted">'+price.toFixed(2)+' '+CURRENCY+' × '+qty+'</div></div>'+
+        '<div class="qty" data-qty="'+id+'"><button data-dec="'+id+'">−</button><span>'+qty+'</span><button data-inc="'+id+'">+</button></div>';
+      lines.appendChild(el);
+    }
+    $('#cartMeta').textContent = 'Итого: ' + sum.toFixed(2) + ' ' + CURRENCY;
+  }
+  function openSheet(){ document.body.style.overflow='hidden'; $('#overlay').classList.add('show'); $('#sheet').classList.add('open'); renderCartSheet(); }
+  function closeSheet(){ document.body.style.overflow=''; $('#overlay').classList.remove('show'); $('#sheet').classList.remove('open'); }
+
+  window.add = function(id){
+    if(!getItemById(id)){ console.warn('Нет позиции', id); return; }
+    cart.set(id, (cart.get(id)||0)+1);
+    renderFab();
   };
 
-  const $ = s => document.querySelector(s);
-  const selA = $('#langSel'); const selB = $('#langSelMenu');
-
-  function applyTexts(){
-    const L = T[LANG];
-    $('#navHome').textContent = '🏠 ' + L.navHome;
-    $('#navMenu').textContent = '🍜 ' + L.navMenu;
-    $('#navKaraoke').textContent = '🎤 ' + L.navKaraoke;
-    $('#navContact').textContent = '📞 ' + L.navContact;
-
-    $('#btnMenu').textContent = '🍜 ' + L.btnMenu;
-
-    $('#secRest').textContent = L.rest;
-    $('#restText').textContent = L.restText;
-    $('#openMenu').textContent = '🍜 ' + L.openMenu;
-    $('#openGallery').textContent = '🖼 ' + L.openGal;
-
-    $('#secKaraoke').textContent = L.kara;
-    $('#karaText').textContent = L.karaText;
-    $('#bookRoom').textContent = '📞 ' + L.book;
-    $('#karaMore').textContent = '➜ ' + L.more;
-
-    $('#secContact').textContent = L.contact;
-    $('#cAddr').textContent = L.addr;
-    $('#cHours').textContent = L.hours;
-
-    $('#secMap').textContent = L.map;
-    $('#openMaps').textContent = '📍 ' + L.openMaps;
-    $('#backTop').textContent = '↑ ' + L.backTop;
-
-    document.documentElement.lang = LANG;
-    selA.value = LANG; selB.value = LANG;
-  }
-  function setLang(v){
-    LANG = v; localStorage.setItem('CYBER_LANG', v); applyTexts();
-  }
-  selA.addEventListener('change', e=>setLang(e.target.value));
-  selB?.addEventListener('change', e=>setLang(e.target.value));
-
-  // burger popup
-  const burger = $('#burger'), navPop = $('#navPop');
-  burger.addEventListener('click', ()=>{
-    const open = navPop.classList.toggle('open');
-    burger.setAttribute('aria-expanded', String(open));
+  document.addEventListener('click', e=>{
+    if(e.target.closest('#cartFab')){ openSheet(); return; }
+    if(e.target.id==='overlay'){ closeSheet(); return; }
+    const inc=e.target.closest('[data-inc]'); if(inc){ const id=inc.dataset.inc; cart.set(id,(cart.get(id)||0)+1); renderCartSheet(); renderFab(); return; }
+    const dec=e.target.closest('[data-dec]'); if(dec){ const id=dec.dataset.dec; const q=(cart.get(id)||0)-1; if(q<=0) cart.delete(id); else cart.set(id,q); renderCartSheet(); renderFab(); return; }
+    if(e.target.id==='clearBtn'){ cart.clear(); renderCartSheet(); renderFab(); return; }
   });
-  document.addEventListener('click', (e)=>{
-    if(!navPop.contains(e.target) && e.target!==burger){
-      navPop.classList.remove('open'); burger.setAttribute('aria-expanded','false');
+
+  /* ===== Order type ===== */
+  const otWrap=$('#orderType'),
+        tableField=$('#tableField'), takeawayField=$('#takeawayField'), addrField=$('#addrField');
+  const tableNo=$('#tableNo'), pickupIn=$('#pickupIn'), address=$('#address'), phone=$('#phone'), phoneHint=$('#phoneHint');
+  function show(el,on){ if(!el) return; el.style.display=on?'grid':'none'; }
+  function setPhoneHint(req){ if(phoneHint) phoneHint.textContent = req ? '(обязательно)' : '(необязательно)'; }
+  function setOrderType(v){
+    show(tableField, v==='on_site'); show(takeawayField, v==='takeaway'); show(addrField, v==='delivery');
+    if(tableNo) tableNo.required=(v==='on_site');
+    if(pickupIn) pickupIn.required=(v==='takeaway');
+    if(address) address.required=(v==='delivery');
+    setPhoneHint(v!=='on_site');
+  }
+  if(otWrap){
+    otWrap.addEventListener('click',e=>{
+      const b=e.target.closest('[data-ot]'); if(!b) return;
+      $$('#orderType .chip').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active'); setOrderType(b.dataset.ot);
+    });
+    setOrderType('on_site');
+  }
+
+  /* ===== Telegram send ===== */
+  async function sendOrderToTelegram(text){
+    const url = TG_ENDPOINT(TG.BOT_TOKEN);
+    const payload = {chat_id: TG.CHAT_ID, text: text, parse_mode: "HTML", disable_web_page_preview: true};
+    try{
+      const r = await fetch(url, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)});
+      if(r.ok) return {ok:true};
+      await fetch(url, {method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)});
+      return {ok:true, opaque:true};
+    }catch(e){ console.error(e); return {ok:false, reason:String(e)}; }
+  }
+  function cartSummary(){
+    let items=0,sum=0, lines=[];
+    for(const [id,qty] of cart){
+      const it=getItemById(id); if(!it) continue;
+      const name=itemName(it); const price=Number(it.price||0);
+      items+=qty; sum+=price*qty;
+      lines.push('• '+name+' — '+price.toFixed(2)+' '+CURRENCY+' × '+qty);
+    }
+    return {items,sum,lines};
+  }
+  $('#checkoutBtn')?.addEventListener('click', async ()=>{
+    const ot=document.querySelector('#orderType .chip.active')?.dataset.ot||'on_site';
+    if(ot==='on_site' && !tableNo.value.trim()){ alert('Укажите номер стола.'); return; }
+    if(ot==='takeaway'){
+      if(!pickupIn.value.trim()){ alert('Укажите через сколько минут забрать.'); return; }
+      if(!phone.value.trim()){ alert('Укажите телефон.'); return; }
+    }
+    if(ot==='delivery'){
+      if(!address.value.trim()){ alert('Укажите адрес доставки.'); return; }
+      if(!phone.value.trim()){ alert('Укажите телефон.'); return; }
+    }
+    const s=cartSummary();
+    const typeStr = ot==='on_site' ? 'На месте' : (ot==='takeaway' ? 'На вынос' : 'Доставка');
+    const meta=[];
+    if(ot==='on_site') meta.push('Стол: '+tableNo.value.trim());
+    if(ot==='takeaway') meta.push('Через сколько забрать (мин): '+pickupIn.value.trim());
+    if(ot==='delivery') meta.push('Адрес доставки: '+address.value.trim());
+    if(phone?.value.trim()) meta.push('Телефон: '+phone.value.trim());
+    const ordId = 'CD-' + new Date().toISOString().replace(/[-:TZ.]/g,'').slice(0,14);
+
+    const text =
+      '<b>CYBER DRAGON — Новый заказ</b>\n' +
+      'ID: <code>'+ordId+'</code>\n' +
+      'Итого: <b>'+s.sum.toFixed(2)+' '+CURRENCY+'</b>\n' +
+      'Тип: <b>'+typeStr+'</b>\n' +
+      (meta.length?meta.join('\n')+'\n\n':'\n') +
+      '<b>Позиции:</b>\n' +
+      (s.lines.join('\n') || '—');
+
+    const res = await sendOrderToTelegram(text);
+    alert((res.ok ? 'Заказ принят ✔' : 'Отправка не подтверждена') +
+          '\nID: ' + ordId +
+          '\nСумма: ' + s.sum.toFixed(2) + ' ' + CURRENCY);
+
+    cart.clear(); renderCartSheet(); renderFab(); closeSheet();
+  });
+
+  /* ===== Collectors & renderer for tabs ===== */
+  function collectPromo(limit=6){
+    const d = window.menuData||{};
+    const order = ['SUSHI','VORSPEISEN','HAUPTSPEISEN','GETRÄNKE','NACHSPEISEN','BEILAGEN'];
+    const out=[];
+    for(const cat of order){
+      const arr=d[cat]||[];
+      for(let i=0;i<arr.length && out.length<limit;i++) out.push({id:cat+':'+i,item:arr[i]});
+      if(out.length>=limit) break;
+    }
+    if(out.length<limit){
+      for(const cat of Object.keys(d)){
+        const arr=d[cat]||[];
+        for(let i=0;i<arr.length && out.length<limit;i++){
+          const id=cat+':'+i; if(out.find(x=>x.id===id)) continue;
+          out.push({id:itemId= id,item:arr[i]});
+        }
+        if(out.length>=limit) break;
+      }
+    }
+    return out;
+  }
+  function collectPopular(limit=12){
+    const d = window.menuData||{}; const out=[]; const cats=Object.keys(d).sort();
+    for(const cat of cats){
+      const arr=d[cat]||[];
+      for(let i=arr.length-1;i>=0 && out.length<limit;i--) out.push({id:cat+':'+i,item:arr[i]});
+      if(out.length>=limit) break;
+    }
+    return out;
+  }
+  function collectBaked(limit=12){
+    const d = window.menuData||{}; const out=[]; const kw=['запеч','baked','yaki','яки'];
+    for(const cat of Object.keys(d)){
+      const arr=d[cat]||[];
+      for(let i=0;i<arr.length;i++){
+        const it=arr[i]; const txt=((it.key||'')+' '+(it.desc||'')+' '+(it.translations?.ru||'')).toLowerCase();
+        if(kw.some(k=>txt.includes(k))) out.push({id:cat+':'+i,item:it});
+        if(out.length>=limit) return out;
+      }
+    }
+    return out.length?out:collectPromo(limit);
+  }
+  function renderListBy(list){
+    const wrap = $('#promoList');
+    wrap.innerHTML = list.map(({id,item})=>{
+      const name = itemName(item);
+      const price = (Number(item.price||0)).toFixed(2)+' '+CURRENCY;
+      return (
+        '<div class="card" data-id="'+id+'">'+
+          '<div class="thumb-wrap">'+
+            '<div class="thumb"><img alt="'+name+'" loading="lazy" decoding="async"></div>'+
+            '<button class="info" data-toggle="'+id+'" title="Подробнее">i</button>'+
+          '</div>'+
+          '<div class="name">'+name+'</div>'+
+          '<div class="foot"><div class="price">'+price+'</div>'+
+            '<button class="add" onclick="add(\''+id+'\')">Добавить</button>'+
+          '</div>'+
+        '</div>'
+      );
+    }).join('');
+
+    wrap.querySelectorAll('.card').forEach(row=>{
+      const id=row.getAttribute('data-id'); const [cat,idx]=id.split(':');
+      const key=(window.menuData?.[cat]?.[+idx]?.key)||'';
+      const img=row.querySelector('.thumb img');
+      if(img && key) buildThumb(img,key);
+    });
+
+    applyView(); // применить режим после рендера
+  }
+
+  /* ===== Tabs + View toggle ===== */
+  function switchTab(k){
+    $$('#tabs .tab').forEach(t=>{ t.classList.toggle('active', t.getAttribute('onclick').includes("'" + k + "'")); });
+    const titles = {
+      promo:'Промоакции', popular:'Самое популярное', baked:'Запечённые роли',
+      sushirrito:'Суширито', sets:'Сеты', soups:'Супы', wok:'WOK • Лапша • Рис',
+      salads:'Салаты', snacks:'Закуски'
+    };
+    $('#contentTitle').textContent = titles[k] || 'Промоакции';
+
+    if(k==='promo') renderListBy(collectPromo());
+    else if(k==='popular') renderListBy(collectPopular());
+    else if(k==='baked') renderListBy(collectBaked());
+    else renderListBy(collectPromo()); // временно
+  }
+  window.switchTab = switchTab;
+
+  // Вид: сетка / список
+  const VIEW_KEY='CD_VIEW';
+  let viewMode = localStorage.getItem(VIEW_KEY) || 'grid'; // 'grid' | 'list'
+  function applyView(){
+    const wrap = document.getElementById('promoList');
+    const btn  = document.getElementById('viewToggle');
+    if(!wrap || !btn) return;
+    wrap.classList.toggle('as-list', viewMode==='list');
+    btn.dataset.view = viewMode;
+    const to = (viewMode==='grid') ? 'Вид списком' : 'Вид сеткой';
+    btn.setAttribute('aria-label', to);
+    btn.title = to;
+  }
+  document.getElementById('viewToggle')?.addEventListener('click', ()=>{
+    viewMode = (viewMode==='grid') ? 'list' : 'grid';
+    localStorage.setItem(VIEW_KEY, viewMode);
+    applyView();
+  });
+
+  document.addEventListener('click', e=>{
+    const info = e.target.closest('[data-toggle]');
+    if(info){
+      const card = document.querySelector('.card[data-id="'+info.dataset.toggle+'"]');
+      if(card) card.classList.toggle('expanded');
     }
   });
 
-  // init
-  (function init(){
-    selA.value = LANG; selB.value = LANG;
-    applyTexts();
-  })();
+  /* ===== Init ===== */
+  renderFab();
+  switchTab('promo');
+  applyView();
   </script>
+  <script>
+  /* ==== I18N ==== */
+  const LANG_KEY='CD_LANG';
+  let LANG = localStorage.getItem(LANG_KEY) || 'ru';
+  document.documentElement.lang = LANG;
+
+  const I18N = {
+    ru:{navHome:'Главная',navMenu:'Меню',navKaraoke:'Караоке',navContact:'Контакты',btnMenu:'Меню',
+        tabs:{promo:'Промоакции',popular:'Самое популярное',baked:'Запечённые роли',sushirrito:'Суширито',sets:'Сеты',soups:'Супы',wok:'WOK • Лапша • Рис',salads:'Салаты',snacks:'Закуски'},
+        viewList:'Вид списком',viewGrid:'Вид сеткой'},
+    en:{navHome:'Home',navMenu:'Menu',navKaraoke:'Karaoke',navContact:'Contact',btnMenu:'Menu',
+        tabs:{promo:'Promos',popular:'Most popular',baked:'Baked rolls',sushirrito:'Sushirrito',sets:'Sets',soups:'Soups',wok:'WOK • Noodles • Rice',salads:'Salads',snacks:'Snacks'},
+        viewList:'List view',viewGrid:'Grid view'},
+    ua:{navHome:'Головна',navMenu:'Меню',navKaraoke:'Караоке',navContact:'Контакти',btnMenu:'Меню',
+        tabs:{promo:'Промоакції',popular:'Найпопулярніше',baked:'Запечені роли',sushirrito:'Сушіріто',sets:'Набори',soups:'Супи',wok:'WOK • Локшина • Рис',salads:'Салати',snacks:'Закуски'},
+        viewList:'Вигляд списком',viewGrid:'Вигляд сіткою'},
+    pl:{navHome:'Start',navMenu:'Menu',navKaraoke:'Karaoke',navContact:'Kontakt',btnMenu:'Menu',
+        tabs:{promo:'Promocje',popular:'Najpopularniejsze',baked:'Rolki zapiekane',sushirrito:'Sushirrito',sets:'Zestawy',soups:'Zupy',wok:'WOK • Makaron • Ryż',salads:'Sałatki',snacks:'Przystawki'},
+        viewList:'Widok listy',viewGrid:'Widok siatki'},
+    de:{navHome:'Start',navMenu:'Menü',navKaraoke:'Karaoke',navContact:'Kontakt',btnMenu:'Menü',
+        tabs:{promo:'Aktionen',popular:'Am beliebtesten',baked:'Gebackene Rollen',sushirrito:'Sushirrito',sets:'Sets',soups:'Suppen',wok:'WOK • Nudeln • Reis',salads:'Salate',snacks:'Vorspeisen'},
+        viewList:'Listenansicht',viewGrid:'Rasteransicht'},
+    zh:{navHome:'主页',navMenu:'菜单',navKaraoke:'卡拉OK',navContact:'联系',btnMenu:'菜单',
+        tabs:{promo:'促销',popular:'最受欢迎',baked:'烤卷',sushirrito:'寿司卷饼',sets:'套餐',soups:'汤品',wok:'WOK • 面 • 米饭',salads:'沙拉',snacks:'小吃'},
+        viewList:'列表视图',viewGrid:'网格视图'},
+    vn:{navHome:'Trang chủ',navMenu:'Thực đơn',navKaraoke:'Karaoke',navContact:'Liên hệ',btnMenu:'Thực đơn',
+        tabs:{promo:'Khuyến mãi',popular:'Phổ biến nhất',baked:'Cuộn nướng',sushirrito:'Sushirrito',sets:'Set',soups:'Súp',wok:'WOK • Mì • Cơm',salads:'Salad',snacks:'Món ăn nhẹ'},
+        viewList:'Dạng danh sách',viewGrid:'Dạng lưới'}
+  };
+  const L = () => I18N[LANG] || I18N.en;
+
+  /* REPLACE old itemName() with this: */
+  function itemName(it){
+    return (it?.translations?.[LANG]) || it?.translations?.en || (it?.key||'').replaceAll('_',' ');
+  }
+
+  /* текущая вкладка для перерисовки */
+  let currentTab = 'promo';
+  const originalSwitchTab = window.switchTab; // обёртка над твоей switchTab
+  window.switchTab = function(k){ currentTab = k; originalSwitchTab(k); setTitles(); };
+
+  /* установить тексты интерфейса */
+  function setTitles(){
+    // навигация
+    const t = L();
+    const set = (sel, txt) => { const n=document.querySelector(sel); if(n) n.textContent = txt; };
+    set('#navHome', '🏠 ' + t.navHome);
+    set('#navMenu', '🍜 ' + t.navMenu);
+    set('#navKaraoke', '🎤 ' + t.navKaraoke);
+    set('#navContact', '📞 ' + t.navContact);
+    set('#btnMenu', '🍜 ' + t.btnMenu);
+
+    // подписи вкладок
+    const map = t.tabs;
+    const setTab = key => {
+      const el = document.querySelector(`[onclick="switchTab('${key}')"]`);
+      if(el) el.textContent = map[key] || I18N.en.tabs[key];
+    };
+    ['promo','popular','baked','sushirrito','sets','soups','wok','salads','snacks'].forEach(setTab);
+
+    // заголовок текущего контента
+    const h = document.getElementById('contentTitle');
+    if(h) h.textContent = map[currentTab] || map.promo;
+
+    // кнопка смены вида
+    const vt = document.getElementById('viewToggle');
+    if(vt){
+      const label = (vt.dataset.view==='grid') ? t.viewList : t.viewGrid;
+      vt.setAttribute('aria-label', label);
+      vt.title = label;
+    }
+
+    // перерисовать карточки, чтобы имена взялись в новом языке
+    if(currentTab==='promo')       renderListBy(collectPromo());
+    else if(currentTab==='popular')renderListBy(collectPopular());
+    else if(currentTab==='baked')  renderListBy(collectBaked());
+  }
+
+  /* обработка селекторов языка */
+  const selA = document.getElementById('langSel');
+  const selB = document.getElementById('langSelMenu');
+  function setLang(v){
+    LANG = v; localStorage.setItem(LANG_KEY, v);
+    document.documentElement.lang = v;
+    if(selA) selA.value = v;
+    if(selB) selB.value = v;
+    setTitles();
+  }
+  if(selA){ selA.value = LANG; selA.addEventListener('change', e=>setLang(e.target.value)); }
+  if(selB){ selB.value = LANG; selB.addEventListener('change', e=>setLang(e.target.value)); }
+
+  /* стартовые тексты */
+  setTitles();
+  </script>
+
 </body>
 </html>
-
