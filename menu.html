@@ -40,18 +40,14 @@
     }
     .brand{margin:0;font-size:1.06rem;letter-spacing:.35px;text-shadow:0 1px 6px #0009;display:flex;align-items:center;gap:6px}
     .brand .mark{height:18px;width:auto;vertical-align:middle;filter:drop-shadow(0 0 6px #00eaff66)}
-
     .lang{margin-left:auto;display:flex;align-items:center;gap:6px}
     .lang select{
       appearance:none;border-radius:10px;padding:10px 28px 10px 12px;
-      color:var(--text);background:var(--glass-strong);border:1px solid var(--line);outline:none;
-      min-height:44px;
+      color:var(--text);background:var(--glass-strong);border:1px solid var(--line);outline:none;min-height:44px;
     }
-
     .burger{
       width:44px;height:44px;border-radius:12px;border:1px solid var(--line);
-      background:var(--glass-strong);color:#fff;display:grid;place-items:center;cursor:pointer;
-      touch-action: manipulation;
+      background:var(--glass-strong);color:#fff;display:grid;place-items:center;cursor:pointer;touch-action:manipulation;
     }
     .burger:active{transform:scale(.98)}
     .nav-pop{
@@ -75,47 +71,48 @@
     .pill:active{transform:scale(.98)}
     .pill.active{background:linear-gradient(90deg,var(--brandA),var(--brandB));color:#001027;border:none;font-weight:700}
 
-    /* Items with thumbnails */
-    .list{display:grid;gap:10px;margin-top:8px}
-    .item{
-      display:grid;grid-template-columns:96px 1fr auto;align-items:center;gap:10px;padding:12px;border-radius:16px;background:var(--glass);
-      border:1px solid var(--line);backdrop-filter:blur(10px);position:relative;content-visibility:auto;contain-intrinsic-size:120px
+    /* GRID like screenshot */
+    .list{
+      display:grid;gap:10px;margin-top:8px;
+      grid-template-columns:repeat(2, minmax(0,1fr));
     }
-    .thumb{width:96px;height:72px;border-radius:12px;overflow:hidden;position:relative;background:linear-gradient(135deg,#3a517f,#7a45cc)}
+    .card{
+      display:grid;grid-template-rows:auto auto auto;gap:8px;
+      padding:10px;border-radius:16px;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(10px);
+      position:relative; overflow:hidden;
+    }
+    .thumb-wrap{position:relative}
+    .thumb{width:100%;aspect-ratio:1/1;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#3a517f,#7a45cc)}
     .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
     .thumb.noimg{background:linear-gradient(135deg,#334b7a,#6842a6)}
-    .name-row{display:flex;align-items:center;gap:8px}
-    .name{font-weight:700;margin:0}
-    .desc{margin:.25rem 0 0;color:var(--muted);font-size:.95rem}
     .info{
-      margin-left:auto;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);
-      background:var(--glass-strong);color:#fff;cursor:pointer;display:grid;place-items:center;font-weight:800;touch-action:manipulation
+      position:absolute;right:8px;top:8px;width:28px;height:28px;border-radius:999px;border:1px solid var(--line);
+      background:var(--glass-strong);color:#fff;cursor:pointer;display:grid;place-items:center;font-weight:800
     }
-    .price{font-weight:800;font-size:1.02rem}
+    .name{font-weight:800;line-height:1.2;min-height:2.4em}
+    .desc{display:none;color:var(--muted);font-size:.92rem}
+    .card.expanded .desc{display:block}
+    .foot{display:flex;align-items:center;justify-content:space-between;gap:8px}
+    .price{font-weight:800}
     .add{
       border:none;border-radius:999px;padding:10px 14px;background:linear-gradient(90deg,var(--brandA),var(--brandB));
-      color:#001027;font-weight:800;cursor:pointer;min-height:44px;touch-action:manipulation
+      color:#001027;font-weight:800;cursor:pointer;min-height:40px;flex:1
     }
     .qty{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:6px 8px}
     .qty button{
-      width:36px;height:36px;border:none;border-radius:10px;background:var(--glass-strong);color:#fff;cursor:pointer;touch-action:manipulation
+      width:32px;height:32px;border:none;border-radius:10px;background:var(--glass-strong);color:#fff;cursor:pointer
     }
-
-    /* Expanded info */
-    .more{display:none;grid-column:1/-1;margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);color:#cfe7ff}
-    .item.expanded .more{display:block}
 
     /* FAB cart */
     .fab{position:sticky;bottom:calc(14px + env(safe-area-inset-bottom));display:flex;justify-content:center;margin-top:14px;z-index:35}
     .cart-fab{
       display:inline-flex;align-items:center;gap:10px;border:none;border-radius:999px;padding:12px 18px;cursor:pointer;color:#001027;
-      background:linear-gradient(90deg,var(--brandA),var(--brandB));font-weight:800;box-shadow:0 18px 28px #001a2f66;min-height:48px;touch-action:manipulation
+      background:linear-gradient(90deg,var(--brandA),var(--brandB));font-weight:800;box-shadow:0 18px 28px #001a2f66;min-height:48px
     }
 
     /* Overlay + bottom sheet */
     .overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:.2s opacity;z-index:40}
     .overlay.show{opacity:1;pointer-events:auto}
-
     .sheet{
       position:fixed; left:0; right:0; bottom:0;
       width:100%; max-width:430px; margin:0 auto;
@@ -140,10 +137,28 @@
     }
     .field textarea{min-height:72px;resize:vertical}
     .checkout{display:grid;gap:8px;margin-top:10px}
-    .btn{border:none;border-radius:14px;padding:12px 14px;font-weight:800;cursor:pointer;min-height:48px;touch-action:manipulation}
+    .btn{border:none;border-radius:14px;padding:12px 14px;font-weight:800;cursor:pointer;min-height:48px}
     .btn.primary{background:linear-gradient(90deg,var(--brandA),var(--brandB));color:#001027}
     .btn.ghost{background:transparent;border:1px dashed var(--line);color:#fff}
     .muted{color:var(--muted)}
+
+    /* Мягкие скруглённые углы у фото блюд */
+    .thumb{
+      border-radius: 20px;   /* можно 16–24 — как больше нравится */
+      overflow: hidden;      /* чтобы картинка не “торчала” за радиус */
+    }
+
+    /* на всякий случай — скруглить и сам тег img */
+    .thumb img{
+      border-radius: inherit;
+    }
+
+    /* Фикс для редких браузерных артефактов */
+    @supports (clip-path: inset(0 round 20px)){
+      .thumb{ clip-path: inset(0 round 20px); }
+    }
+
+
   </style>
 </head>
 <body>
@@ -186,7 +201,7 @@
     <!-- Categories -->
     <div class="h-scroll" id="catPills" aria-label="Categories"></div>
 
-    <!-- Items -->
+    <!-- Items GRID -->
     <div class="list" id="list"></div>
 
     <!-- FAB -->
@@ -244,11 +259,11 @@
   // ---------- SETTINGS ----------
   let LANG='ru'; document.documentElement.lang=LANG;
   const CURRENCY='€';
-  const USE_IMAGES=true;               // ← вернули изображения
+  const USE_IMAGES=true;
   const IMG_DIR='images/'; const IMG_EXTS=['webp','jpg','jpeg','png'];
 
   // ---------- I18N ----------
-  const I18N={ /* … тот же объект из прошлой версии (RU/EN/UA/VN/PL/DE/ZH) … */ };
+  const I18N={};
   I18N.ru={navHome:'Главная',navMenu:'Меню',navKaraoke:'Караоке',navContact:'Контакты',
     sheetTitle:'Ваш заказ',orderTypeTitle:'Тип заказа',otOnSite:'На месте',otTakeaway:'На вынос',otDelivery:'Доставка',
     tableLbl:'Стол',pickupLbl:'Через сколько забрать (мин)',addrLbl:'Адрес доставки',
@@ -326,7 +341,6 @@
     return (fromJson && (fromJson[LANG]||fromJson.en)) || it.short || it.description || it.desc || '';
   }
 
-  // загрузка миниатюры с перебором расширений и фолбэком
   function buildThumb(imgEl, key){
     let i=0;
     const trySet=()=>{ imgEl.src = IMG_DIR + key + '.' + IMG_EXTS[i]; };
@@ -354,28 +368,28 @@
     const wrap=$('#list'); const items=menuData[currentCat]||[]; const L=I18N[LANG];
     wrap.innerHTML=items.map((it,idx)=>{
       const name=itemName(it); const id=`${currentCat}:${idx}`; const qty=cart.get(id)||0; const price=it.price??0;
-      const btn=qty?`<div class="qty" data-qty="${id}"><button data-dec="${id}">−</button><span>${qty}</span><button data-inc="${id}">+</button></div>`
-                   :`<button class="add" data-add="${id}">${L.add}</button>`;
+      const btn=qty
+        ? `<div class="qty" data-qty="${id}"><button data-dec="${id}">−</button><span>${qty}</span><button data-inc="${id}">+</button></div>`
+        : `<button class="add" data-add="${id}">${L.add}</button>`;
       const descText=getDesc(it);
-      return `<div class="item" data-id="${id}">
-        <div class="thumb">${USE_IMAGES?'<img loading="lazy" decoding="async" alt="'+name+'">':''}</div>
-        <div>
-          <div class="name-row">
-            <div class="name">${name}</div>
-            <button class="info" title="i" data-toggle="${id}">i</button>
-          </div>
-          ${descText?`<p class="desc">${descText}</p>`:''}
+      return `
+      <div class="card" data-id="${id}">
+        <div class="thumb-wrap">
+          <div class="thumb">${USE_IMAGES?`<img loading="lazy" decoding="async" alt="${name}">`:''}</div>
+          <button class="info" title="Подробнее" data-toggle="${id}">i</button>
         </div>
-        <div style="display:grid;gap:8px;justify-items:end">
+        <div class="name">${name}</div>
+        ${descText?`<p class="desc">${descText}</p>`:''}
+        <div class="foot">
           <div class="price">${fmt(price)}</div>
           ${btn}
         </div>
-        <div class="more"></div>
-      </div>`}).join('');
+      </div>`;
+    }).join('');
 
-    // подставляем изображения
+    // подставить изображения
     if(USE_IMAGES){
-      wrap.querySelectorAll('.item').forEach(row=>{
+      wrap.querySelectorAll('.card').forEach(row=>{
         const id=row.getAttribute('data-id'); const [cat,idx]=id.split(':');
         const key=(menuData[cat]?.[+idx]?.key)||''; const img=row.querySelector('.thumb img');
         if(img && key) buildThumb(img,key);
@@ -434,23 +448,24 @@
     const dec=e.target.closest('[data-dec]');
     if(dec){const id=dec.dataset.dec; const q=(cart.get(id)||0)-1; if(q<=0) cart.delete(id); else cart.set(id,q); renderList(); renderCartSheet(); renderFab(); return;}
 
-    // expand card
+    // раскрытие (по “i” или по клику по карточке вне кнопок)
     const infoBtn=e.target.closest('[data-toggle]');
-    const itemEl=infoBtn?document.querySelector(`.item[data-id="${infoBtn.dataset.toggle}"]`):e.target.closest('.item');
-    if(itemEl && !e.target.closest('.add') && !e.target.closest('.qty')){ itemEl.classList.toggle('expanded'); return; }
+    const cardEl=infoBtn ? document.querySelector(`.card[data-id="${infoBtn.dataset.toggle}"]`)
+                         : e.target.closest('.card');
+    if(cardEl && !e.target.closest('.add') && !e.target.closest('.qty')){
+      cardEl.classList.toggle('expanded');
+      return;
+    }
 
-    // open cart
+    // корзина
     if(e.target.closest('#cartFab')){
       document.body.style.overflow='hidden';
       $('#overlay').classList.add('show');
       const sh=$('#sheet'); sh.classList.add('open'); sh.scrollTop=0;
       renderCartSheet(); return;
     }
-
-    // overlay closes
     if(e.target.id==='overlay'){ closeSheet(); }
 
-    // clear
     if(e.target.id==='clearBtn'){ cart.clear(); renderList(); renderCartSheet(); renderFab(); }
   });
 
