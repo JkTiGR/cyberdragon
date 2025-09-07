@@ -365,6 +365,19 @@
   };
   const L = ()=>I18N[LANG]||I18N.en;
 
+  // ==== Descriptions loader ====
+  // Lazy-load descriptions from descriptions.json. If not yet loaded, fetch the file and cache it.
+  let DESCS = null;
+  async function loadDescriptions(){
+    if(DESCS) return DESCS;
+    try{
+      const resp = await fetch('descriptions.json');
+      if(resp.ok){ DESCS = await resp.json(); return DESCS; }
+    }catch(e){ console.error('Failed to load descriptions.json', e); }
+    DESCS = {};
+    return DESCS;
+  }
+
   /* ==== CATEGORIES (labels) ==== */
   const CAT_LABELS={
     'VORSPEISEN':{ru:'Закуски',en:'Starters',ua:'Закуски',pl:'Przystawki',de:'Vorspeisen',zh:'前菜',vn:'Khai vị'},
@@ -431,20 +444,23 @@
   function renderList(){
     const list=$('#list'); const items=(menuData[currentCat]||[]); const t=L();
     list.innerHTML=items.map((it,idx)=>{
-      const id=`${currentCat}:${idx}`, name=itemName(it), price=fmt(it.price||0);
-      const qty=cart.get(id)||0;
+      const id = `${currentCat}:${idx}`, name = itemName(it), price = fmt(it.price||0);
+      const qty = cart.get(id) || 0;
       const btn = qty
         ? `<div class="qty" data-qty="${id}"><button data-dec="${id}">−</button><span>${qty}</span><button data-inc="${id}">+</button></div>`
         : `<button class="add" data-add="${id}">${t.ui.add}</button>`;
-      const more=t.ui.more;
+      const more = t.ui.more;
+      // derive a key for description lookup and a short description fallback
+      const key = (it && (it.key || it.id || it.code)) || '';
+      const shortDesc = (it && (it.short || it.desc || '')) || '';
       return `
-        <div class="card" data-id="${id}">
+        <div class="card" data-id="${id}"${key ? ` data-key="${key}"` : ''}>
           <div class="thumb-wrap">
             <div class="thumb"><img alt="${name}" loading="lazy" decoding="async"></div>
-            <button class="info" data-toggle="${id}" title="${more}">i</button>
+            <button class="info" data-toggle="${id}" title="${more}" aria-label="${more}" aria-expanded="false" aria-controls="desc-${id}">i</button>
           </div>
           <div class="name">${name}</div>
-          ${it.short?`<p class="desc">${it.short}</p>`:''}
+          <p class="desc" id="desc-${id}" aria-hidden="true">${shortDesc}</p>
           <div class="foot">
             <div class="price">${price}</div>
             ${btn}
@@ -487,11 +503,60 @@
   function closeSheet(){ document.body.style.overflow=''; $('#overlay').classList.remove('show'); $('#sheet').classList.remove('open'); }
 
   /* ==== Events ==== */
-  document.addEventListener('click', e=>{
+document.addEventListener('click', async e=>{
     const add=e.target.closest('[data-add]'); if(add){const id=add.dataset.add; cart.set(id,(cart.get(id)||0)+1); renderList(); renderFab(); return;}
     const inc=e.target.closest('[data-inc]'); if(inc){const id=inc.dataset.inc; cart.set(id,(cart.get(id)||0)+1); renderList(); renderCartSheet(); renderFab(); return;}
     const dec=e.target.closest('[data-dec]'); if(dec){const id=dec.dataset.dec; const q=(cart.get(id)||0)-1; if(q<=0) cart.delete(id); else cart.set(id,q); renderList(); renderCartSheet(); renderFab(); return;}
-    const info=e.target.closest('[data-toggle]'); if(info){ document.querySelector(`.card[data-id="${info.dataset.toggle}"]`)?.classList.toggle('expanded'); return; }
+    const info=e.target.closest('[data-toggle]');
+    if(info){
+      e.preventDefault();
+      const cardId = info.dataset.toggle;
+      const card   = document.querySelector(`.card[data-id="${cardId}"]`);
+      if(card){
+        const expanded = card.classList.contains('expanded');
+        if(!expanded){
+          const descEl = card.querySelector('.desc');
+          if(descEl){
+            let text = '';
+            // determine key from card or menuData
+            let key = card.getAttribute('data-key');
+            if(!key){
+              const parts0 = cardId.split(':');
+              if(parts0.length === 2){
+                const [cat0, idx0] = parts0;
+                const it0 = (menuData?.[cat0] || [])[+idx0];
+                key = (it0 && (it0.key || it0.id || it0.code)) || '';
+              }
+            }
+            if(key){
+              try{
+                const descs = await loadDescriptions();
+                const entry = descs[key];
+                if(entry && entry.description){
+                  text = entry.description[LANG] || entry.description.en || '';
+                }
+              }catch(err){ console.error(err); }
+            }
+            // fallback to any existing description on item
+            if(!text){
+              const parts1 = cardId.split(':');
+              if(parts1.length === 2){
+                const [cat1, idx1] = parts1;
+                const it1 = (menuData?.[cat1] || [])[+idx1];
+                const fallback = (it1 && (it1.desc || it1.short || '')) || '';
+                text = fallback;
+              }
+            }
+            if(text) descEl.textContent = text;
+          }
+        }
+        card.classList.toggle('expanded');
+        info.setAttribute('aria-expanded', (!expanded).toString());
+        const descEl2 = card.querySelector('.desc');
+        if(descEl2) descEl2.setAttribute('aria-hidden', expanded.toString());
+      }
+      return;
+    }
     if(e.target.closest('#cartFab')){ openSheet(); return; }
     if(e.target.id==='overlay'){ closeSheet(); return; }
     if(e.target.id==='clearBtn'){ cart.clear(); renderList(); renderCartSheet(); renderFab(); return; }
@@ -649,3 +714,4 @@ ${lines.join('\n') || '—'}`;
   <script src="menu.js"></script>
 </body>
 </html>
+

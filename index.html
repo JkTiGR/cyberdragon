@@ -518,6 +518,17 @@
   const CURRENCY='€';
   const IMG_DIR='images/'; const IMG_EXTS=['webp','jpg','jpeg','png'];
 
+  // Lazy-load descriptions from descriptions.json. Returns a Promise resolving to an object keyed by item keys.
+  let DESCS = null;
+  async function loadDescriptions(){
+    if(DESCS) return DESCS;
+    try{
+      const resp = await fetch('descriptions.json');
+      if(resp.ok){ DESCS = await resp.json(); return DESCS; }
+    }catch(e){ console.error('Failed to load descriptions.json', e); }
+    DESCS = {}; return DESCS;
+  }
+
   function buildThumb(imgEl, key){
     let i=0; const trySet=()=>imgEl.src=IMG_DIR + key + '.' + IMG_EXTS[i];
     imgEl.onerror=()=>{ i++; if(i<IMG_EXTS.length){ trySet(); } else { imgEl.closest('.thumb')?.classList.add('noimg'); imgEl.remove(); } };
@@ -711,17 +722,22 @@
     wrap.innerHTML = list.map(({id,item})=>{
       const name = itemName(item);
       const price = (Number(item.price||0)).toFixed(2)+' '+CURRENCY;
+      // pull the unique key for this item for description lookup
+      const key  = (item && (item.key || item.id || item.code)) || '';
+      // use any short or brief description from the item as an initial description
+      const shortDesc = (item && (item.short || item.desc || '')) || '';
       return (
-        '<div class="card" data-id="'+id+'">'+
-          '<div class="thumb-wrap">'+
-            '<div class="thumb"><img alt="'+name+'" loading="lazy" decoding="async"></div>'+
-            '<button class="info" data-toggle="'+id+'" title="'+ui.more+'">i</button>'+
-          '</div>'+
-          '<div class="name">'+name+'</div>'+
-          '<div class="foot"><div class="price">'+price+'</div>'+
-            '<button class="add" onclick="add(\''+id+'\')">'+ui.add+'</button>'+
-          '</div>'+
-        '</div>'
+        '<div class="card" data-id="'+id+'"'+(key ? ' data-key="'+key+'"' : '')+'>\
+          <div class="thumb-wrap">\
+            <div class="thumb"><img alt="'+name+'" loading="lazy" decoding="async"></div>\
+            <button class="info" data-toggle="'+id+'" title="'+ui.more+'" aria-label="'+ui.more+'" aria-expanded="false" aria-controls="desc-'+id+'">i</button>\
+          </div>\
+          <div class="name">'+name+'</div>\
+          <p class="desc" id="desc-'+id+'" aria-hidden="true">'+shortDesc+'</p>\
+          <div class="foot"><div class="price">'+price+'</div>\
+            <button class="add" onclick="add(\''+id+'\')">'+ui.add+'</button>\
+          </div>\
+        </div>'
       );
     }).join('');
 
@@ -767,11 +783,60 @@
     applyView();
   });
 
-  document.addEventListener('click', e=>{
+  // Handle clicks globally: intercept clicks on the info buttons to toggle descriptions and load long text
+  document.addEventListener('click', async e=>{
     const info = e.target.closest('[data-toggle]');
     if(info){
-      const card = document.querySelector('.card[data-id="'+info.dataset.toggle+'"]');
-      if(card) card.classList.toggle('expanded');
+      e.preventDefault();
+      const cardId = info.dataset.toggle;
+      const card   = document.querySelector('.card[data-id="'+cardId+'"]');
+      if(card){
+        const expanded = card.classList.contains('expanded');
+        // when opening, attempt to load the long description from descriptions.json
+        if(!expanded){
+          const descEl = card.querySelector('.desc');
+          if(descEl){
+            let text = '';
+            // determine the item key from card or menuData
+            let key = card.getAttribute('data-key');
+            if(!key){
+              const parts = cardId.split(':');
+              if(parts.length===2){
+                const [cat, idx] = parts;
+                const it = (window.menuData?.[cat]||[])[+idx];
+                key = (it && (it.key || it.id || it.code)) || '';
+              }
+            }
+            if(key){
+              try{
+                const descs = await loadDescriptions();
+                const entry = descs[key];
+                if(entry && entry.description){
+                  text = entry.description[LANG] || entry.description.en || '';
+                }
+              }catch(err){ console.error(err); }
+            }
+            // fallback if description still empty
+            if(!text){
+              const parts2 = cardId.split(':');
+              if(parts2.length===2){
+                const [cat2, idx2] = parts2;
+                const it2 = (window.menuData?.[cat2]||[])[+idx2];
+                const fallback = (it2 && (it2.desc || it2.short || '')) || '';
+                text = fallback;
+              }
+            }
+            if(text) descEl.textContent = text;
+          }
+        }
+        // toggle card expanded class
+        card.classList.toggle('expanded');
+        // update aria attributes
+        info.setAttribute('aria-expanded', (!expanded).toString());
+        const descEl2 = card.querySelector('.desc');
+        if(descEl2) descEl2.setAttribute('aria-hidden', expanded.toString());
+      }
+      return;
     }
   });
 
